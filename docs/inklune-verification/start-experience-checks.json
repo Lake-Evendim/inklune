@@ -1,0 +1,68 @@
+{
+  "script": "./assets/index-DLkZzXAC.js",
+  "css": "./assets/index-CyaehE_K.css",
+  "servedBuildMatches": true,
+  "materials": {
+    "snow": {
+      "dimensions": [
+        2048,
+        2048
+      ],
+      "seamToAdjacentRatio": 1.008,
+      "servedMatches": true
+    },
+    "milk": {
+      "dimensions": [
+        2048,
+        2048
+      ],
+      "seamToAdjacentRatio": 1.029,
+      "servedMatches": true
+    },
+    "ivory": {
+      "dimensions": [
+        2048,
+        2048
+      ],
+      "seamToAdjacentRatio": 1.015,
+      "servedMatches": true
+    },
+    "oat": {
+      "dimensions": [
+        2048,
+        2048
+      ],
+      "seamToAdjacentRatio": 1.023,
+      "servedMatches": true
+    },
+    "linen": {
+      "dimensions": [
+        2048,
+        2048
+      ],
+      "seamToAdjacentRatio": 1.051,
+      "servedMatches": true
+    },
+    "book": {
+      "dimensions": [
+        2048,
+        2048
+      ],
+      "seamToAdjacentRatio": 1.0,
+      "servedMatches": true
+    },
+    "graphite": {
+      "dimensions": [
+        2048,
+        2048
+      ],
+      "seamToAdjacentRatio": 1.013,
+      "servedMatches": true
+    }
+  },
+  "simulatedDOMChecks": 40,
+  "existingTests": 18,
+  "build": "passed",
+  "browserVisualVerification": "pending: cua_repl connection timeout",
+  "brandAndDraftAlgorithmsUnchanged": true
+}

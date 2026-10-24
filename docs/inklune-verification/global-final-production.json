@@ -1,0 +1,108 @@
+{
+  "script": "./assets/index-n056_Ff4.js",
+  "clips": 12,
+  "dot": "0.09s",
+  "duration": "2200",
+  "finish": 0,
+  "font": "Borel",
+  "parts": 18,
+  "pens": [
+    {
+      "dash": "1px, 2px",
+      "delay": "120ms",
+      "time": "92ms"
+    },
+    {
+      "dash": "1px, 2px",
+      "delay": "212ms",
+      "time": "78ms"
+    },
+    {
+      "dash": "1px, 2px",
+      "delay": "290ms",
+      "time": "162ms"
+    },
+    {
+      "dash": "1px, 2px",
+      "delay": "452ms",
+      "time": "168ms"
+    },
+    {
+      "dash": "1px, 2px",
+      "delay": "620ms",
+      "time": "155ms"
+    },
+    {
+      "dash": "1px, 2px",
+      "delay": "775ms",
+      "time": "113ms"
+    },
+    {
+      "dash": "1px, 2px",
+      "delay": "888ms",
+      "time": "97ms"
+    },
+    {
+      "dash": "1px, 2px",
+      "delay": "985ms",
+      "time": "45ms"
+    },
+    {
+      "dash": "1px, 2px",
+      "delay": "1030ms",
+      "time": "208ms"
+    },
+    {
+      "dash": "1px, 2px",
+      "delay": "1238ms",
+      "time": "70ms"
+    },
+    {
+      "dash": "1px, 2px",
+      "delay": "1308ms",
+      "time": "52ms"
+    },
+    {
+      "dash": "1px, 2px",
+      "delay": "1360ms",
+      "time": "73ms"
+    },
+    {
+      "dash": "1px, 2px",
+      "delay": "1433ms",
+      "time": "128ms"
+    },
+    {
+      "dash": "1px, 2px",
+      "delay": "1561ms",
+      "time": "59ms"
+    },
+    {
+      "dash": "1px, 2px",
+      "delay": "1620ms",
+      "time": "162ms"
+    },
+    {
+      "dash": "1px, 2px",
+      "delay": "1782ms",
+      "time": "168ms"
+    },
+    {
+      "dash": "1px, 2px",
+      "delay": "1950ms",
+      "time": "163ms"
+    },
+    {
+      "dash": "1px, 2px",
+      "delay": "2113ms",
+      "time": "87ms"
+    }
+  ],
+  "errors": [],
+  "replayed": [
+    "desktop-day",
+    "desktop-night",
+    "phone-night",
+    "phone-day"
+  ]
+}
