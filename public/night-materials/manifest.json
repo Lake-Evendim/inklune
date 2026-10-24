@@ -1,0 +1,52 @@
+{
+  "midnight": {
+    "title": "午夜棉纸",
+    "color": "#1b222d",
+    "size": [
+      2048,
+      2048
+    ],
+    "displayPixels": 1024,
+    "bytes": 1404402
+  },
+  "linen": {
+    "title": "暖灰亚麻",
+    "color": "#292622",
+    "size": [
+      2048,
+      2048
+    ],
+    "displayPixels": 1024,
+    "bytes": 1342330
+  },
+  "suede": {
+    "title": "炭黑麂皮",
+    "color": "#201e1d",
+    "size": [
+      2048,
+      2048
+    ],
+    "displayPixels": 1024,
+    "bytes": 1125212
+  },
+  "slate": {
+    "title": "蓝灰石板",
+    "color": "#202932",
+    "size": [
+      2048,
+      2048
+    ],
+    "displayPixels": 1024,
+    "bytes": 1163056
+  },
+  "walnut": {
+    "title": "烟熏胡桃",
+    "color": "#281f1b",
+    "size": [
+      2048,
+      2048
+    ],
+    "displayPixels": 1024,
+    "bytes": 1470506
+  }
+}

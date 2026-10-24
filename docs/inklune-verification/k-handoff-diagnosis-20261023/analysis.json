@@ -1,0 +1,999 @@
+{
+  "plateaus": {
+    "zeroGrowth": [
+      [
+        975,
+        997
+      ],
+      [
+        1139,
+        1140
+      ]
+    ],
+    "nearStationary": [
+      [
+        944,
+        946
+      ],
+      [
+        972,
+        997
+      ],
+      [
+        1002,
+        1023
+      ],
+      [
+        1092,
+        1094
+      ],
+      [
+        1138,
+        1140
+      ]
+    ],
+    "maxGrowth": {
+      "t": 814,
+      "area": 4100.043137254901,
+      "growth": 51.20000000000001,
+      "lost": 0.1333333333333333,
+      "opaque": 4095,
+      "gx": 388.35255821078425,
+      "gy": 97.5255821078431
+    }
+  },
+  "handoff": [
+    {
+      "dpr": 1.25,
+      "nativeComparison": {
+        "before": {
+          "area": 61874.82352941177,
+          "centroid": [
+            495.0502346926875,
+            179.31584761897517
+          ],
+          "bounds": [
+            20,
+            20,
+            1004,
+            259
+          ]
+        },
+        "after": {
+          "area": 62342.66666666667,
+          "centroid": [
+            495.15543139812974,
+            179.4779698918941
+          ],
+          "bounds": [
+            20,
+            20,
+            1004,
+            259
+          ]
+        },
+        "centroidDelta": [
+          0.10519670544221071,
+          0.16212227291893555
+        ],
+        "changedPixels": 6309,
+        "largeChanges": 2842,
+        "edgeAlphaMae255": 27.454004167907115,
+        "maxAlphaDelta255": 164.0,
+        "addedEquivalentPixels": 595.5607843137254,
+        "removedEquivalentPixels": 127.71764705882352,
+        "bestIntegerShift": [
+          723.2784313725491,
+          0,
+          0
+        ],
+        "apparentSubpixelShift": [
+          0.0034591835805174672,
+          0.03285187216770577
+        ]
+      },
+      "actualScreenComparison": {
+        "before": {
+          "area": 61876.72100171365,
+          "centroid": [
+            495.12165451050714,
+            179.02908580350763
+          ],
+          "bounds": [
+            20,
+            20,
+            1004,
+            259
+          ]
+        },
+        "after": {
+          "area": 62342.984504628665,
+          "centroid": [
+            495.1562599017651,
+            179.47820240133495
+          ],
+          "bounds": [
+            20,
+            20,
+            1004,
+            259
+          ]
+        },
+        "centroidDelta": [
+          0.03460539125796913,
+          0.44911659782732727
+        ],
+        "changedPixels": 7057,
+        "largeChanges": 3718,
+        "edgeAlphaMae255": 39.71772818438198,
+        "maxAlphaDelta255": 206.22004515327632,
+        "addedEquivalentPixels": 794.0862536381029,
+        "removedEquivalentPixels": 327.8227507230871,
+        "bestIntegerShift": [
+          1121.90900436119,
+          0,
+          0
+        ],
+        "apparentSubpixelShift": [
+          -0.006264170247990656,
+          0.4612222595511656
+        ]
+      },
+      "maskOnlyComparison": {
+        "before": {
+          "area": 61874.82352941177,
+          "centroid": [
+            495.0502346926875,
+            179.31584761897517
+          ],
+          "bounds": [
+            20,
+            20,
+            1004,
+            259
+          ]
+        },
+        "after": {
+          "area": 62257.75294117647,
+          "centroid": [
+            494.96880917642386,
+            179.45304482749043
+          ],
+          "bounds": [
+            20,
+            20,
+            1004,
+            259
+          ]
+        },
+        "centroidDelta": [
+          -0.08142551626366412,
+          0.13719720851526063
+        ],
+        "changedPixels": 2537,
+        "largeChanges": 1663,
+        "edgeAlphaMae255": 17.047311452513963,
+        "maxAlphaDelta255": 131.00000000000003,
+        "addedEquivalentPixels": 382.9294117647059,
+        "removedEquivalentPixels": 0.0,
+        "bestIntegerShift": [
+          382.9294117647059,
+          0,
+          0
+        ],
+        "apparentSubpixelShift": [
+          -0.0066406312878667245,
+          0.010153975740126503
+        ]
+      },
+      "svgNativeToScreen": {
+        "before": {
+          "area": 61874.82352941177,
+          "centroid": [
+            495.0502346926875,
+            179.31584761897517
+          ],
+          "bounds": [
+            20,
+            20,
+            1004,
+            259
+          ]
+        },
+        "after": {
+          "area": 61876.72100171365,
+          "centroid": [
+            495.12165451050714,
+            179.02908580350763
+          ],
+          "bounds": [
+            20,
+            20,
+            1004,
+            259
+          ]
+        },
+        "centroidDelta": [
+          0.07141981781961704,
+          -0.28676181546754265
+        ],
+        "changedPixels": 5471,
+        "largeChanges": 3151,
+        "edgeAlphaMae255": 33.377743252315426,
+        "maxAlphaDelta255": 188.33465105946996,
+        "addedEquivalentPixels": 425.8932203416949,
+        "removedEquivalentPixels": 423.9957480398113,
+        "bestIntegerShift": [
+          849.8889683815063,
+          0,
+          0
+        ],
+        "apparentSubpixelShift": [
+          0.008678117422072916,
+          -0.450686609566299
+        ]
+      },
+      "canvasNativeToScreen": {
+        "before": {
+          "area": 62342.66666666667,
+          "centroid": [
+            495.15543139812974,
+            179.4779698918941
+          ],
+          "bounds": [
+            20,
+            20,
+            1004,
+            259
+          ]
+        },
+        "after": {
+          "area": 62342.984504628665,
+          "centroid": [
+            495.1562599017651,
+            179.47820240133495
+          ],
+          "bounds": [
+            20,
+            20,
+            1004,
+            259
+          ]
+        },
+        "centroidDelta": [
+          0.0008285036353754549,
+          0.00023250944084907132
+        ],
+        "changedPixels": 0,
+        "largeChanges": 0,
+        "edgeAlphaMae255": 0.2728328525906419,
+        "maxAlphaDelta255": 0.8119066832289168,
+        "addedEquivalentPixels": 3.639945200228772,
+        "removedEquivalentPixels": 3.322107238231254,
+        "bestIntegerShift": [
+          6.9620524384600255,
+          0,
+          0
+        ],
+        "apparentSubpixelShift": [
+          4.713015718766439e-05,
+          1.1272478492885212e-05
+        ]
+      }
+    },
+    {
+      "dpr": 1,
+      "nativeComparison": {
+        "before": {
+          "area": 39513.705882352944,
+          "centroid": [
+            396.19457046177575,
+            143.34921255915668
+          ],
+          "bounds": [
+            16,
+            16,
+            803,
+            207
+          ]
+        },
+        "after": {
+          "area": 39902.376470588235,
+          "centroid": [
+            395.99216361972054,
+            143.4862329689735
+          ],
+          "bounds": [
+            16,
+            16,
+            803,
+            207
+          ]
+        },
+        "centroidDelta": [
+          -0.2024068420552112,
+          0.13702040981681307
+        ],
+        "changedPixels": 5157,
+        "largeChanges": 2265,
+        "edgeAlphaMae255": 28.385241353800623,
+        "maxAlphaDelta255": 145.0,
+        "addedEquivalentPixels": 495.27450980392155,
+        "removedEquivalentPixels": 106.60392156862744,
+        "bestIntegerShift": [
+          601.878431372549,
+          0,
+          0
+        ],
+        "apparentSubpixelShift": [
+          0.005483545201533219,
+          0.06424301855642607
+        ]
+      },
+      "actualScreenComparison": {
+        "before": {
+          "area": 39522.79897725109,
+          "centroid": [
+            396.197374974371,
+            143.1003557243842
+          ],
+          "bounds": [
+            16,
+            16,
+            803,
+            207
+          ]
+        },
+        "after": {
+          "area": 39902.3446156078,
+          "centroid": [
+            395.9916956430808,
+            143.48599939758722
+          ],
+          "bounds": [
+            16,
+            16,
+            803,
+            207
+          ]
+        },
+        "centroidDelta": [
+          -0.20567933129018456,
+          0.3856436732030204
+        ],
+        "changedPixels": 5564,
+        "largeChanges": 2754,
+        "edgeAlphaMae255": 37.60690228270208,
+        "maxAlphaDelta255": 195.58454452312517,
+        "addedEquivalentPixels": 608.0205637812695,
+        "removedEquivalentPixels": 228.47492542455865,
+        "bestIntegerShift": [
+          836.4954892058282,
+          0,
+          0
+        ],
+        "apparentSubpixelShift": [
+          -0.0036344563470535325,
+          0.4140891548409813
+        ]
+      },
+      "maskOnlyComparison": {
+        "before": {
+          "area": 39513.705882352944,
+          "centroid": [
+            396.19457046177575,
+            143.34921255915668
+          ],
+          "bounds": [
+            16,
+            16,
+            803,
+            207
+          ]
+        },
+        "after": {
+          "area": 39827.631372549025,
+          "centroid": [
+            396.0811297034298,
+            143.4902786970441
+          ],
+          "bounds": [
+            16,
+            16,
+            803,
+            207
+          ]
+        },
+        "centroidDelta": [
+          -0.11344075834597334,
+          0.14106613788740674
+        ],
+        "changedPixels": 2011,
+        "largeChanges": 1444,
+        "edgeAlphaMae255": 17.3910493156637,
+        "maxAlphaDelta255": 117.00000000000001,
+        "addedEquivalentPixels": 313.9254901960784,
+        "removedEquivalentPixels": 0.0,
+        "bestIntegerShift": [
+          313.9254901960784,
+          0,
+          0
+        ],
+        "apparentSubpixelShift": [
+          -0.0028208074011954825,
+          0.015646047408208987
+        ]
+      },
+      "svgNativeToScreen": {
+        "before": {
+          "area": 39513.705882352944,
+          "centroid": [
+            396.19457046177575,
+            143.34921255915668
+          ],
+          "bounds": [
+            16,
+            16,
+            803,
+            207
+          ]
+        },
+        "after": {
+          "area": 39522.79897725109,
+          "centroid": [
+            396.197374974371,
+            143.1003557243842
+          ],
+          "bounds": [
+            16,
+            16,
+            803,
+            207
+          ]
+        },
+        "centroidDelta": [
+          0.0028045125952189665,
+          -0.24885683477248222
+        ],
+        "changedPixels": 4215,
+        "largeChanges": 2235,
+        "edgeAlphaMae255": 27.637498523656095,
+        "maxAlphaDelta255": 121.96308855663652,
+        "addedEquivalentPixels": 277.6158710975119,
+        "removedEquivalentPixels": 268.5227761993628,
+        "bestIntegerShift": [
+          546.1386472968746,
+          0,
+          0
+        ],
+        "apparentSubpixelShift": [
+          0.008499147285253549,
+          -0.3760008527077311
+        ]
+      },
+      "canvasNativeToScreen": {
+        "before": {
+          "area": 39902.376470588235,
+          "centroid": [
+            395.99216361972054,
+            143.4862329689735
+          ],
+          "bounds": [
+            16,
+            16,
+            803,
+            207
+          ]
+        },
+        "after": {
+          "area": 39902.3446156078,
+          "centroid": [
+            395.9916956430808,
+            143.48599939758722
+          ],
+          "bounds": [
+            16,
+            16,
+            803,
+            207
+          ]
+        },
+        "centroidDelta": [
+          -0.0004679766397543972,
+          -0.00023357138627488894
+        ],
+        "changedPixels": 0,
+        "largeChanges": 0,
+        "edgeAlphaMae255": 0.28878607755233154,
+        "maxAlphaDelta255": 0.8119066832289168,
+        "addedEquivalentPixels": 2.9336542312929366,
+        "removedEquivalentPixels": 2.9655092117270447,
+        "bestIntegerShift": [
+          5.89916344301998,
+          0,
+          0
+        ],
+        "apparentSubpixelShift": [
+          0.0002526292548148535,
+          -5.1912479952686386e-05
+        ]
+      }
+    },
+    {
+      "dpr": 1.5,
+      "nativeComparison": {
+        "before": {
+          "area": 89261.85098039216,
+          "centroid": [
+            594.1840378244716,
+            215.3630999379134
+          ],
+          "bounds": [
+            24,
+            24,
+            1205,
+            311
+          ]
+        },
+        "after": {
+          "area": 89801.10588235295,
+          "centroid": [
+            594.3053635044103,
+            215.4760169773009
+          ],
+          "bounds": [
+            24,
+            24,
+            1205,
+            311
+          ]
+        },
+        "centroidDelta": [
+          0.12132567993864996,
+          0.1129170393874972
+        ],
+        "changedPixels": 7757,
+        "largeChanges": 3855,
+        "edgeAlphaMae255": 29.123122383649342,
+        "maxAlphaDelta255": 158.0,
+        "addedEquivalentPixels": 733.4274509803921,
+        "removedEquivalentPixels": 194.17254901960783,
+        "bestIntegerShift": [
+          927.6,
+          0,
+          0
+        ],
+        "apparentSubpixelShift": [
+          0.013180846210108694,
+          0.034238880664605224
+        ]
+      },
+      "actualScreenComparison": {
+        "before": {
+          "area": 89220.82893436454,
+          "centroid": [
+            594.2163168684422,
+            215.00551703406742
+          ],
+          "bounds": [
+            24,
+            24,
+            1205,
+            311
+          ]
+        },
+        "after": {
+          "area": 89801.96558196045,
+          "centroid": [
+            594.3026807640067,
+            215.47567639487764
+          ],
+          "bounds": [
+            24,
+            24,
+            1205,
+            311
+          ]
+        },
+        "centroidDelta": [
+          0.0863638955645456,
+          0.47015936081021437
+        ],
+        "changedPixels": 8730,
+        "largeChanges": 5032,
+        "edgeAlphaMae255": 43.85164822341299,
+        "maxAlphaDelta255": 214.19667062588968,
+        "addedEquivalentPixels": 1050.405608798542,
+        "removedEquivalentPixels": 469.26896120263666,
+        "bestIntegerShift": [
+          1519.6745700011786,
+          0,
+          0
+        ],
+        "apparentSubpixelShift": [
+          0.0008164757255788249,
+          0.5192343325774789
+        ]
+      },
+      "maskOnlyComparison": {
+        "before": {
+          "area": 89261.85098039216,
+          "centroid": [
+            594.1840378244716,
+            215.3630999379134
+          ],
+          "bounds": [
+            24,
+            24,
+            1205,
+            311
+          ]
+        },
+        "after": {
+          "area": 89708.0588235294,
+          "centroid": [
+            594.1514321291877,
+            215.52127832526907
+          ],
+          "bounds": [
+            24,
+            24,
+            1205,
+            311
+          ]
+        },
+        "centroidDelta": [
+          -0.032605695283905334,
+          0.1581783873556617
+        ],
+        "changedPixels": 2820,
+        "largeChanges": 1948,
+        "edgeAlphaMae255": 17.13857508660943,
+        "maxAlphaDelta255": 136.0,
+        "addedEquivalentPixels": 446.20784313725494,
+        "removedEquivalentPixels": 0.0,
+        "bestIntegerShift": [
+          446.20784313725494,
+          0,
+          0
+        ],
+        "apparentSubpixelShift": [
+          0.016629591730843177,
+          0.005256070859909657
+        ]
+      },
+      "svgNativeToScreen": {
+        "before": {
+          "area": 89261.85098039216,
+          "centroid": [
+            594.1840378244716,
+            215.3630999379134
+          ],
+          "bounds": [
+            24,
+            24,
+            1205,
+            311
+          ]
+        },
+        "after": {
+          "area": 89220.82893436454,
+          "centroid": [
+            594.2163168684422,
+            215.00551703406742
+          ],
+          "bounds": [
+            24,
+            24,
+            1205,
+            311
+          ]
+        },
+        "centroidDelta": [
+          0.03227904397056136,
+          -0.3575829038459801
+        ],
+        "changedPixels": 6809,
+        "largeChanges": 4122,
+        "edgeAlphaMae255": 39.10428611539685,
+        "maxAlphaDelta255": 194.35306597999838,
+        "addedEquivalentPixels": 569.7336721162428,
+        "removedEquivalentPixels": 610.7557181438551,
+        "bestIntegerShift": [
+          1180.489390260098,
+          0,
+          0
+        ],
+        "apparentSubpixelShift": [
+          0.011490448945435655,
+          -0.5103040906650721
+        ]
+      },
+      "canvasNativeToScreen": {
+        "before": {
+          "area": 89801.10588235295,
+          "centroid": [
+            594.3053635044103,
+            215.4760169773009
+          ],
+          "bounds": [
+            24,
+            24,
+            1205,
+            311
+          ]
+        },
+        "after": {
+          "area": 89801.96558196045,
+          "centroid": [
+            594.3026807640067,
+            215.47567639487764
+          ],
+          "bounds": [
+            24,
+            24,
+            1205,
+            311
+          ]
+        },
+        "centroidDelta": [
+          -0.0026827404035429936,
+          -0.0003405824232629584
+        ],
+        "changedPixels": 0,
+        "largeChanges": 0,
+        "edgeAlphaMae255": 0.2955157341326753,
+        "maxAlphaDelta255": 0.8119066832289168,
+        "addedEquivalentPixels": 4.967464929230907,
+        "removedEquivalentPixels": 4.107765321721956,
+        "bestIntegerShift": [
+          9.075230250952863,
+          0,
+          0
+        ],
+        "apparentSubpixelShift": [
+          -0.00033761082840248866,
+          9.057707207964883e-05
+        ]
+      }
+    },
+    {
+      "dpr": 2,
+      "nativeComparison": {
+        "before": {
+          "area": 158804.71372549018,
+          "centroid": [
+            792.7656365561533,
+            287.40559291443964
+          ],
+          "bounds": [
+            32,
+            32,
+            1608,
+            415
+          ]
+        },
+        "after": {
+          "area": 159622.98823529412,
+          "centroid": [
+            792.5776952073982,
+            287.4794426632048
+          ],
+          "bounds": [
+            32,
+            32,
+            1607,
+            415
+          ]
+        },
+        "centroidDelta": [
+          -0.18794134875508917,
+          0.07384974876515571
+        ],
+        "changedPixels": 10333,
+        "largeChanges": 5361,
+        "edgeAlphaMae255": 29.60847050120215,
+        "maxAlphaDelta255": 208.0,
+        "addedEquivalentPixels": 1036.9529411764706,
+        "removedEquivalentPixels": 218.67843137254903,
+        "bestIntegerShift": [
+          1255.6313725490195,
+          0,
+          0
+        ],
+        "apparentSubpixelShift": [
+          0.013711091589601081,
+          0.02126086512366786
+        ]
+      },
+      "actualScreenComparison": {
+        "before": {
+          "area": 158796.79396324267,
+          "centroid": [
+            792.7666472212474,
+            286.90472586217544
+          ],
+          "bounds": [
+            32,
+            31,
+            1607,
+            415
+          ]
+        },
+        "after": {
+          "area": 159622.21750641483,
+          "centroid": [
+            792.5797031340387,
+            286.47967532035796
+          ],
+          "bounds": [
+            32,
+            31,
+            1607,
+            414
+          ]
+        },
+        "centroidDelta": [
+          -0.1869440872086443,
+          -0.4250505418174839
+        ],
+        "changedPixels": 11877,
+        "largeChanges": 7453,
+        "edgeAlphaMae255": 51.20820249576418,
+        "maxAlphaDelta255": 253.67056242123112,
+        "addedEquivalentPixels": 1618.7151444814172,
+        "removedEquivalentPixels": 793.2916013092638,
+        "bestIntegerShift": [
+          2412.006745790681,
+          0,
+          0
+        ],
+        "apparentSubpixelShift": [
+          0.024129644467207816,
+          -0.6420800864476853
+        ]
+      },
+      "maskOnlyComparison": {
+        "before": {
+          "area": 158804.71372549018,
+          "centroid": [
+            792.7656365561533,
+            287.40559291443964
+          ],
+          "bounds": [
+            32,
+            32,
+            1608,
+            415
+          ]
+        },
+        "after": {
+          "area": 159438.6588235294,
+          "centroid": [
+            792.4749093498568,
+            287.53984688142896
+          ],
+          "bounds": [
+            32,
+            32,
+            1608,
+            415
+          ]
+        },
+        "centroidDelta": [
+          -0.2907272062964239,
+          0.1342539669893199
+        ],
+        "changedPixels": 3980,
+        "largeChanges": 2874,
+        "edgeAlphaMae255": 17.531287279036984,
+        "maxAlphaDelta255": 209.0,
+        "addedEquivalentPixels": 633.9450980392156,
+        "removedEquivalentPixels": 0.0,
+        "bestIntegerShift": [
+          633.9450980392156,
+          0,
+          0
+        ],
+        "apparentSubpixelShift": [
+          -0.003109183066908105,
+          -0.0005341896999570235
+        ]
+      },
+      "svgNativeToScreen": {
+        "before": {
+          "area": 158804.71372549018,
+          "centroid": [
+            792.7656365561533,
+            287.40559291443964
+          ],
+          "bounds": [
+            32,
+            32,
+            1608,
+            415
+          ]
+        },
+        "after": {
+          "area": 158796.79396324267,
+          "centroid": [
+            792.7666472212474,
+            286.90472586217544
+          ],
+          "bounds": [
+            32,
+            31,
+            1607,
+            415
+          ]
+        },
+        "centroidDelta": [
+          0.0010106650940997497,
+          -0.5008670522641978
+        ],
+        "changedPixels": 9694,
+        "largeChanges": 6628,
+        "edgeAlphaMae255": 48.55187739311023,
+        "maxAlphaDelta255": 195.58454452312517,
+        "addedEquivalentPixels": 1069.1318090235795,
+        "removedEquivalentPixels": 1077.0515712710812,
+        "bestIntegerShift": [
+          2146.1833802946608,
+          0,
+          0
+        ],
+        "apparentSubpixelShift": [
+          0.01104292045293803,
+          -0.6682344317515283
+        ]
+      },
+      "canvasNativeToScreen": {
+        "before": {
+          "area": 159622.98823529412,
+          "centroid": [
+            792.5776952073982,
+            287.4794426632048
+          ],
+          "bounds": [
+            32,
+            32,
+            1607,
+            415
+          ]
+        },
+        "after": {
+          "area": 159622.21750641483,
+          "centroid": [
+            792.5797031340387,
+            286.47967532035796
+          ],
+          "bounds": [
+            32,
+            31,
+            1607,
+            414
+          ]
+        },
+        "centroidDelta": [
+          0.0020079266405446106,
+          -0.9997673428468374
+        ],
+        "changedPixels": 12775,
+        "largeChanges": 9399,
+        "edgeAlphaMae255": 74.22250954786074,
+        "maxAlphaDelta255": 255.0,
+        "addedEquivalentPixels": 2143.8353525015195,
+        "removedEquivalentPixels": 2144.606081380789,
+        "bestIntegerShift": [
+          12.467609839993674,
+          0,
+          -1
+        ],
+        "apparentSubpixelShift": [
+          0.01039044080446813,
+          -1.109123843321858
+        ]
+      }
+    }
+  ]
+}

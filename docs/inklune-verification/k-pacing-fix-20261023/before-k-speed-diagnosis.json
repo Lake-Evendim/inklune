@@ -1,0 +1,1780 @@
+{
+  "rows": [
+    {
+      "name": "lead-up-and-upper-loop",
+      "part": 0,
+      "a": 735,
+      "b": 880,
+      "mappedStart": 740.5526396729521,
+      "mappedEnd": 933.8274803823429,
+      "elapsed": 193.2748407093908,
+      "pathDistance": 314.93637774067537,
+      "originalSpeed": 2.1719750189012097,
+      "displayedSpeed": 1.6294742584432684
+    },
+    {
+      "name": "descending-stem-above-crossing",
+      "part": 1,
+      "a": 895,
+      "b": 935,
+      "mappedStart": 951.9275724270055,
+      "mappedEnd": 999.8414925081773,
+      "elapsed": 47.913920081171796,
+      "pathDistance": 86.01783414857577,
+      "originalSpeed": 2.1504458537143942,
+      "displayedSpeed": 1.7952577038750217
+    },
+    {
+      "name": "stem-through-crossing",
+      "part": 1,
+      "a": 935,
+      "b": 950,
+      "mappedStart": 999.8414925081773,
+      "mappedEnd": 1002.6921503267529,
+      "elapsed": 2.8506578185755416,
+      "pathDistance": 32.25668780571592,
+      "originalSpeed": 2.1504458537143942,
+      "displayedSpeed": 11.31552429601474
+    },
+    {
+      "name": "stem-below-crossing",
+      "part": 1,
+      "a": 950,
+      "b": 970,
+      "mappedStart": 1002.6921503267529,
+      "mappedEnd": 1025.2874182550331,
+      "elapsed": 22.595267928280236,
+      "pathDistance": 43.008917074287886,
+      "originalSpeed": 2.1504458537143942,
+      "displayedSpeed": 1.9034479790548502
+    },
+    {
+      "name": "right-loop",
+      "part": 2,
+      "a": 1025,
+      "b": 1088,
+      "mappedStart": 1025.7226045121179,
+      "mappedEnd": 1098.2214241613267,
+      "elapsed": 72.49881964920883,
+      "pathDistance": 137.2716229625584,
+      "originalSpeed": 2.1789146501993395,
+      "displayedSpeed": 1.8934325224432318
+    },
+    {
+      "name": "outgoing-leg",
+      "part": 3,
+      "a": 1105,
+      "b": 1135,
+      "mappedStart": 1101.320562845735,
+      "mappedEnd": 1137.4028480502648,
+      "elapsed": 36.08228520452985,
+      "pathDistance": 64.51912434895833,
+      "originalSpeed": 2.150637478298611,
+      "displayedSpeed": 1.7881108134708288
+    }
+  ],
+  "boundaries": [
+    {
+      "part": 0,
+      "start": 730,
+      "end": 940.6448091804052,
+      "originalStart": 730,
+      "originalEnd": 885
+    },
+    {
+      "part": 1,
+      "start": 940.6448091804052,
+      "end": 1025.4031493802024,
+      "originalStart": 885,
+      "originalEnd": 998
+    },
+    {
+      "part": 2,
+      "start": 1025.4031493802024,
+      "end": 1099.198765965947,
+      "originalStart": 998,
+      "originalEnd": 1095
+    },
+    {
+      "part": 3,
+      "start": 1099.198765965947,
+      "end": 1140,
+      "originalStart": 1095,
+      "originalEnd": 1140
+    }
+  ],
+  "curve": [
+    {
+      "original": 730,
+      "displayed": 730
+    },
+    {
+      "original": 731,
+      "displayed": 730
+    },
+    {
+      "original": 732,
+      "displayed": 730.618620147226
+    },
+    {
+      "original": 733,
+      "displayed": 734.4941629383471
+    },
+    {
+      "original": 734,
+      "displayed": 739.2622677035595
+    },
+    {
+      "original": 735,
+      "displayed": 740.5526396729521
+    },
+    {
+      "original": 736,
+      "displayed": 741.9250698563377
+    },
+    {
+      "original": 737,
+      "displayed": 743.5550457726417
+    },
+    {
+      "original": 738,
+      "displayed": 744.7764069440944
+    },
+    {
+      "original": 739,
+      "displayed": 746.101174789523
+    },
+    {
+      "original": 740,
+      "displayed": 747.3796325931172
+    },
+    {
+      "original": 741,
+      "displayed": 748.9754799147423
+    },
+    {
+      "original": 742,
+      "displayed": 750.2578578449064
+    },
+    {
+      "original": 743,
+      "displayed": 751.443876589785
+    },
+    {
+      "original": 744,
+      "displayed": 753.0968999902394
+    },
+    {
+      "original": 745,
+      "displayed": 754.3181488013764
+    },
+    {
+      "original": 746,
+      "displayed": 755.6355882573256
+    },
+    {
+      "original": 747,
+      "displayed": 756.8587659205488
+    },
+    {
+      "original": 748,
+      "displayed": 758.4686792782609
+    },
+    {
+      "original": 749,
+      "displayed": 759.638991412948
+    },
+    {
+      "original": 750,
+      "displayed": 760.9613304596331
+    },
+    {
+      "original": 751,
+      "displayed": 762.5094257820391
+    },
+    {
+      "original": 752,
+      "displayed": 763.7523635389641
+    },
+    {
+      "original": 753,
+      "displayed": 765.0187409061916
+    },
+    {
+      "original": 754,
+      "displayed": 766.2147029715331
+    },
+    {
+      "original": 755,
+      "displayed": 767.7912487203408
+    },
+    {
+      "original": 756,
+      "displayed": 769.0860112541908
+    },
+    {
+      "original": 757,
+      "displayed": 770.3153273090045
+    },
+    {
+      "original": 758,
+      "displayed": 771.9293718944857
+    },
+    {
+      "original": 759,
+      "displayed": 773.277982825896
+    },
+    {
+      "original": 760,
+      "displayed": 774.5734223590218
+    },
+    {
+      "original": 761,
+      "displayed": 775.8283168424708
+    },
+    {
+      "original": 762,
+      "displayed": 777.5285582469066
+    },
+    {
+      "original": 763,
+      "displayed": 778.9306192074853
+    },
+    {
+      "original": 764,
+      "displayed": 780.256617341623
+    },
+    {
+      "original": 765,
+      "displayed": 781.9342175749694
+    },
+    {
+      "original": 766,
+      "displayed": 783.2141116611848
+    },
+    {
+      "original": 767,
+      "displayed": 784.4661437939652
+    },
+    {
+      "original": 768,
+      "displayed": 785.72252506543
+    },
+    {
+      "original": 769,
+      "displayed": 787.0922841376743
+    },
+    {
+      "original": 770,
+      "displayed": 788.3434627860364
+    },
+    {
+      "original": 771,
+      "displayed": 789.5486593938899
+    },
+    {
+      "original": 772,
+      "displayed": 790.9749232204509
+    },
+    {
+      "original": 773,
+      "displayed": 792.108603622315
+    },
+    {
+      "original": 774,
+      "displayed": 793.3130233550563
+    },
+    {
+      "original": 775,
+      "displayed": 794.360922330648
+    },
+    {
+      "original": 776,
+      "displayed": 795.8672655811979
+    },
+    {
+      "original": 777,
+      "displayed": 796.919558526105
+    },
+    {
+      "original": 778,
+      "displayed": 798.1502194998491
+    },
+    {
+      "original": 779,
+      "displayed": 799.6193629737576
+    },
+    {
+      "original": 780,
+      "displayed": 800.8036798570868
+    },
+    {
+      "original": 781,
+      "displayed": 802.019473518149
+    },
+    {
+      "original": 782,
+      "displayed": 803.2469918079115
+    },
+    {
+      "original": 783,
+      "displayed": 804.7212839946703
+    },
+    {
+      "original": 784,
+      "displayed": 805.9322081412427
+    },
+    {
+      "original": 785,
+      "displayed": 807.2050853824904
+    },
+    {
+      "original": 786,
+      "displayed": 808.8030011553818
+    },
+    {
+      "original": 787,
+      "displayed": 810.0675824599873
+    },
+    {
+      "original": 788,
+      "displayed": 811.3680401864046
+    },
+    {
+      "original": 789,
+      "displayed": 812.7586982773688
+    },
+    {
+      "original": 790,
+      "displayed": 814.1521023863515
+    },
+    {
+      "original": 791,
+      "displayed": 815.4305749443306
+    },
+    {
+      "original": 792,
+      "displayed": 816.7631007588294
+    },
+    {
+      "original": 793,
+      "displayed": 818.1655305790301
+    },
+    {
+      "original": 794,
+      "displayed": 819.4245063523301
+    },
+    {
+      "original": 795,
+      "displayed": 820.6668840101056
+    },
+    {
+      "original": 796,
+      "displayed": 822.2279030387223
+    },
+    {
+      "original": 797,
+      "displayed": 823.5466760640749
+    },
+    {
+      "original": 798,
+      "displayed": 824.7302138023866
+    },
+    {
+      "original": 799,
+      "displayed": 825.9788569664531
+    },
+    {
+      "original": 800,
+      "displayed": 827.4828224911304
+    },
+    {
+      "original": 801,
+      "displayed": 828.7001477708394
+    },
+    {
+      "original": 802,
+      "displayed": 829.9035483160707
+    },
+    {
+      "original": 803,
+      "displayed": 831.45457351883
+    },
+    {
+      "original": 804,
+      "displayed": 832.7710108115592
+    },
+    {
+      "original": 805,
+      "displayed": 834.000685511421
+    },
+    {
+      "original": 806,
+      "displayed": 835.4754401913984
+    },
+    {
+      "original": 807,
+      "displayed": 836.9014827021862
+    },
+    {
+      "original": 808,
+      "displayed": 838.2656504300336
+    },
+    {
+      "original": 809,
+      "displayed": 839.606069272972
+    },
+    {
+      "original": 810,
+      "displayed": 841.2093459948654
+    },
+    {
+      "original": 811,
+      "displayed": 842.490300694364
+    },
+    {
+      "original": 812,
+      "displayed": 843.8157699405511
+    },
+    {
+      "original": 813,
+      "displayed": 845.2556424172676
+    },
+    {
+      "original": 814,
+      "displayed": 846.7287366614686
+    },
+    {
+      "original": 815,
+      "displayed": 848.0725864663702
+    },
+    {
+      "original": 816,
+      "displayed": 849.3226630756764
+    },
+    {
+      "original": 817,
+      "displayed": 850.9686588491126
+    },
+    {
+      "original": 818,
+      "displayed": 852.254736725026
+    },
+    {
+      "original": 819,
+      "displayed": 853.560948094074
+    },
+    {
+      "original": 820,
+      "displayed": 855.0315403350835
+    },
+    {
+      "original": 821,
+      "displayed": 856.4665966400861
+    },
+    {
+      "original": 822,
+      "displayed": 857.7948890810742
+    },
+    {
+      "original": 823,
+      "displayed": 859.0215919073335
+    },
+    {
+      "original": 824,
+      "displayed": 860.6828170433575
+    },
+    {
+      "original": 825,
+      "displayed": 861.9347112793868
+    },
+    {
+      "original": 826,
+      "displayed": 863.2149112353507
+    },
+    {
+      "original": 827,
+      "displayed": 864.6475971916731
+    },
+    {
+      "original": 828,
+      "displayed": 866.0575392636881
+    },
+    {
+      "original": 829,
+      "displayed": 867.3282135617766
+    },
+    {
+      "original": 830,
+      "displayed": 868.5567203953267
+    },
+    {
+      "original": 831,
+      "displayed": 870.1292915398357
+    },
+    {
+      "original": 832,
+      "displayed": 871.3608763650643
+    },
+    {
+      "original": 833,
+      "displayed": 872.6022246207556
+    },
+    {
+      "original": 834,
+      "displayed": 874.0632128921545
+    },
+    {
+      "original": 835,
+      "displayed": 875.4094483675975
+    },
+    {
+      "original": 836,
+      "displayed": 876.657686353556
+    },
+    {
+      "original": 837,
+      "displayed": 877.8891593859452
+    },
+    {
+      "original": 838,
+      "displayed": 879.4222120454799
+    },
+    {
+      "original": 839,
+      "displayed": 880.6868614472463
+    },
+    {
+      "original": 840,
+      "displayed": 881.86348164895
+    },
+    {
+      "original": 841,
+      "displayed": 883.2557025697599
+    },
+    {
+      "original": 842,
+      "displayed": 884.5800941783737
+    },
+    {
+      "original": 843,
+      "displayed": 885.7613563365544
+    },
+    {
+      "original": 844,
+      "displayed": 886.9476769788467
+    },
+    {
+      "original": 845,
+      "displayed": 888.4013879336371
+    },
+    {
+      "original": 846,
+      "displayed": 889.5955397494479
+    },
+    {
+      "original": 847,
+      "displayed": 890.7633464760854
+    },
+    {
+      "original": 848,
+      "displayed": 892.0404463087934
+    },
+    {
+      "original": 849,
+      "displayed": 893.3552941002889
+    },
+    {
+      "original": 850,
+      "displayed": 894.552377498882
+    },
+    {
+      "original": 851,
+      "displayed": 895.6780377576059
+    },
+    {
+      "original": 852,
+      "displayed": 897.1018671106601
+    },
+    {
+      "original": 853,
+      "displayed": 898.304005588507
+    },
+    {
+      "original": 854,
+      "displayed": 899.4391835604373
+    },
+    {
+      "original": 855,
+      "displayed": 900.8952393274724
+    },
+    {
+      "original": 856,
+      "displayed": 902.0570239951696
+    },
+    {
+      "original": 857,
+      "displayed": 903.239809259852
+    },
+    {
+      "original": 858,
+      "displayed": 904.6641675008568
+    },
+    {
+      "original": 859,
+      "displayed": 905.9869366946092
+    },
+    {
+      "original": 860,
+      "displayed": 907.2082320388063
+    },
+    {
+      "original": 861,
+      "displayed": 908.4334991499204
+    },
+    {
+      "original": 862,
+      "displayed": 909.9748988189682
+    },
+    {
+      "original": 863,
+      "displayed": 911.2338240868738
+    },
+    {
+      "original": 864,
+      "displayed": 912.4520959171213
+    },
+    {
+      "original": 865,
+      "displayed": 913.9201748054123
+    },
+    {
+      "original": 866,
+      "displayed": 915.1899173073475
+    },
+    {
+      "original": 867,
+      "displayed": 916.4674739585107
+    },
+    {
+      "original": 868,
+      "displayed": 917.7071629133782
+    },
+    {
+      "original": 869,
+      "displayed": 919.1944730074204
+    },
+    {
+      "original": 870,
+      "displayed": 920.4831607070302
+    },
+    {
+      "original": 871,
+      "displayed": 921.7116113604224
+    },
+    {
+      "original": 872,
+      "displayed": 923.0541491600216
+    },
+    {
+      "original": 873,
+      "displayed": 924.4754424613037
+    },
+    {
+      "original": 874,
+      "displayed": 925.7070062899078
+    },
+    {
+      "original": 875,
+      "displayed": 926.9554922630275
+    },
+    {
+      "original": 876,
+      "displayed": 928.4639714945283
+    },
+    {
+      "original": 877,
+      "displayed": 929.7926441446656
+    },
+    {
+      "original": 878,
+      "displayed": 930.9886760095972
+    },
+    {
+      "original": 879,
+      "displayed": 932.3994999398475
+    },
+    {
+      "original": 880,
+      "displayed": 933.8274803823429
+    },
+    {
+      "original": 881,
+      "displayed": 935.1163184631832
+    },
+    {
+      "original": 882,
+      "displayed": 936.3614551909332
+    },
+    {
+      "original": 883,
+      "displayed": 937.9302407007651
+    },
+    {
+      "original": 884,
+      "displayed": 939.2200917268759
+    },
+    {
+      "original": 885,
+      "displayed": 940.6448091804052
+    },
+    {
+      "original": 886,
+      "displayed": 940.6448091804052
+    },
+    {
+      "original": 887,
+      "displayed": 940.6448091804052
+    },
+    {
+      "original": 888,
+      "displayed": 940.6992188120678
+    },
+    {
+      "original": 889,
+      "displayed": 943.3159379135484
+    },
+    {
+      "original": 890,
+      "displayed": 945.2465798200873
+    },
+    {
+      "original": 891,
+      "displayed": 946.5505082318118
+    },
+    {
+      "original": 892,
+      "displayed": 947.8177578101769
+    },
+    {
+      "original": 893,
+      "displayed": 949.085007388542
+    },
+    {
+      "original": 894,
+      "displayed": 950.352256966907
+    },
+    {
+      "original": 895,
+      "displayed": 951.9275724270055
+    },
+    {
+      "original": 896,
+      "displayed": 953.1946761639507
+    },
+    {
+      "original": 897,
+      "displayed": 954.4617799008959
+    },
+    {
+      "original": 898,
+      "displayed": 955.7288836378411
+    },
+    {
+      "original": 899,
+      "displayed": 957.3228667996831
+    },
+    {
+      "original": 900,
+      "displayed": 958.5901163780482
+    },
+    {
+      "original": 901,
+      "displayed": 959.8573659564133
+    },
+    {
+      "original": 902,
+      "displayed": 961.1246155347783
+    },
+    {
+      "original": 903,
+      "displayed": 962.6987642635179
+    },
+    {
+      "original": 904,
+      "displayed": 963.965868000463
+    },
+    {
+      "original": 905,
+      "displayed": 965.2329717374082
+    },
+    {
+      "original": 906,
+      "displayed": 966.5000754743535
+    },
+    {
+      "original": 907,
+      "displayed": 968.0539448685385
+    },
+    {
+      "original": 908,
+      "displayed": 969.3624749459195
+    },
+    {
+      "original": 909,
+      "displayed": 970.6297245242846
+    },
+    {
+      "original": 910,
+      "displayed": 971.8969741026497
+    },
+    {
+      "original": 911,
+      "displayed": 973.4310726210824
+    },
+    {
+      "original": 912,
+      "displayed": 974.7370598369754
+    },
+    {
+      "original": 913,
+      "displayed": 976.0041635739206
+    },
+    {
+      "original": 914,
+      "displayed": 977.2712673108658
+    },
+    {
+      "original": 915,
+      "displayed": 978.8380978647
+    },
+    {
+      "original": 916,
+      "displayed": 980.1348335137909
+    },
+    {
+      "original": 917,
+      "displayed": 981.4020830921559
+    },
+    {
+      "original": 918,
+      "displayed": 982.6693326705209
+    },
+    {
+      "original": 919,
+      "displayed": 984.215225617244
+    },
+    {
+      "original": 920,
+      "displayed": 985.5082516734877
+    },
+    {
+      "original": 921,
+      "displayed": 986.7753554104329
+    },
+    {
+      "original": 922,
+      "displayed": 988.0424591473782
+    },
+    {
+      "original": 923,
+      "displayed": 989.6222508608616
+    },
+    {
+      "original": 924,
+      "displayed": 990.9071920816621
+    },
+    {
+      "original": 925,
+      "displayed": 992.1744416600272
+    },
+    {
+      "original": 926,
+      "displayed": 993.3668212472222
+    },
+    {
+      "original": 927,
+      "displayed": 994.5608045225595
+    },
+    {
+      "original": 928,
+      "displayed": 995.4720466828737
+    },
+    {
+      "original": 929,
+      "displayed": 996.2818496096897
+    },
+    {
+      "original": 930,
+      "displayed": 997.0326122978933
+    },
+    {
+      "original": 931,
+      "displayed": 997.7237559216156
+    },
+    {
+      "original": 932,
+      "displayed": 998.4748897393467
+    },
+    {
+      "original": 933,
+      "displayed": 998.9897536471705
+    },
+    {
+      "original": 934,
+      "displayed": 999.4451431969801
+    },
+    {
+      "original": 935,
+      "displayed": 999.8414925081773
+    },
+    {
+      "original": 936,
+      "displayed": 1000.243570493046
+    },
+    {
+      "original": 937,
+      "displayed": 1000.5216946205512
+    },
+    {
+      "original": 938,
+      "displayed": 1000.7403443900423
+    },
+    {
+      "original": 939,
+      "displayed": 1000.9300171150865
+    },
+    {
+      "original": 940,
+      "displayed": 1001.0887856460264
+    },
+    {
+      "original": 941,
+      "displayed": 1001.160006764318
+    },
+    {
+      "original": 942,
+      "displayed": 1001.2008395245002
+    },
+    {
+      "original": 943,
+      "displayed": 1001.212007458909
+    },
+    {
+      "original": 944,
+      "displayed": 1001.2175914261135
+    },
+    {
+      "original": 945,
+      "displayed": 1001.2175914261135
+    },
+    {
+      "original": 946,
+      "displayed": 1001.2175914261135
+    },
+    {
+      "original": 947,
+      "displayed": 1001.2769210776603
+    },
+    {
+      "original": 948,
+      "displayed": 1001.6865850862678
+    },
+    {
+      "original": 949,
+      "displayed": 1002.1311233534675
+    },
+    {
+      "original": 950,
+      "displayed": 1002.6921503267529
+    },
+    {
+      "original": 951,
+      "displayed": 1003.3418823644242
+    },
+    {
+      "original": 952,
+      "displayed": 1004.2583084211219
+    },
+    {
+      "original": 953,
+      "displayed": 1005.058390478201
+    },
+    {
+      "original": 954,
+      "displayed": 1005.9118692216722
+    },
+    {
+      "original": 955,
+      "displayed": 1006.8254039864078
+    },
+    {
+      "original": 956,
+      "displayed": 1008.0313173168811
+    },
+    {
+      "original": 957,
+      "displayed": 1009.0634098064452
+    },
+    {
+      "original": 958,
+      "displayed": 1010.1515036988108
+    },
+    {
+      "original": 959,
+      "displayed": 1011.298637829789
+    },
+    {
+      "original": 960,
+      "displayed": 1012.7526858655262
+    },
+    {
+      "original": 961,
+      "displayed": 1013.9924202185011
+    },
+    {
+      "original": 962,
+      "displayed": 1015.2875771484087
+    },
+    {
+      "original": 963,
+      "displayed": 1016.5864964464631
+    },
+    {
+      "original": 964,
+      "displayed": 1017.9385485544108
+    },
+    {
+      "original": 965,
+      "displayed": 1019.5518809570829
+    },
+    {
+      "original": 966,
+      "displayed": 1020.861690693615
+    },
+    {
+      "original": 967,
+      "displayed": 1022.171500430147
+    },
+    {
+      "original": 968,
+      "displayed": 1023.5382206665804
+    },
+    {
+      "original": 969,
+      "displayed": 1024.9024576265415
+    },
+    {
+      "original": 970,
+      "displayed": 1025.2874182550331
+    },
+    {
+      "original": 971,
+      "displayed": 1025.3978440438818
+    },
+    {
+      "original": 972,
+      "displayed": 1025.4031493802024
+    },
+    {
+      "original": 973,
+      "displayed": 1025.4031493802024
+    },
+    {
+      "original": 974,
+      "displayed": 1025.4031493802024
+    },
+    {
+      "original": 975,
+      "displayed": 1025.4031493802024
+    },
+    {
+      "original": 976,
+      "displayed": 1025.4031493802024
+    },
+    {
+      "original": 977,
+      "displayed": 1025.4031493802024
+    },
+    {
+      "original": 978,
+      "displayed": 1025.4031493802024
+    },
+    {
+      "original": 979,
+      "displayed": 1025.4031493802024
+    },
+    {
+      "original": 980,
+      "displayed": 1025.4031493802024
+    },
+    {
+      "original": 981,
+      "displayed": 1025.4031493802024
+    },
+    {
+      "original": 982,
+      "displayed": 1025.4031493802024
+    },
+    {
+      "original": 983,
+      "displayed": 1025.4031493802024
+    },
+    {
+      "original": 984,
+      "displayed": 1025.4031493802024
+    },
+    {
+      "original": 985,
+      "displayed": 1025.4031493802024
+    },
+    {
+      "original": 986,
+      "displayed": 1025.4031493802024
+    },
+    {
+      "original": 987,
+      "displayed": 1025.4031493802024
+    },
+    {
+      "original": 988,
+      "displayed": 1025.4031493802024
+    },
+    {
+      "original": 989,
+      "displayed": 1025.4031493802024
+    },
+    {
+      "original": 990,
+      "displayed": 1025.4031493802024
+    },
+    {
+      "original": 991,
+      "displayed": 1025.4031493802024
+    },
+    {
+      "original": 992,
+      "displayed": 1025.4031493802024
+    },
+    {
+      "original": 993,
+      "displayed": 1025.4031493802024
+    },
+    {
+      "original": 994,
+      "displayed": 1025.4031493802024
+    },
+    {
+      "original": 995,
+      "displayed": 1025.4031493802024
+    },
+    {
+      "original": 996,
+      "displayed": 1025.4031493802024
+    },
+    {
+      "original": 997,
+      "displayed": 1025.4031493802024
+    },
+    {
+      "original": 998,
+      "displayed": 1025.4031493802024
+    },
+    {
+      "original": 999,
+      "displayed": 1025.4031493802024
+    },
+    {
+      "original": 1000,
+      "displayed": 1025.4031493802024
+    },
+    {
+      "original": 1001,
+      "displayed": 1025.4031493802024
+    },
+    {
+      "original": 1002,
+      "displayed": 1025.4920178777747
+    },
+    {
+      "original": 1003,
+      "displayed": 1025.5207616894452
+    },
+    {
+      "original": 1004,
+      "displayed": 1025.5207616894452
+    },
+    {
+      "original": 1005,
+      "displayed": 1025.5207616894452
+    },
+    {
+      "original": 1006,
+      "displayed": 1025.5207616894452
+    },
+    {
+      "original": 1007,
+      "displayed": 1025.5207616894452
+    },
+    {
+      "original": 1008,
+      "displayed": 1025.5207616894452
+    },
+    {
+      "original": 1009,
+      "displayed": 1025.5207616894452
+    },
+    {
+      "original": 1010,
+      "displayed": 1025.5207616894452
+    },
+    {
+      "original": 1011,
+      "displayed": 1025.5207616894452
+    },
+    {
+      "original": 1012,
+      "displayed": 1025.5207616894452
+    },
+    {
+      "original": 1013,
+      "displayed": 1025.5207616894452
+    },
+    {
+      "original": 1014,
+      "displayed": 1025.5207616894452
+    },
+    {
+      "original": 1015,
+      "displayed": 1025.5207616894452
+    },
+    {
+      "original": 1016,
+      "displayed": 1025.5207616894452
+    },
+    {
+      "original": 1017,
+      "displayed": 1025.5207616894452
+    },
+    {
+      "original": 1018,
+      "displayed": 1025.5207616894452
+    },
+    {
+      "original": 1019,
+      "displayed": 1025.5207616894452
+    },
+    {
+      "original": 1020,
+      "displayed": 1025.5207616894452
+    },
+    {
+      "original": 1021,
+      "displayed": 1025.5207616894452
+    },
+    {
+      "original": 1022,
+      "displayed": 1025.5207616894452
+    },
+    {
+      "original": 1023,
+      "displayed": 1025.5207616894452
+    },
+    {
+      "original": 1024,
+      "displayed": 1025.5519388396697
+    },
+    {
+      "original": 1025,
+      "displayed": 1025.7226045121179
+    },
+    {
+      "original": 1026,
+      "displayed": 1026.0222246434546
+    },
+    {
+      "original": 1027,
+      "displayed": 1026.5707064172495
+    },
+    {
+      "original": 1028,
+      "displayed": 1027.1356801884929
+    },
+    {
+      "original": 1029,
+      "displayed": 1027.822928087128
+    },
+    {
+      "original": 1030,
+      "displayed": 1028.6146285186371
+    },
+    {
+      "original": 1031,
+      "displayed": 1029.7657230670054
+    },
+    {
+      "original": 1032,
+      "displayed": 1030.8389173005378
+    },
+    {
+      "original": 1033,
+      "displayed": 1032.1094939926954
+    },
+    {
+      "original": 1034,
+      "displayed": 1033.3441732664164
+    },
+    {
+      "original": 1035,
+      "displayed": 1034.417181935185
+    },
+    {
+      "original": 1036,
+      "displayed": 1035.5637803684965
+    },
+    {
+      "original": 1037,
+      "displayed": 1037.0171145189956
+    },
+    {
+      "original": 1038,
+      "displayed": 1038.178570617891
+    },
+    {
+      "original": 1039,
+      "displayed": 1039.3604632422876
+    },
+    {
+      "original": 1040,
+      "displayed": 1040.7327680134015
+    },
+    {
+      "original": 1041,
+      "displayed": 1042.1008938887337
+    },
+    {
+      "original": 1042,
+      "displayed": 1043.2325041369027
+    },
+    {
+      "original": 1043,
+      "displayed": 1044.583844062041
+    },
+    {
+      "original": 1044,
+      "displayed": 1045.9682025981338
+    },
+    {
+      "original": 1045,
+      "displayed": 1047.1950013278947
+    },
+    {
+      "original": 1046,
+      "displayed": 1048.3936447189517
+    },
+    {
+      "original": 1047,
+      "displayed": 1049.971072893471
+    },
+    {
+      "original": 1048,
+      "displayed": 1051.2457683289183
+    },
+    {
+      "original": 1049,
+      "displayed": 1052.495267814785
+    },
+    {
+      "original": 1050,
+      "displayed": 1054.009350875162
+    },
+    {
+      "original": 1051,
+      "displayed": 1055.3186464781284
+    },
+    {
+      "original": 1052,
+      "displayed": 1056.5428762424895
+    },
+    {
+      "original": 1053,
+      "displayed": 1057.9781527283128
+    },
+    {
+      "original": 1054,
+      "displayed": 1059.3679221513255
+    },
+    {
+      "original": 1055,
+      "displayed": 1060.614196669141
+    },
+    {
+      "original": 1056,
+      "displayed": 1061.883598685271
+    },
+    {
+      "original": 1057,
+      "displayed": 1063.4005026705436
+    },
+    {
+      "original": 1058,
+      "displayed": 1064.5901050285213
+    },
+    {
+      "original": 1059,
+      "displayed": 1065.734031783215
+    },
+    {
+      "original": 1060,
+      "displayed": 1067.2301621620395
+    },
+    {
+      "original": 1061,
+      "displayed": 1068.3407508165985
+    },
+    {
+      "original": 1062,
+      "displayed": 1069.4424454144507
+    },
+    {
+      "original": 1063,
+      "displayed": 1070.6372390460042
+    },
+    {
+      "original": 1064,
+      "displayed": 1071.813279854363
+    },
+    {
+      "original": 1065,
+      "displayed": 1072.8560630307322
+    },
+    {
+      "original": 1066,
+      "displayed": 1074.0620722647072
+    },
+    {
+      "original": 1067,
+      "displayed": 1075.1662830526595
+    },
+    {
+      "original": 1068,
+      "displayed": 1076.1417516178751
+    },
+    {
+      "original": 1069,
+      "displayed": 1077.1137347433985
+    },
+    {
+      "original": 1070,
+      "displayed": 1078.3478805893583
+    },
+    {
+      "original": 1071,
+      "displayed": 1079.3036407012191
+    },
+    {
+      "original": 1072,
+      "displayed": 1080.2761481748826
+    },
+    {
+      "original": 1073,
+      "displayed": 1081.5417310752314
+    },
+    {
+      "original": 1074,
+      "displayed": 1082.577488894488
+    },
+    {
+      "original": 1075,
+      "displayed": 1083.5035421873263
+    },
+    {
+      "original": 1076,
+      "displayed": 1084.743736196138
+    },
+    {
+      "original": 1077,
+      "displayed": 1085.8435768487811
+    },
+    {
+      "original": 1078,
+      "displayed": 1086.8142502389076
+    },
+    {
+      "original": 1079,
+      "displayed": 1087.9381598331165
+    },
+    {
+      "original": 1080,
+      "displayed": 1089.1460332268748
+    },
+    {
+      "original": 1081,
+      "displayed": 1090.2179903619817
+    },
+    {
+      "original": 1082,
+      "displayed": 1091.224199688115
+    },
+    {
+      "original": 1083,
+      "displayed": 1092.5871388296823
+    },
+    {
+      "original": 1084,
+      "displayed": 1093.639024326576
+    },
+    {
+      "original": 1085,
+      "displayed": 1094.7327044560511
+    },
+    {
+      "original": 1086,
+      "displayed": 1096.0399855180037
+    },
+    {
+      "original": 1087,
+      "displayed": 1097.181068648748
+    },
+    {
+      "original": 1088,
+      "displayed": 1098.2214241613267
+    },
+    {
+      "original": 1089,
+      "displayed": 1098.934844068851
+    },
+    {
+      "original": 1090,
+      "displayed": 1099.1796874113318
+    },
+    {
+      "original": 1091,
+      "displayed": 1099.198765965947
+    },
+    {
+      "original": 1092,
+      "displayed": 1099.198765965947
+    },
+    {
+      "original": 1093,
+      "displayed": 1099.198765965947
+    },
+    {
+      "original": 1094,
+      "displayed": 1099.198765965947
+    },
+    {
+      "original": 1095,
+      "displayed": 1099.198765965947
+    },
+    {
+      "original": 1096,
+      "displayed": 1099.198765965947
+    },
+    {
+      "original": 1097,
+      "displayed": 1099.198765965947
+    },
+    {
+      "original": 1098,
+      "displayed": 1099.198765965947
+    },
+    {
+      "original": 1099,
+      "displayed": 1099.2761271782579
+    },
+    {
+      "original": 1100,
+      "displayed": 1099.4031624321583
+    },
+    {
+      "original": 1101,
+      "displayed": 1099.6102941343374
+    },
+    {
+      "original": 1102,
+      "displayed": 1099.8406980412988
+    },
+    {
+      "original": 1103,
+      "displayed": 1100.219826147948
+    },
+    {
+      "original": 1104,
+      "displayed": 1100.7378469266616
+    },
+    {
+      "original": 1105,
+      "displayed": 1101.320562845735
+    },
+    {
+      "original": 1106,
+      "displayed": 1101.9664076704642
+    },
+    {
+      "original": 1107,
+      "displayed": 1102.76638474442
+    },
+    {
+      "original": 1108,
+      "displayed": 1103.8983723643562
+    },
+    {
+      "original": 1109,
+      "displayed": 1104.8866721371387
+    },
+    {
+      "original": 1110,
+      "displayed": 1106.009866711157
+    },
+    {
+      "original": 1111,
+      "displayed": 1107.2142699870842
+    },
+    {
+      "original": 1112,
+      "displayed": 1108.6299702415406
+    },
+    {
+      "original": 1113,
+      "displayed": 1109.9585861440437
+    },
+    {
+      "original": 1114,
+      "displayed": 1111.1675394452805
+    },
+    {
+      "original": 1115,
+      "displayed": 1112.3899833615937
+    },
+    {
+      "original": 1116,
+      "displayed": 1113.830156033295
+    },
+    {
+      "original": 1117,
+      "displayed": 1115.0168313483011
+    },
+    {
+      "original": 1118,
+      "displayed": 1116.246844831539
+    },
+    {
+      "original": 1119,
+      "displayed": 1117.3619971308397
+    },
+    {
+      "original": 1120,
+      "displayed": 1118.7791796335011
+    },
+    {
+      "original": 1121,
+      "displayed": 1119.9109555847617
+    },
+    {
+      "original": 1122,
+      "displayed": 1121.0676443149086
+    },
+    {
+      "original": 1123,
+      "displayed": 1122.2225125809505
+    },
+    {
+      "original": 1124,
+      "displayed": 1123.5909307065988
+    },
+    {
+      "original": 1125,
+      "displayed": 1124.7243199930995
+    },
+    {
+      "original": 1126,
+      "displayed": 1125.9380032096462
+    },
+    {
+      "original": 1127,
+      "displayed": 1127.0673815733621
+    },
+    {
+      "original": 1128,
+      "displayed": 1128.437116244124
+    },
+    {
+      "original": 1129,
+      "displayed": 1129.761933459994
+    },
+    {
+      "original": 1130,
+      "displayed": 1130.9709179724298
+    },
+    {
+      "original": 1131,
+      "displayed": 1132.1394754702676
+    },
+    {
+      "original": 1132,
+      "displayed": 1133.7027973178797
+    },
+    {
+      "original": 1133,
+      "displayed": 1134.8800252867459
+    },
+    {
+      "original": 1134,
+      "displayed": 1136.1270505757616
+    },
+    {
+      "original": 1135,
+      "displayed": 1137.4028480502648
+    },
+    {
+      "original": 1136,
+      "displayed": 1138.9369522434608
+    },
+    {
+      "original": 1137,
+      "displayed": 1139.9415385872562
+    },
+    {
+      "original": 1138,
+      "displayed": 1140
+    },
+    {
+      "original": 1139,
+      "displayed": 1140
+    },
+    {
+      "original": 1140,
+      "displayed": 1140
+    }
+  ],
+  "renderer": "continuous-coverage",
+  "canvas": [
+    1025,
+    280
+  ],
+  "production": {
+    "dpr": 1.25,
+    "rect": [
+      358.3999938964844,
+      185.60000610351562,
+      820,
+      224
+    ],
+    "physical": [
+      447.99999237060547,
+      232.00000762939453,
+      1025,
+      280
+    ],
+    "canvas": [
+      1025,
+      280
+    ],
+    "bundle": [
+      "http://127.0.0.1:5174/assets/index-Bp8CpUMd.js"
+    ],
+    "hd": "true"
+  }
+}

@@ -1,0 +1,30 @@
+[
+  {
+    "dpr": 1.25,
+    "sameGeometryMaxDelta": 2.767122708746683e-06,
+    "centroidDeltaY": 0.44911659782732727,
+    "edgeAlphaMae255": 39.71772818438198,
+    "largeDeltaPixels": 3718
+  },
+  {
+    "dpr": 1,
+    "sameGeometryMaxDelta": 2.2136981669973466e-06,
+    "centroidDeltaY": 0.3856436732030204,
+    "edgeAlphaMae255": 37.60690228270208,
+    "largeDeltaPixels": 2754
+  },
+  {
+    "dpr": 1.5,
+    "sameGeometryMaxDelta": 3.3205473073394387e-06,
+    "centroidDeltaY": 0.47015936081021437,
+    "edgeAlphaMae255": 43.85164822341299,
+    "largeDeltaPixels": 5032
+  },
+  {
+    "dpr": 2,
+    "sameGeometryMaxDelta": 4.427396333994693e-06,
+    "centroidDeltaY": -0.4250505418174839,
+    "edgeAlphaMae255": 51.20820249576418,
+    "largeDeltaPixels": 7453
+  }
+]

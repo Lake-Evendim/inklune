@@ -1,0 +1,25 @@
+// Full production UI, isolated notes and preferences, no localStorage writes.
+import React from 'react';
+import { createRoot } from 'react-dom/client';
+import '@fontsource/special-elite';
+import '@fontsource/courier-prime/400.css';
+import '@fontsource/dm-sans/400.css';
+import '@fontsource/dm-sans/500.css';
+import '../src/styles.css';
+import '../src/motion.css';
+import '../src/lighting.css';
+import '../src/materials.css';
+import '../src/typing.css';
+import '../src/ui.css';
+import App from '../src/App';
+import { createNote, defaults } from '../src/storage';
+import { kits, paperSkins } from '../src/skins';
+import type { Paper } from '../src/storage';
+const params=new URLSearchParams(location.search);
+const kit=kits.find(k=>k.id===params.get('kit'));
+const paper=params.get('paper') as Paper;
+const lighting=params.has('max')?{brightness:200,spread:160,beam:200}:{};
+const temperature=params.has('cold')?{warmth:0}:params.has('warm')?{warmth:100}:{};
+const note=createNote(params.has('long')?Array.from({length:50},(_,i)=>`${String(i+1).padStart(2,'0')}. Paper and ink roll together. 纸与字一起卷动。`).join('\n'):params.has('short')?'Let’s\njn.':'给美好留一点空间。\n\n慢下来。\n找到你的下一句话。');
+const other=createNote('关于一些小事\n\n把窗户打开，让风进来。');
+createRoot(document.getElementById('root')!).render(<React.StrictMode><App persist={false} initialWorkspace={{notes:[note,other],activeId:note.id,settings:{...defaults,paper:paperSkins[paper]?paper:'blue',sound:false,night:params.has('night'),...lighting,...temperature,...(kit?{kit:kit.id,rail:kit.rail,endcap:kit.endcap}:{} )}}}/></React.StrictMode>);

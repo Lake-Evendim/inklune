@@ -1,0 +1,109 @@
+{
+  "pass": true,
+  "checks": [
+    {
+      "name": "all ink samples have a writing time",
+      "pass": true,
+      "renderer": "continuous-coverage",
+      "unassigned": "0",
+      "canvas": [
+        1025,
+        280
+      ],
+      "bundle": [
+        "http://127.0.0.1:5174/assets/index-ChtVksrF.js"
+      ]
+    },
+    {
+      "name": "k continues to reveal ink through returns",
+      "pass": true,
+      "minGrowthPer5ms": 0.16862745098114829,
+      "samples": 79
+    },
+    {
+      "name": "no backwards ink, disconnected strokes or early next letter",
+      "pass": true,
+      "samples": 463,
+      "faults": []
+    },
+    {
+      "name": "finish event preserves every native ink pixel",
+      "pass": true
+    },
+    {
+      "name": "finish event preserves actual screen pixels",
+      "pass": true,
+      "changedPixels": 0
+    },
+    {
+      "name": "natural playback finishes on its own clock 0",
+      "pass": true,
+      "firstComplete": {
+        "t": 4375.10000038147,
+        "time": 2310,
+        "clock": 2310,
+        "state": "finished",
+        "hd": "true",
+        "canvasDisplay": "block"
+      },
+      "early": []
+    },
+    {
+      "name": "natural playback finishes on its own clock 1",
+      "pass": true,
+      "firstComplete": {
+        "t": 4445.900000095367,
+        "time": 2310,
+        "clock": 2310,
+        "state": "finished",
+        "hd": "true",
+        "canvasDisplay": "block"
+      },
+      "early": []
+    },
+    {
+      "name": "natural playback finishes on its own clock 2",
+      "pass": true,
+      "firstComplete": {
+        "t": 4532.900000095367,
+        "time": 2310,
+        "clock": 2310,
+        "state": "finished",
+        "hd": "true",
+        "canvasDisplay": "block"
+      },
+      "early": []
+    },
+    {
+      "name": "theme change retains paused writing progress",
+      "pass": true
+    },
+    {
+      "name": "DPR change retains paused writing progress",
+      "pass": true
+    },
+    {
+      "name": "signature captures the current bitmap",
+      "pass": true,
+      "maxChannelDelta": 0
+    },
+    {
+      "name": "signature cleans up its snapshot",
+      "pass": true
+    },
+    {
+      "name": "gates captures the current bitmap",
+      "pass": true,
+      "maxChannelDelta": 0
+    },
+    {
+      "name": "gates cleans up its snapshot",
+      "pass": true
+    },
+    {
+      "name": "no browser exceptions",
+      "pass": true,
+      "errors": []
+    }
+  ]
+}

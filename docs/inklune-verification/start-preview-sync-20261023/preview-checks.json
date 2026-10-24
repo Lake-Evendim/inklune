@@ -1,0 +1,767 @@
+{
+  "pass": true,
+  "checks": [
+    {
+      "design": "quiet",
+      "night": false,
+      "renderer": "continuous-coverage",
+      "coverage": "area-average",
+      "unassigned": "0",
+      "complete": "true",
+      "time": 2310,
+      "canvas": [
+        1640,
+        448
+      ],
+      "bundle": [
+        "http://127.0.0.1:5174/assets/index-BpJm8tvG.js"
+      ],
+      "crossingMs": 17.058444394248113,
+      "crossingSpeedRatio": 0.9999999999999958,
+      "name": "quiet-desktop-day",
+      "pass": true
+    },
+    {
+      "design": "quiet",
+      "night": true,
+      "renderer": "continuous-coverage",
+      "coverage": "area-average",
+      "unassigned": "0",
+      "complete": "true",
+      "time": 2310,
+      "canvas": [
+        1640,
+        448
+      ],
+      "bundle": [
+        "http://127.0.0.1:5174/assets/index-BpJm8tvG.js"
+      ],
+      "crossingMs": 17.058444394248113,
+      "crossingSpeedRatio": 0.9999999999999958,
+      "name": "quiet-desktop-night",
+      "pass": true
+    },
+    {
+      "design": "quiet",
+      "night": false,
+      "renderer": "continuous-coverage",
+      "coverage": "area-average",
+      "unassigned": "0",
+      "complete": "true",
+      "time": 2310,
+      "canvas": [
+        671,
+        183
+      ],
+      "bundle": [
+        "http://127.0.0.1:5174/assets/index-BpJm8tvG.js"
+      ],
+      "crossingMs": 17.70129851368165,
+      "crossingSpeedRatio": 1.000000000000004,
+      "name": "quiet-phone-day",
+      "pass": true
+    },
+    {
+      "design": "quiet",
+      "night": true,
+      "renderer": "continuous-coverage",
+      "coverage": "area-average",
+      "unassigned": "0",
+      "complete": "true",
+      "time": 2310,
+      "canvas": [
+        671,
+        183
+      ],
+      "bundle": [
+        "http://127.0.0.1:5174/assets/index-BpJm8tvG.js"
+      ],
+      "crossingMs": 17.70129851368165,
+      "crossingSpeedRatio": 1.000000000000004,
+      "name": "quiet-phone-night",
+      "pass": true
+    },
+    {
+      "design": "nord",
+      "night": false,
+      "renderer": "continuous-coverage",
+      "coverage": "area-average",
+      "unassigned": "0",
+      "complete": "true",
+      "time": 2310,
+      "canvas": [
+        1640,
+        448
+      ],
+      "bundle": [
+        "http://127.0.0.1:5174/assets/index-BpJm8tvG.js"
+      ],
+      "crossingMs": 17.058444394248113,
+      "crossingSpeedRatio": 0.9999999999999958,
+      "name": "nord-desktop-day",
+      "pass": true
+    },
+    {
+      "design": "nord",
+      "night": true,
+      "renderer": "continuous-coverage",
+      "coverage": "area-average",
+      "unassigned": "0",
+      "complete": "true",
+      "time": 2310,
+      "canvas": [
+        1640,
+        448
+      ],
+      "bundle": [
+        "http://127.0.0.1:5174/assets/index-BpJm8tvG.js"
+      ],
+      "crossingMs": 17.058444394248113,
+      "crossingSpeedRatio": 0.9999999999999958,
+      "name": "nord-desktop-night",
+      "pass": true
+    },
+    {
+      "design": "nord",
+      "night": false,
+      "renderer": "continuous-coverage",
+      "coverage": "area-average",
+      "unassigned": "0",
+      "complete": "true",
+      "time": 2310,
+      "canvas": [
+        671,
+        183
+      ],
+      "bundle": [
+        "http://127.0.0.1:5174/assets/index-BpJm8tvG.js"
+      ],
+      "crossingMs": 17.70129851368165,
+      "crossingSpeedRatio": 1.000000000000004,
+      "name": "nord-phone-day",
+      "pass": true
+    },
+    {
+      "design": "nord",
+      "night": true,
+      "renderer": "continuous-coverage",
+      "coverage": "area-average",
+      "unassigned": "0",
+      "complete": "true",
+      "time": 2310,
+      "canvas": [
+        671,
+        183
+      ],
+      "bundle": [
+        "http://127.0.0.1:5174/assets/index-BpJm8tvG.js"
+      ],
+      "crossingMs": 17.70129851368165,
+      "crossingSpeedRatio": 1.000000000000004,
+      "name": "nord-phone-night",
+      "pass": true
+    },
+    {
+      "design": "letter",
+      "night": false,
+      "renderer": "continuous-coverage",
+      "coverage": "area-average",
+      "unassigned": "0",
+      "complete": "true",
+      "time": 2310,
+      "canvas": [
+        1640,
+        448
+      ],
+      "bundle": [
+        "http://127.0.0.1:5174/assets/index-BpJm8tvG.js"
+      ],
+      "crossingMs": 17.058444394248113,
+      "crossingSpeedRatio": 0.9999999999999958,
+      "name": "letter-desktop-day",
+      "pass": true
+    },
+    {
+      "design": "letter",
+      "night": true,
+      "renderer": "continuous-coverage",
+      "coverage": "area-average",
+      "unassigned": "0",
+      "complete": "true",
+      "time": 2310,
+      "canvas": [
+        1640,
+        448
+      ],
+      "bundle": [
+        "http://127.0.0.1:5174/assets/index-BpJm8tvG.js"
+      ],
+      "crossingMs": 17.058444394248113,
+      "crossingSpeedRatio": 0.9999999999999958,
+      "name": "letter-desktop-night",
+      "pass": true
+    },
+    {
+      "design": "letter",
+      "night": false,
+      "renderer": "continuous-coverage",
+      "coverage": "area-average",
+      "unassigned": "0",
+      "complete": "true",
+      "time": 2310,
+      "canvas": [
+        671,
+        183
+      ],
+      "bundle": [
+        "http://127.0.0.1:5174/assets/index-BpJm8tvG.js"
+      ],
+      "crossingMs": 17.70129851368165,
+      "crossingSpeedRatio": 1.000000000000004,
+      "name": "letter-phone-day",
+      "pass": true
+    },
+    {
+      "design": "letter",
+      "night": true,
+      "renderer": "continuous-coverage",
+      "coverage": "area-average",
+      "unassigned": "0",
+      "complete": "true",
+      "time": 2310,
+      "canvas": [
+        671,
+        183
+      ],
+      "bundle": [
+        "http://127.0.0.1:5174/assets/index-BpJm8tvG.js"
+      ],
+      "crossingMs": 17.70129851368165,
+      "crossingSpeedRatio": 1.000000000000004,
+      "name": "letter-phone-night",
+      "pass": true
+    },
+    {
+      "design": "japandi",
+      "night": false,
+      "renderer": "continuous-coverage",
+      "coverage": "area-average",
+      "unassigned": "0",
+      "complete": "true",
+      "time": 2310,
+      "canvas": [
+        1640,
+        448
+      ],
+      "bundle": [
+        "http://127.0.0.1:5174/assets/index-BpJm8tvG.js"
+      ],
+      "crossingMs": 17.058444394248113,
+      "crossingSpeedRatio": 0.9999999999999958,
+      "name": "japandi-desktop-day",
+      "pass": true
+    },
+    {
+      "design": "japandi",
+      "night": true,
+      "renderer": "continuous-coverage",
+      "coverage": "area-average",
+      "unassigned": "0",
+      "complete": "true",
+      "time": 2310,
+      "canvas": [
+        1640,
+        448
+      ],
+      "bundle": [
+        "http://127.0.0.1:5174/assets/index-BpJm8tvG.js"
+      ],
+      "crossingMs": 17.058444394248113,
+      "crossingSpeedRatio": 0.9999999999999958,
+      "name": "japandi-desktop-night",
+      "pass": true
+    },
+    {
+      "design": "japandi",
+      "night": false,
+      "renderer": "continuous-coverage",
+      "coverage": "area-average",
+      "unassigned": "0",
+      "complete": "true",
+      "time": 2310,
+      "canvas": [
+        671,
+        183
+      ],
+      "bundle": [
+        "http://127.0.0.1:5174/assets/index-BpJm8tvG.js"
+      ],
+      "crossingMs": 17.70129851368165,
+      "crossingSpeedRatio": 1.000000000000004,
+      "name": "japandi-phone-day",
+      "pass": true
+    },
+    {
+      "design": "japandi",
+      "night": true,
+      "renderer": "continuous-coverage",
+      "coverage": "area-average",
+      "unassigned": "0",
+      "complete": "true",
+      "time": 2310,
+      "canvas": [
+        671,
+        183
+      ],
+      "bundle": [
+        "http://127.0.0.1:5174/assets/index-BpJm8tvG.js"
+      ],
+      "crossingMs": 17.70129851368165,
+      "crossingSpeedRatio": 1.000000000000004,
+      "name": "japandi-phone-night",
+      "pass": true
+    },
+    {
+      "design": "nocturne",
+      "night": false,
+      "renderer": "continuous-coverage",
+      "coverage": "area-average",
+      "unassigned": "0",
+      "complete": "true",
+      "time": 2310,
+      "canvas": [
+        1640,
+        448
+      ],
+      "bundle": [
+        "http://127.0.0.1:5174/assets/index-BpJm8tvG.js"
+      ],
+      "crossingMs": 17.058444394248113,
+      "crossingSpeedRatio": 0.9999999999999958,
+      "name": "nocturne-desktop-day",
+      "pass": true
+    },
+    {
+      "design": "nocturne",
+      "night": true,
+      "renderer": "continuous-coverage",
+      "coverage": "area-average",
+      "unassigned": "0",
+      "complete": "true",
+      "time": 2310,
+      "canvas": [
+        1640,
+        448
+      ],
+      "bundle": [
+        "http://127.0.0.1:5174/assets/index-BpJm8tvG.js"
+      ],
+      "crossingMs": 17.058444394248113,
+      "crossingSpeedRatio": 0.9999999999999958,
+      "name": "nocturne-desktop-night",
+      "pass": true
+    },
+    {
+      "design": "nocturne",
+      "night": false,
+      "renderer": "continuous-coverage",
+      "coverage": "area-average",
+      "unassigned": "0",
+      "complete": "true",
+      "time": 2310,
+      "canvas": [
+        671,
+        183
+      ],
+      "bundle": [
+        "http://127.0.0.1:5174/assets/index-BpJm8tvG.js"
+      ],
+      "crossingMs": 17.70129851368165,
+      "crossingSpeedRatio": 1.000000000000004,
+      "name": "nocturne-phone-day",
+      "pass": true
+    },
+    {
+      "design": "nocturne",
+      "night": true,
+      "renderer": "continuous-coverage",
+      "coverage": "area-average",
+      "unassigned": "0",
+      "complete": "true",
+      "time": 2310,
+      "canvas": [
+        671,
+        183
+      ],
+      "bundle": [
+        "http://127.0.0.1:5174/assets/index-BpJm8tvG.js"
+      ],
+      "crossingMs": 17.70129851368165,
+      "crossingSpeedRatio": 1.000000000000004,
+      "name": "nocturne-phone-night",
+      "pass": true
+    },
+    {
+      "design": "focus",
+      "night": false,
+      "renderer": "continuous-coverage",
+      "coverage": "area-average",
+      "unassigned": "0",
+      "complete": "true",
+      "time": 2310,
+      "canvas": [
+        1640,
+        448
+      ],
+      "bundle": [
+        "http://127.0.0.1:5174/assets/index-BpJm8tvG.js"
+      ],
+      "crossingMs": 17.058444394248113,
+      "crossingSpeedRatio": 0.9999999999999958,
+      "name": "focus-desktop-day",
+      "pass": true
+    },
+    {
+      "design": "focus",
+      "night": true,
+      "renderer": "continuous-coverage",
+      "coverage": "area-average",
+      "unassigned": "0",
+      "complete": "true",
+      "time": 2310,
+      "canvas": [
+        1640,
+        448
+      ],
+      "bundle": [
+        "http://127.0.0.1:5174/assets/index-BpJm8tvG.js"
+      ],
+      "crossingMs": 17.058444394248113,
+      "crossingSpeedRatio": 0.9999999999999958,
+      "name": "focus-desktop-night",
+      "pass": true
+    },
+    {
+      "design": "focus",
+      "night": false,
+      "renderer": "continuous-coverage",
+      "coverage": "area-average",
+      "unassigned": "0",
+      "complete": "true",
+      "time": 2310,
+      "canvas": [
+        671,
+        183
+      ],
+      "bundle": [
+        "http://127.0.0.1:5174/assets/index-BpJm8tvG.js"
+      ],
+      "crossingMs": 17.70129851368165,
+      "crossingSpeedRatio": 1.000000000000004,
+      "name": "focus-phone-day",
+      "pass": true
+    },
+    {
+      "design": "focus",
+      "night": true,
+      "renderer": "continuous-coverage",
+      "coverage": "area-average",
+      "unassigned": "0",
+      "complete": "true",
+      "time": 2310,
+      "canvas": [
+        671,
+        183
+      ],
+      "bundle": [
+        "http://127.0.0.1:5174/assets/index-BpJm8tvG.js"
+      ],
+      "crossingMs": 17.70129851368165,
+      "crossingSpeedRatio": 1.000000000000004,
+      "name": "focus-phone-night",
+      "pass": true
+    },
+    {
+      "design": "glass",
+      "night": false,
+      "renderer": "continuous-coverage",
+      "coverage": "area-average",
+      "unassigned": "0",
+      "complete": "true",
+      "time": 2310,
+      "canvas": [
+        1640,
+        448
+      ],
+      "bundle": [
+        "http://127.0.0.1:5174/assets/index-BpJm8tvG.js"
+      ],
+      "crossingMs": 17.058444394248113,
+      "crossingSpeedRatio": 0.9999999999999958,
+      "name": "glass-desktop-day",
+      "pass": true
+    },
+    {
+      "design": "glass",
+      "night": true,
+      "renderer": "continuous-coverage",
+      "coverage": "area-average",
+      "unassigned": "0",
+      "complete": "true",
+      "time": 2310,
+      "canvas": [
+        1640,
+        448
+      ],
+      "bundle": [
+        "http://127.0.0.1:5174/assets/index-BpJm8tvG.js"
+      ],
+      "crossingMs": 17.058444394248113,
+      "crossingSpeedRatio": 0.9999999999999958,
+      "name": "glass-desktop-night",
+      "pass": true
+    },
+    {
+      "design": "glass",
+      "night": false,
+      "renderer": "continuous-coverage",
+      "coverage": "area-average",
+      "unassigned": "0",
+      "complete": "true",
+      "time": 2310,
+      "canvas": [
+        671,
+        183
+      ],
+      "bundle": [
+        "http://127.0.0.1:5174/assets/index-BpJm8tvG.js"
+      ],
+      "crossingMs": 17.70129851368165,
+      "crossingSpeedRatio": 1.000000000000004,
+      "name": "glass-phone-day",
+      "pass": true
+    },
+    {
+      "design": "glass",
+      "night": true,
+      "renderer": "continuous-coverage",
+      "coverage": "area-average",
+      "unassigned": "0",
+      "complete": "true",
+      "time": 2310,
+      "canvas": [
+        671,
+        183
+      ],
+      "bundle": [
+        "http://127.0.0.1:5174/assets/index-BpJm8tvG.js"
+      ],
+      "crossingMs": 17.70129851368165,
+      "crossingSpeedRatio": 1.000000000000004,
+      "name": "glass-phone-night",
+      "pass": true
+    },
+    {
+      "design": "organic",
+      "night": false,
+      "renderer": "continuous-coverage",
+      "coverage": "area-average",
+      "unassigned": "0",
+      "complete": "true",
+      "time": 2310,
+      "canvas": [
+        1640,
+        448
+      ],
+      "bundle": [
+        "http://127.0.0.1:5174/assets/index-BpJm8tvG.js"
+      ],
+      "crossingMs": 17.058444394248113,
+      "crossingSpeedRatio": 0.9999999999999958,
+      "name": "organic-desktop-day",
+      "pass": true
+    },
+    {
+      "design": "organic",
+      "night": true,
+      "renderer": "continuous-coverage",
+      "coverage": "area-average",
+      "unassigned": "0",
+      "complete": "true",
+      "time": 2310,
+      "canvas": [
+        1640,
+        448
+      ],
+      "bundle": [
+        "http://127.0.0.1:5174/assets/index-BpJm8tvG.js"
+      ],
+      "crossingMs": 17.058444394248113,
+      "crossingSpeedRatio": 0.9999999999999958,
+      "name": "organic-desktop-night",
+      "pass": true
+    },
+    {
+      "design": "organic",
+      "night": false,
+      "renderer": "continuous-coverage",
+      "coverage": "area-average",
+      "unassigned": "0",
+      "complete": "true",
+      "time": 2310,
+      "canvas": [
+        671,
+        183
+      ],
+      "bundle": [
+        "http://127.0.0.1:5174/assets/index-BpJm8tvG.js"
+      ],
+      "crossingMs": 17.70129851368165,
+      "crossingSpeedRatio": 1.000000000000004,
+      "name": "organic-phone-day",
+      "pass": true
+    },
+    {
+      "design": "organic",
+      "night": true,
+      "renderer": "continuous-coverage",
+      "coverage": "area-average",
+      "unassigned": "0",
+      "complete": "true",
+      "time": 2310,
+      "canvas": [
+        671,
+        183
+      ],
+      "bundle": [
+        "http://127.0.0.1:5174/assets/index-BpJm8tvG.js"
+      ],
+      "crossingMs": 17.70129851368165,
+      "crossingSpeedRatio": 1.000000000000004,
+      "name": "organic-phone-night",
+      "pass": true
+    },
+    {
+      "design": "quiet",
+      "renderer": "continuous-coverage",
+      "coverage": "area-average",
+      "time": 2310,
+      "bundle": [
+        "http://127.0.0.1:5174/assets/index-BpJm8tvG.js"
+      ],
+      "ready": true,
+      "name": "expanded-quiet",
+      "pass": true
+    },
+    {
+      "design": "nord",
+      "renderer": "continuous-coverage",
+      "coverage": "area-average",
+      "time": 2310,
+      "bundle": [
+        "http://127.0.0.1:5174/assets/index-BpJm8tvG.js"
+      ],
+      "ready": true,
+      "name": "expanded-nord",
+      "pass": true
+    },
+    {
+      "design": "letter",
+      "renderer": "continuous-coverage",
+      "coverage": "area-average",
+      "time": 2310,
+      "bundle": [
+        "http://127.0.0.1:5174/assets/index-BpJm8tvG.js"
+      ],
+      "ready": true,
+      "name": "expanded-letter",
+      "pass": true
+    },
+    {
+      "design": "japandi",
+      "renderer": "continuous-coverage",
+      "coverage": "area-average",
+      "time": 2310,
+      "bundle": [
+        "http://127.0.0.1:5174/assets/index-BpJm8tvG.js"
+      ],
+      "ready": true,
+      "name": "expanded-japandi",
+      "pass": true
+    },
+    {
+      "design": "nocturne",
+      "renderer": "continuous-coverage",
+      "coverage": "area-average",
+      "time": 2310,
+      "bundle": [
+        "http://127.0.0.1:5174/assets/index-BpJm8tvG.js"
+      ],
+      "ready": true,
+      "name": "expanded-nocturne",
+      "pass": true
+    },
+    {
+      "design": "focus",
+      "renderer": "continuous-coverage",
+      "coverage": "area-average",
+      "time": 2310,
+      "bundle": [
+        "http://127.0.0.1:5174/assets/index-BpJm8tvG.js"
+      ],
+      "ready": true,
+      "name": "expanded-focus",
+      "pass": true
+    },
+    {
+      "design": "glass",
+      "renderer": "continuous-coverage",
+      "coverage": "area-average",
+      "time": 2310,
+      "bundle": [
+        "http://127.0.0.1:5174/assets/index-BpJm8tvG.js"
+      ],
+      "ready": true,
+      "name": "expanded-glass",
+      "pass": true
+    },
+    {
+      "design": "organic",
+      "renderer": "continuous-coverage",
+      "coverage": "area-average",
+      "time": 2310,
+      "bundle": [
+        "http://127.0.0.1:5174/assets/index-BpJm8tvG.js"
+      ],
+      "ready": true,
+      "name": "expanded-organic",
+      "pass": true
+    }
+  ],
+  "thumbnailUrls": [
+    {
+      "src": "http://127.0.0.1:5174/start-previews/quiet-desktop-day.webp"
+    },
+    {
+      "src": "http://127.0.0.1:5174/start-previews/nord-desktop-day.webp"
+    },
+    {
+      "src": "http://127.0.0.1:5174/start-previews/letter-desktop-day.webp"
+    },
+    {
+      "src": "http://127.0.0.1:5174/start-previews/japandi-desktop-day.webp"
+    },
+    {
+      "src": "http://127.0.0.1:5174/start-previews/nocturne-desktop-day.webp"
+    },
+    {
+      "src": "http://127.0.0.1:5174/start-previews/focus-desktop-day.webp"
+    },
+    {
+      "src": "http://127.0.0.1:5174/start-previews/glass-desktop-day.webp"
+    },
+    {
+      "src": "http://127.0.0.1:5174/start-previews/organic-desktop-day.webp"
+    }
+  ]
+}

@@ -1,0 +1,2 @@
+<!doctype html><html><head><meta charset="utf-8"><title>信盒响应式预览</title><style>html,body{margin:0;background:#171916}iframe{display:block;border:0}</style></head><body><iframe id="room" title="信盒响应式预览"></iframe><script type="module">const q=new URLSearchParams(location.search),f=document.querySelector('#room');f.style.width=(Number(q.get('width'))||390)+'px';f.style.height=(Number(q.get('height'))||700)+'px';f.src=q.has('input')?'/tests/interaction.html':'/tests/library-room.html'+(q.has('night')?'?night':'');</script></body></html>
+

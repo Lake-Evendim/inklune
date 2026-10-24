@@ -1,0 +1,151 @@
+{
+  "pass": true,
+  "checks": [
+    {
+      "design": "quiet",
+      "renderer": "continuous-coverage",
+      "coverage": "area-average",
+      "time": 2310,
+      "bundle": [
+        "http://127.0.0.1:5174/assets/index-C4yqqZaJ.js"
+      ],
+      "ready": true,
+      "crossingMs": 17.15423677067838,
+      "crossingSpeedRatio": 1.0000000000000049,
+      "name": "expanded-quiet",
+      "pass": true
+    },
+    {
+      "design": "nord",
+      "renderer": "continuous-coverage",
+      "coverage": "area-average",
+      "time": 2310,
+      "bundle": [
+        "http://127.0.0.1:5174/assets/index-C4yqqZaJ.js"
+      ],
+      "ready": true,
+      "crossingMs": 17.15423677067838,
+      "crossingSpeedRatio": 1.0000000000000049,
+      "name": "expanded-nord",
+      "pass": true
+    },
+    {
+      "design": "letter",
+      "renderer": "continuous-coverage",
+      "coverage": "area-average",
+      "time": 2310,
+      "bundle": [
+        "http://127.0.0.1:5174/assets/index-C4yqqZaJ.js"
+      ],
+      "ready": true,
+      "crossingMs": 17.15423677067838,
+      "crossingSpeedRatio": 1.0000000000000049,
+      "name": "expanded-letter",
+      "pass": true
+    },
+    {
+      "design": "japandi",
+      "renderer": "continuous-coverage",
+      "coverage": "area-average",
+      "time": 2310,
+      "bundle": [
+        "http://127.0.0.1:5174/assets/index-C4yqqZaJ.js"
+      ],
+      "ready": true,
+      "crossingMs": 17.15423677067838,
+      "crossingSpeedRatio": 1.0000000000000049,
+      "name": "expanded-japandi",
+      "pass": true
+    },
+    {
+      "design": "nocturne",
+      "renderer": "continuous-coverage",
+      "coverage": "area-average",
+      "time": 2310,
+      "bundle": [
+        "http://127.0.0.1:5174/assets/index-C4yqqZaJ.js"
+      ],
+      "ready": true,
+      "crossingMs": 17.15423677067838,
+      "crossingSpeedRatio": 1.0000000000000049,
+      "name": "expanded-nocturne",
+      "pass": true
+    },
+    {
+      "design": "focus",
+      "renderer": "continuous-coverage",
+      "coverage": "area-average",
+      "time": 2310,
+      "bundle": [
+        "http://127.0.0.1:5174/assets/index-C4yqqZaJ.js"
+      ],
+      "ready": true,
+      "crossingMs": 17.15423677067838,
+      "crossingSpeedRatio": 1.0000000000000049,
+      "name": "expanded-focus",
+      "pass": true
+    },
+    {
+      "design": "glass",
+      "renderer": "continuous-coverage",
+      "coverage": "area-average",
+      "time": 2310,
+      "bundle": [
+        "http://127.0.0.1:5174/assets/index-C4yqqZaJ.js"
+      ],
+      "ready": true,
+      "crossingMs": 17.15423677067838,
+      "crossingSpeedRatio": 1.0000000000000049,
+      "name": "expanded-glass",
+      "pass": true
+    },
+    {
+      "design": "organic",
+      "renderer": "continuous-coverage",
+      "coverage": "area-average",
+      "time": 2310,
+      "bundle": [
+        "http://127.0.0.1:5174/assets/index-C4yqqZaJ.js"
+      ],
+      "ready": true,
+      "crossingMs": 17.15423677067838,
+      "crossingSpeedRatio": 1.0000000000000049,
+      "name": "expanded-organic",
+      "pass": true
+    }
+  ],
+  "thumbnailUrls": [
+    {
+      "src": "http://127.0.0.1:5174/start-previews/quiet-desktop-day.webp?v=logo-20261023-arc",
+      "loaded": true
+    },
+    {
+      "src": "http://127.0.0.1:5174/start-previews/nord-desktop-day.webp?v=logo-20261023-arc",
+      "loaded": true
+    },
+    {
+      "src": "http://127.0.0.1:5174/start-previews/letter-desktop-day.webp?v=logo-20261023-arc",
+      "loaded": true
+    },
+    {
+      "src": "http://127.0.0.1:5174/start-previews/japandi-desktop-day.webp?v=logo-20261023-arc",
+      "loaded": true
+    },
+    {
+      "src": "http://127.0.0.1:5174/start-previews/nocturne-desktop-day.webp?v=logo-20261023-arc",
+      "loaded": true
+    },
+    {
+      "src": "http://127.0.0.1:5174/start-previews/focus-desktop-day.webp?v=logo-20261023-arc",
+      "loaded": true
+    },
+    {
+      "src": "http://127.0.0.1:5174/start-previews/glass-desktop-day.webp?v=logo-20261023-arc",
+      "loaded": true
+    },
+    {
+      "src": "http://127.0.0.1:5174/start-previews/organic-desktop-day.webp?v=logo-20261023-arc",
+      "loaded": true
+    }
+  ]
+}

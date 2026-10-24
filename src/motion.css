@@ -1,0 +1,73 @@
+/* The sheet is a viewport into a moving roll; the rail lives outside that roll. */
+.typewriter-assembly {
+  --carriage-x: 80px;
+  --carriage-y: 135px;
+  --paper-feed: 0px;
+  --carriage-tilt: 0deg;
+}
+
+.paper,
+.paper.curved {
+  height: 680px;
+  min-height: 0;
+  transform: none;
+  /* Paper movement is explicit. A scroll container would let focusing the
+     bottom sliders scroll the lighting layers away from the carriage. */
+  overflow: clip;
+}
+
+.paper-content {
+  position: absolute;
+  inset: 0 0 auto;
+  padding-top: 1px;
+  transform: translate3d(0, calc(-1 * var(--paper-feed)), 0);
+  will-change: transform;
+}
+
+.paper .writing-area { min-height: 480px; }
+.paper .ink-text, .paper .writing-input { min-height: 480px; }
+.paper .writing-input { caret-color: #586b40; }
+.paper .paper-footer { z-index: 4; }
+
+.carriage,
+.capsule-anchor {
+  transition: none;
+  will-change: left, top;
+}
+
+.capsule-sled {
+  position: absolute;
+  width: 0;
+  height: 0;
+  transform: rotate(var(--carriage-tilt));
+  transform-origin: 0 24px;
+}
+
+.type-hammer { will-change: transform; }
+.capsule { will-change: transform; }
+.night .paper-content { z-index: 3; }
+
+@media (min-width: 1600px) {
+  .paper, .paper.curved { height: 740px; }
+}
+
+@media (max-width: 760px) {
+  .paper, .paper.curved { height: 640px; }
+  .paper .writing-area,
+  .paper .ink-text,
+  .paper .writing-input { min-height: 460px; }
+  .focus-mode .paper, .focus-mode .paper.curved {
+    height: max(520px, calc(100dvh - 166px));
+    min-height: 0;
+  }
+}
+
+@media print {
+  .paper, .paper.curved { height: auto !important; overflow: visible; }
+  .paper-content { position: relative; transform: none; will-change: auto; }
+  .paper .writing-area, .paper .ink-text { min-height: 0; }
+}
+
+.paper-surface { position:absolute; inset:0; isolation:isolate; }
+.roll-definition { position:absolute; pointer-events:none; }
+@media print { .paper-surface { position:relative; filter:none!important; } }

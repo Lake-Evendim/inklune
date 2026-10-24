@@ -1,0 +1,174 @@
+import { useLayoutEffect, useRef } from 'react';
+import type { RefObject } from 'react';
+import type { Settings } from './storage';
+import { paperSkins } from './skins';
+import { lampAperture, lampTint } from './lamp';
+import type { LampFrame } from './lampIgnition';
+
+type LightingRefs = {
+  root: RefObject<HTMLDivElement | null>; paper: RefObject<HTMLDivElement | null>;
+  canvas: RefObject<HTMLCanvasElement | null>; draw: RefObject<(() => void) | null>;
+  drawPaper: RefObject<(() => void) | null>;
+};
+const materials = Object.fromEntries(Object.entries(paperSkins).map(([id,stock])=>[id,{ day:[1,3,5].map(i=>parseInt(stock.color.slice(i,i+2),16)),ambient:stock.ambient }]));
+// Cross sections of the official 112° / 120% night image. Coordinates in
+// source pixels on a 430px sheet, above the 20px emitter. This separates the
+// rounded aperture, expanding penumbra and longitudinal falloff.
+const sections = [
+  // height, center level, half width, edge softness, lateral rolloff
+  [0, .88, lampAperture.length/2, .55, .00], [5, .92, 19, 2.5, .00],
+  [15, .96, 32, 3, .01], [30, 1, 51, 4, .03],
+  [50, 1, 75, 7, .05], [70, .96, 96, 11, .09],
+  [90, .76, 115, 16, .14], [110, .52, 134, 23, .18],
+  [130, .36, 151, 32, .22], [150, .23, 166, 42, .23],
+  [175, .08, 184, 55, .23], [200, 0, 200, 65, .23],
+  [225, 0, 260, 75, .23],
+];
+function profile(height: number) {
+  for (let i=1;i<sections.length;i++) {
+    if (height > sections[i][0]) continue;
+    const a=sections[i-1], b=sections[i];
+    const t=Math.max(0,Math.min(1,(height-a[0])/(b[0]-a[0])));
+    return a.slice(1).map((v,j)=> {
+      const column=j+1, delta=(b[column]-v)/(b[0]-a[0]);
+      const slope=(row:number)=> {
+        const prev=sections[Math.max(0,row-1)], next=sections[Math.min(sections.length-1,row+1)], at=sections[row];
+        if(row===0 || row===sections.length-1) return (next[column]-prev[column])/(next[0]-prev[0]);
+        const left=(at[column]-prev[column])/(at[0]-prev[0]);
+        const right=(next[column]-at[column])/(next[0]-at[0]);
+        if(left*right<=0)return 0;
+        return 2*left*right/(left+right);
+      };
+      const span=b[0]-a[0];
+      const m0=Math.abs(delta)<1e-8?0:slope(i-1), m1=Math.abs(delta)<1e-8?0:slope(i);
+      return (2*t*t*t-3*t*t+1)*v+(t*t*t-2*t*t+t)*span*m0+(-2*t*t*t+3*t*t)*b[column]+(t*t*t-t*t)*span*m1;
+    });
+  }
+  return [0,260,75,.23];
+}
+export default function usePaperLighting(refs: LightingRefs, settings: Settings, ignition: RefObject<LampFrame>) {
+  const field=useRef<HTMLCanvasElement | null>(null);
+  useLayoutEffect(()=> {
+    const paper=refs.paper.current, canvas=refs.canvas.current;
+    if (!paper || !canvas) return;
+    const material=materials[settings.paper];
+    const ambient=material.ambient.map((v,i)=>Math.round(v/material.day[i]*255));
+    const power=settings.brightness/150, reach=settings.beam/120;
+    // Angular spread changes width only; range changes both projection axes.
+    const spread=Math.tan(settings.spread/2*Math.PI/180)/Math.tan(56*Math.PI/180);
+    const tint=lampTint(settings.warmth);
+    let scale=1, fieldWidth=0, fieldHeight=0, upperHeight=0, sheetWidth=0, sheetHeight=0;
+    const rebuild=()=> {
+      if (paper.clientWidth<=0 || paper.clientHeight<=0) return;
+      const ratio=Math.min(devicePixelRatio || 1,2);
+      sheetWidth=paper.clientWidth;sheetHeight=paper.clientHeight;
+      scale=sheetWidth/430;
+      canvas.width=Math.round(paper.clientWidth*ratio); canvas.height=Math.round(paper.clientHeight*ratio);
+      // Anything farther than a full sheet to either side cannot be visible
+      // for a carriage constrained to that sheet. Avoid huge offscreen fields.
+      fieldWidth=Math.min(680*scale*reach*Math.max(1,spread),paper.clientWidth*2+80*scale);
+      upperHeight=226*scale*reach;
+      // Continue below the aperture with a short smooth tail. The former
+      // sprite ended with nonzero alpha at its bottom, creating a straight
+      // seam across the paper when the spread was enlarged.
+      fieldHeight=upperHeight+32*scale;
+      const sprite=field.current || document.createElement('canvas'); field.current=sprite;
+      sprite.width=Math.ceil(fieldWidth*ratio); sprite.height=Math.ceil(fieldHeight*ratio);
+      const context=sprite.getContext('2d')!;
+      const pixels=context.createImageData(sprite.width,sprite.height);
+      for(let y=0;y<sprite.height;y++) {
+        const height=(upperHeight-y/ratio)/scale;
+        const [baseLevel,baseRadius,baseSoftness,rolloff]=profile(Math.max(0,height/reach));
+        const level=baseLevel*(height<0?Math.exp(-Math.pow(height/3.5,2)):1);
+        // Range and angle enlarge the cone, never the physical aperture.
+        const halfSource=lampAperture.length/2;
+        const radius=halfSource+Math.max(0,baseRadius-halfSource)*reach*spread;
+        const broadPenumbra=Math.max(0,Math.min(1,(spread-1)/2.8));
+        // Penumbra grows above the finite slit. Even the widest setting
+        // starts at its two ends instead of creating a broad glowing bar.
+        const distance=Math.max(0,Math.min(1,height/(30*reach)));
+        const opening=distance*distance*(3-2*distance);
+        const softness=Math.max(.55+Math.max(0,baseSoftness-.55)*reach*Math.sqrt(spread),40*broadPenumbra*opening,radius*.20*broadPenumbra*opening);
+        for(let x=0;x<sprite.width;x++) {
+          const offset=Math.abs(x-sprite.width/2)/ratio/scale;
+          const edge=1/(1+Math.exp((offset-radius)/softness));
+          const lateral=Math.max(.3,1-rolloff*Math.pow(offset/Math.max(radius,1),2));
+          // The reference has a cream pool with a soft gray upper falloff.
+          // Exponential exposure keeps intensity adjustment continuous.
+          const exposure=Math.min(1,level*edge*lateral*.97);
+          const amount=1-Math.pow(1-exposure,power);
+          const index=(y*sprite.width+x)*4;
+          for(let c=0;c<3;c++) {
+            // At a different paper color the lamp illuminates that stock;
+            // use its reflectance instead of whitening every sheet to cream.
+            pixels.data[index+c]=Math.min(255,tint[c]/materials.cotton.day[c]*255);
+          }
+          pixels.data[index+3]=Math.round(amount*255);
+        }
+      }
+      context.putImageData(pixels,0,0);
+    };
+    const draw=()=> {
+      // Motion/font observers can draw before our ResizeObserver runs. Never
+      // place a new source into the previous layout's canvas/sprite geometry.
+      if(sheetWidth!==paper.clientWidth || sheetHeight!==paper.clientHeight)rebuild();
+      const root=refs.root.current,sprite=field.current;
+      if(!root || !sprite?.width || !canvas.width || !paper.clientWidth)return;
+      const ratio=canvas.width/paper.clientWidth;
+      const x=parseFloat(root.style.getPropertyValue('--carriage-x')) || 80;
+      const y=parseFloat(root.style.getPropertyValue('--carriage-y')) || 135;
+      const origin=y+lampAperture.origin*scale;
+      const context=canvas.getContext('2d')!;
+      context.setTransform(ratio,0,0,ratio,0,0);
+      context.fillStyle=`rgb(${ambient.join(' ')})`;
+      context.fillRect(0,0,paper.clientWidth,paper.clientHeight);
+      const { amount, projection } = ignition.current;
+      // Weak paper reflection keeps the writing belt legible when the slit
+      // is at the far end of a line. Stock and pigment receive the same light.
+      if(amount>0){
+        context.save();context.translate(sheetWidth*.5,origin-55*scale);context.scale(sheetWidth*.58,85*scale);
+        const reflection=context.createRadialGradient(0,0,0,0,0,1);
+        const reflected=tint.map((v,i)=>Math.min(255,Math.round(v/materials.cotton.day[i]*255))).join(',');
+        const exposure=Math.min(.32,.26*Math.sqrt(power))*amount;
+        reflection.addColorStop(0,`rgba(${reflected},${exposure})`);
+        reflection.addColorStop(.55,`rgba(${reflected},${exposure*.8})`);
+        reflection.addColorStop(1,`rgba(${reflected},0)`);
+        context.fillStyle=reflection;context.fillRect(-1,-1,2,2);context.restore();
+      }
+      context.save();context.globalAlpha=amount;
+      // Project from the physical slit: its width stays fixed while the cone
+      // grows in depth and breadth. A whole-field fade has no direction.
+      if (projection >= 1) context.drawImage(sprite,x-fieldWidth/2,origin-upperHeight,fieldWidth,fieldHeight);
+      else if (projection > 0) {
+        const aperture=lampAperture.length*scale, source=aperture*sprite.width/fieldWidth;
+        const wing=(sprite.width-source)/2, projectedWing=(fieldWidth-aperture)/2*projection;
+        context.save();context.translate(x,origin);context.scale(1,projection);
+        context.drawImage(sprite,0,0,wing,sprite.height,-aperture/2-projectedWing,-upperHeight,projectedWing,fieldHeight);
+        context.drawImage(sprite,wing,0,source,sprite.height,-aperture/2,-upperHeight,aperture,fieldHeight);
+        context.drawImage(sprite,wing+source,0,wing,sprite.height,aperture/2,-upperHeight,projectedWing,fieldHeight);
+        context.restore();
+      }
+      // The basalt reference alone shows a weak reflected pool below the
+      // stone. Its hue and intensity follow the lamp, rather than a fixed
+      // orange light that appeared under every kit.
+      if(settings.kit==='basalt') {
+        context.save();context.translate(x,origin+52*scale);context.scale(1,.28);
+        const bounce=context.createRadialGradient(0,0,0,0,0,46*scale);
+        const reflected=[tint[0]*.68,tint[1]*.42,tint[2]*.27].map(Math.round).join(',');
+        bounce.addColorStop(0,`rgba(${reflected},${Math.min(.20,.13*power)*projection})`);
+        bounce.addColorStop(1,`rgba(${reflected},0)`);
+        context.fillStyle=bounce;context.fillRect(-46*scale,-46*scale,92*scale,92*scale);context.restore();
+      }
+      context.restore();
+      canvas.dataset.lampAmount=String(amount);
+      canvas.dataset.lampProjection=String(projection);
+      canvas.dataset.version=String(Number(canvas.dataset.version||0)+1);
+      canvas.dataset.carriageX=String(x);canvas.dataset.carriageY=String(y);
+      canvas.dataset.sheetWidth=String(sheetWidth);canvas.dataset.sheetHeight=String(sheetHeight);
+      refs.drawPaper.current?.();
+    };
+    refs.draw.current=draw;rebuild();draw();
+    const observer=new ResizeObserver(draw);observer.observe(paper);
+    return ()=>{observer.disconnect();refs.draw.current=null;};
+  },[refs.root,refs.paper,refs.canvas,refs.draw,refs.drawPaper,ignition,settings.paper,settings.kit,settings.brightness,settings.warmth,settings.beam,settings.spread]);
+}

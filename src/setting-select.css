@@ -1,0 +1,22 @@
+/* The same neutral material as the instruments, with a raised menu above it. */
+.app { --ui-menu-surface:linear-gradient(155deg,var(--ui-lip),transparent 70px),var(--ui-raised); }
+.app .setting-select { width:170px; max-width:100%; min-width:0; flex-shrink:0; }
+.app .setting-select .setting-select-trigger { display:flex; align-items:center; justify-content:space-between; gap:10px; width:100%; min-height:40px; padding:9px 11px 9px 13px; border:1px solid var(--ui-line-strong); border-radius:9px; background:linear-gradient(180deg,var(--ui-hover),transparent),var(--ui-sunk); color:var(--ui-ink); box-shadow:0 1px 2px #00000009 inset,0 1px 0 var(--ui-lip); font:13px/1.5 var(--ui-font); text-align:left; transition:border-color 140ms,background 140ms; }
+.setting-select-trigger>span { overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+.setting-select-trigger>svg { flex-shrink:0; color:var(--ui-muted); stroke-width:1.6; transition:transform 160ms; }
+.app .setting-select-trigger:is(:hover,[aria-expanded=true]) { background:var(--ui-selected); border-color:color-mix(in srgb,var(--ui-ink) 32%,transparent); }
+.setting-select-trigger[aria-expanded=true]>svg { transform:rotate(180deg); }
+.app .setting-select-trigger:focus-visible { outline:2px solid color-mix(in srgb,var(--ui-ink) 55%,transparent); outline-offset:3px; }
+.app .setting-select-menu { position:fixed; inset:auto; margin:0; box-sizing:border-box; overflow-y:auto; overscroll-behavior:contain; padding:6px; border:1px solid var(--ui-line-strong); border-radius:12px; background:var(--ui-menu-surface); color:var(--ui-ink); box-shadow:var(--ui-elevation); font:13px/1.5 var(--ui-font); scrollbar-width:thin; scrollbar-color:var(--ui-line-strong) transparent; }
+.setting-select-menu:popover-open { animation:select-reveal 140ms ease-out; }
+.setting-select-menu::backdrop { background:transparent; }
+.setting-select-option { display:flex; align-items:center; gap:12px; min-height:42px; box-sizing:border-box; padding:9px 10px; border:1px solid transparent; border-radius:7px; cursor:pointer; user-select:none; }
+.setting-select-option[aria-selected=true] { background:var(--ui-sunk); }
+.setting-select-option.is-active { background:var(--ui-selected); border-color:var(--ui-line); }
+.setting-select-title { flex:1; min-width:0; white-space:nowrap; }
+.setting-select-sample { flex-shrink:0; min-width:25px; font-size:18px; line-height:1; text-align:center; color:var(--ui-muted); }
+.setting-select-check { display:flex; justify-content:center; width:14px; flex-shrink:0; color:var(--ui-ink); }
+/* Action and export menus use the same raised material; their layouts stay intact. */
+.app .action-menu-popover,.app .writer-dock .export-menu { background:var(--ui-menu-surface); }
+@keyframes select-reveal { from { opacity:0; } to { opacity:1; } }
+@media(prefers-reduced-motion:reduce) { .setting-select-menu:popover-open { animation:none; } .app .setting-select-trigger,.setting-select-trigger>svg { transition:none; } }

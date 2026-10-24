@@ -1,0 +1,690 @@
+[
+  {
+    "svgDisplayed": {
+      "dpr": 1.25,
+      "rows": [
+        {
+          "tag": "SPAN",
+          "rect": {
+            "x": 358.3999938964844,
+            "y": 185.60000610351562,
+            "width": 820,
+            "height": 224,
+            "top": 185.60000610351562,
+            "right": 1178.3999938964844,
+            "bottom": 409.6000061035156,
+            "left": 358.3999938964844
+          },
+          "style": {
+            "width": "820px",
+            "height": "224px",
+            "transform": "matrix(1, 0, 0, 1, 0.4, 0.35)",
+            "display": "block",
+            "opacity": "1",
+            "aspectRatio": "auto"
+          }
+        },
+        {
+          "tag": "svg",
+          "rect": {
+            "x": 358.3999938964844,
+            "y": 185.60000610351562,
+            "width": 820,
+            "height": 224,
+            "top": 185.60000610351562,
+            "right": 1178.3999938964844,
+            "bottom": 409.6000061035156,
+            "left": 358.3999938964844
+          },
+          "style": {
+            "width": "820px",
+            "height": "224px",
+            "transform": "none",
+            "display": "block",
+            "opacity": "1",
+            "aspectRatio": "auto"
+          }
+        },
+        {
+          "tag": "CANVAS",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "left": 0
+          },
+          "style": {
+            "width": "100%",
+            "height": "100%",
+            "transform": "none",
+            "display": "none",
+            "opacity": "1",
+            "aspectRatio": "auto 1025 / 280"
+          }
+        }
+      ],
+      "svgCTM": [
+        0.985576923076923,
+        0,
+        0,
+        0.985576923076923,
+        447.99999237060547,
+        232.1525584734403
+      ],
+      "canvasCTM": [
+        0.9855769230769231,
+        0,
+        0,
+        0.9855769230769231,
+        447.99999237060547,
+        232.1525557063176
+      ],
+      "preserve": null
+    },
+    "canvasDisplayed": {
+      "dpr": 1.25,
+      "rows": [
+        {
+          "tag": "SPAN",
+          "rect": {
+            "x": 358.3999938964844,
+            "y": 185.60000610351562,
+            "width": 820,
+            "height": 224,
+            "top": 185.60000610351562,
+            "right": 1178.3999938964844,
+            "bottom": 409.6000061035156,
+            "left": 358.3999938964844
+          },
+          "style": {
+            "width": "820px",
+            "height": "224px",
+            "transform": "matrix(1, 0, 0, 1, 0.4, 0.35)",
+            "display": "block",
+            "opacity": "1",
+            "aspectRatio": "auto"
+          }
+        },
+        {
+          "tag": "svg",
+          "rect": {
+            "x": 358.3999938964844,
+            "y": 185.60000610351562,
+            "width": 820,
+            "height": 224,
+            "top": 185.60000610351562,
+            "right": 1178.3999938964844,
+            "bottom": 409.6000061035156,
+            "left": 358.3999938964844
+          },
+          "style": {
+            "width": "820px",
+            "height": "224px",
+            "transform": "none",
+            "display": "block",
+            "opacity": "0",
+            "aspectRatio": "auto"
+          }
+        },
+        {
+          "tag": "CANVAS",
+          "rect": {
+            "x": 358.3999938964844,
+            "y": 185.60000610351562,
+            "width": 820,
+            "height": 224,
+            "top": 185.60000610351562,
+            "right": 1178.3999938964844,
+            "bottom": 409.6000061035156,
+            "left": 358.3999938964844
+          },
+          "style": {
+            "width": "820px",
+            "height": "224px",
+            "transform": "none",
+            "display": "block",
+            "opacity": "1",
+            "aspectRatio": "auto 1025 / 280"
+          }
+        }
+      ],
+      "svgCTM": [
+        0.985576923076923,
+        0,
+        0,
+        0.985576923076923,
+        447.99999237060547,
+        232.1525584734403
+      ],
+      "canvasCTM": [
+        0.9855769230769231,
+        0,
+        0,
+        0.9855769230769231,
+        447.99999237060547,
+        232.1525557063176
+      ],
+      "preserve": null
+    }
+  },
+  {
+    "svgDisplayed": {
+      "dpr": 1,
+      "rows": [
+        {
+          "tag": "SPAN",
+          "rect": {
+            "x": 358,
+            "y": 185,
+            "width": 820,
+            "height": 224,
+            "top": 185,
+            "right": 1178,
+            "bottom": 409,
+            "left": 358
+          },
+          "style": {
+            "width": "820px",
+            "height": "224px",
+            "transform": "matrix(1, 0, 0, 1, 0, -0.25)",
+            "display": "block",
+            "opacity": "1",
+            "aspectRatio": "auto"
+          }
+        },
+        {
+          "tag": "svg",
+          "rect": {
+            "x": 358,
+            "y": 185,
+            "width": 820,
+            "height": 224,
+            "top": 185,
+            "right": 1178,
+            "bottom": 409,
+            "left": 358
+          },
+          "style": {
+            "width": "820px",
+            "height": "224px",
+            "transform": "none",
+            "display": "block",
+            "opacity": "1",
+            "aspectRatio": "auto"
+          }
+        },
+        {
+          "tag": "CANVAS",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "left": 0
+          },
+          "style": {
+            "width": "100%",
+            "height": "100%",
+            "transform": "none",
+            "display": "none",
+            "opacity": "1",
+            "aspectRatio": "auto 820 / 224"
+          }
+        }
+      ],
+      "svgCTM": [
+        0.7884615384615384,
+        0,
+        0,
+        0.7884615384615384,
+        358,
+        185.12204067523663
+      ],
+      "canvasCTM": [
+        0.7884615384615384,
+        0,
+        0,
+        0.7884615384615384,
+        358,
+        185.12203846153847
+      ],
+      "preserve": null
+    },
+    "canvasDisplayed": {
+      "dpr": 1,
+      "rows": [
+        {
+          "tag": "SPAN",
+          "rect": {
+            "x": 358,
+            "y": 185,
+            "width": 820,
+            "height": 224,
+            "top": 185,
+            "right": 1178,
+            "bottom": 409,
+            "left": 358
+          },
+          "style": {
+            "width": "820px",
+            "height": "224px",
+            "transform": "matrix(1, 0, 0, 1, 0, -0.25)",
+            "display": "block",
+            "opacity": "1",
+            "aspectRatio": "auto"
+          }
+        },
+        {
+          "tag": "svg",
+          "rect": {
+            "x": 358,
+            "y": 185,
+            "width": 820,
+            "height": 224,
+            "top": 185,
+            "right": 1178,
+            "bottom": 409,
+            "left": 358
+          },
+          "style": {
+            "width": "820px",
+            "height": "224px",
+            "transform": "none",
+            "display": "block",
+            "opacity": "0",
+            "aspectRatio": "auto"
+          }
+        },
+        {
+          "tag": "CANVAS",
+          "rect": {
+            "x": 358,
+            "y": 185,
+            "width": 820,
+            "height": 224,
+            "top": 185,
+            "right": 1178,
+            "bottom": 409,
+            "left": 358
+          },
+          "style": {
+            "width": "820px",
+            "height": "224px",
+            "transform": "none",
+            "display": "block",
+            "opacity": "1",
+            "aspectRatio": "auto 820 / 224"
+          }
+        }
+      ],
+      "svgCTM": [
+        0.7884615384615384,
+        0,
+        0,
+        0.7884615384615384,
+        358,
+        185.12204067523663
+      ],
+      "canvasCTM": [
+        0.7884615384615384,
+        0,
+        0,
+        0.7884615384615384,
+        358,
+        185.12203846153847
+      ],
+      "preserve": null
+    }
+  },
+  {
+    "svgDisplayed": {
+      "dpr": 1.5,
+      "rows": [
+        {
+          "tag": "SPAN",
+          "rect": {
+            "x": 358,
+            "y": 185.3333282470703,
+            "width": 820,
+            "height": 223.99998474121094,
+            "top": 185.3333282470703,
+            "right": 1178,
+            "bottom": 409.33331298828125,
+            "left": 358
+          },
+          "style": {
+            "width": "820px",
+            "height": "224px",
+            "transform": "matrix(1, 0, 0, 1, 0, 0.0833333)",
+            "display": "block",
+            "opacity": "1",
+            "aspectRatio": "auto"
+          }
+        },
+        {
+          "tag": "svg",
+          "rect": {
+            "x": 358,
+            "y": 185.3333282470703,
+            "width": 820,
+            "height": 223.99998474121094,
+            "top": 185.3333282470703,
+            "right": 1178,
+            "bottom": 409.33331298828125,
+            "left": 358
+          },
+          "style": {
+            "width": "820px",
+            "height": "224px",
+            "transform": "none",
+            "display": "block",
+            "opacity": "1",
+            "aspectRatio": "auto"
+          }
+        },
+        {
+          "tag": "CANVAS",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "left": 0
+          },
+          "style": {
+            "width": "100%",
+            "height": "100%",
+            "transform": "none",
+            "display": "none",
+            "opacity": "1",
+            "aspectRatio": "auto 1230 / 336"
+          }
+        }
+      ],
+      "svgCTM": [
+        1.1826923076923077,
+        0,
+        0,
+        1.1826923076923077,
+        537,
+        278.18305338346045
+      ],
+      "canvasCTM": [
+        1.1826923076923077,
+        0,
+        0,
+        1.1826923076923077,
+        537,
+        278.18305006291314
+      ],
+      "preserve": null
+    },
+    "canvasDisplayed": {
+      "dpr": 1.5,
+      "rows": [
+        {
+          "tag": "SPAN",
+          "rect": {
+            "x": 358,
+            "y": 185.3333282470703,
+            "width": 820,
+            "height": 223.99998474121094,
+            "top": 185.3333282470703,
+            "right": 1178,
+            "bottom": 409.33331298828125,
+            "left": 358
+          },
+          "style": {
+            "width": "820px",
+            "height": "224px",
+            "transform": "matrix(1, 0, 0, 1, 0, 0.0833333)",
+            "display": "block",
+            "opacity": "1",
+            "aspectRatio": "auto"
+          }
+        },
+        {
+          "tag": "svg",
+          "rect": {
+            "x": 358,
+            "y": 185.3333282470703,
+            "width": 820,
+            "height": 223.99998474121094,
+            "top": 185.3333282470703,
+            "right": 1178,
+            "bottom": 409.33331298828125,
+            "left": 358
+          },
+          "style": {
+            "width": "820px",
+            "height": "224px",
+            "transform": "none",
+            "display": "block",
+            "opacity": "0",
+            "aspectRatio": "auto"
+          }
+        },
+        {
+          "tag": "CANVAS",
+          "rect": {
+            "x": 358,
+            "y": 185.3333282470703,
+            "width": 820,
+            "height": 223.99998474121094,
+            "top": 185.3333282470703,
+            "right": 1178,
+            "bottom": 409.33331298828125,
+            "left": 358
+          },
+          "style": {
+            "width": "820px",
+            "height": "224px",
+            "transform": "none",
+            "display": "block",
+            "opacity": "1",
+            "aspectRatio": "auto 1230 / 336"
+          }
+        }
+      ],
+      "svgCTM": [
+        1.1826923076923077,
+        0,
+        0,
+        1.1826923076923077,
+        537,
+        278.18305338346045
+      ],
+      "canvasCTM": [
+        1.1826923076923077,
+        0,
+        0,
+        1.1826923076923077,
+        537,
+        278.18305006291314
+      ],
+      "preserve": null
+    }
+  },
+  {
+    "svgDisplayed": {
+      "dpr": 2,
+      "rows": [
+        {
+          "tag": "SPAN",
+          "rect": {
+            "x": 358,
+            "y": 185.5,
+            "width": 820,
+            "height": 224,
+            "top": 185.5,
+            "right": 1178,
+            "bottom": 409.5,
+            "left": 358
+          },
+          "style": {
+            "width": "820px",
+            "height": "224px",
+            "transform": "matrix(1, 0, 0, 1, 0, 0.25)",
+            "display": "block",
+            "opacity": "1",
+            "aspectRatio": "auto"
+          }
+        },
+        {
+          "tag": "svg",
+          "rect": {
+            "x": 358,
+            "y": 185.5,
+            "width": 820,
+            "height": 224,
+            "top": 185.5,
+            "right": 1178,
+            "bottom": 409.5,
+            "left": 358
+          },
+          "style": {
+            "width": "820px",
+            "height": "224px",
+            "transform": "none",
+            "display": "block",
+            "opacity": "1",
+            "aspectRatio": "auto"
+          }
+        },
+        {
+          "tag": "CANVAS",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "left": 0
+          },
+          "style": {
+            "width": "100%",
+            "height": "100%",
+            "transform": "none",
+            "display": "none",
+            "opacity": "1",
+            "aspectRatio": "auto 1640 / 448"
+          }
+        }
+      ],
+      "svgCTM": [
+        1.5769230769230769,
+        0,
+        0,
+        1.5769230769230769,
+        716,
+        371.24408135047327
+      ],
+      "canvasCTM": [
+        1.5769230769230769,
+        0,
+        0,
+        1.5769230769230769,
+        716,
+        371.24407692307693
+      ],
+      "preserve": null
+    },
+    "canvasDisplayed": {
+      "dpr": 2,
+      "rows": [
+        {
+          "tag": "SPAN",
+          "rect": {
+            "x": 358,
+            "y": 185.5,
+            "width": 820,
+            "height": 224,
+            "top": 185.5,
+            "right": 1178,
+            "bottom": 409.5,
+            "left": 358
+          },
+          "style": {
+            "width": "820px",
+            "height": "224px",
+            "transform": "matrix(1, 0, 0, 1, 0, 0.25)",
+            "display": "block",
+            "opacity": "1",
+            "aspectRatio": "auto"
+          }
+        },
+        {
+          "tag": "svg",
+          "rect": {
+            "x": 358,
+            "y": 185.5,
+            "width": 820,
+            "height": 224,
+            "top": 185.5,
+            "right": 1178,
+            "bottom": 409.5,
+            "left": 358
+          },
+          "style": {
+            "width": "820px",
+            "height": "224px",
+            "transform": "none",
+            "display": "block",
+            "opacity": "0",
+            "aspectRatio": "auto"
+          }
+        },
+        {
+          "tag": "CANVAS",
+          "rect": {
+            "x": 358,
+            "y": 185.5,
+            "width": 820,
+            "height": 224,
+            "top": 185.5,
+            "right": 1178,
+            "bottom": 409.5,
+            "left": 358
+          },
+          "style": {
+            "width": "820px",
+            "height": "224px",
+            "transform": "none",
+            "display": "block",
+            "opacity": "1",
+            "aspectRatio": "auto 1640 / 448"
+          }
+        }
+      ],
+      "svgCTM": [
+        1.5769230769230769,
+        0,
+        0,
+        1.5769230769230769,
+        716,
+        371.24408135047327
+      ],
+      "canvasCTM": [
+        1.5769230769230769,
+        0,
+        0,
+        1.5769230769230769,
+        716,
+        371.24407692307693
+      ],
+      "preserve": null
+    }
+  }
+]

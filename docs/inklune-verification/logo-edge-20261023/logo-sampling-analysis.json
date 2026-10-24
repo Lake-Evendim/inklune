@@ -1,0 +1,110 @@
+{
+  "method": "Real browser screenshots at 1920x799. Edge alpha estimated from fixed foreground/background RGB. Reference is original B\u00e9zier paths rasterized at 32x and area-downsampled. Cross-engine reference is comparative, not an absolute visual quality score.",
+  "crop": [
+    735,
+    245,
+    1000,
+    365
+  ],
+  "rows": [
+    {
+      "mode": "current",
+      "image_size": [
+        1920,
+        799
+      ],
+      "edge_pixels": 1019,
+      "edge_alpha_mae": 0.1626,
+      "edge_alpha_p95": 0.47817,
+      "whole_crop_alpha_mae": 0.00539
+    },
+    {
+      "mode": "current-snap",
+      "image_size": [
+        1920,
+        799
+      ],
+      "edge_pixels": 1016,
+      "edge_alpha_mae": 0.09427,
+      "edge_alpha_p95": 0.20166,
+      "whole_crop_alpha_mae": 0.00303
+    },
+    {
+      "mode": "svg",
+      "image_size": [
+        1920,
+        799
+      ],
+      "edge_pixels": 1020,
+      "edge_alpha_mae": 0.16202,
+      "edge_alpha_p95": 0.50293,
+      "whole_crop_alpha_mae": 0.00598
+    },
+    {
+      "mode": "svg-snap",
+      "image_size": [
+        1920,
+        799
+      ],
+      "edge_pixels": 1015,
+      "edge_alpha_mae": 0.09658,
+      "edge_alpha_p95": 0.22336,
+      "whole_crop_alpha_mae": 0.00325
+    },
+    {
+      "mode": "mask",
+      "image_size": [
+        1920,
+        799
+      ],
+      "edge_pixels": 1020,
+      "edge_alpha_mae": 0.16202,
+      "edge_alpha_p95": 0.50293,
+      "whole_crop_alpha_mae": 0.00598
+    },
+    {
+      "mode": "native",
+      "image_size": [
+        1920,
+        799
+      ],
+      "edge_pixels": 1019,
+      "edge_alpha_mae": 0.16708,
+      "edge_alpha_p95": 0.44922,
+      "whole_crop_alpha_mae": 0.00927
+    },
+    {
+      "mode": "filtered",
+      "image_size": [
+        1920,
+        799
+      ],
+      "edge_pixels": 1019,
+      "edge_alpha_mae": 0.15896,
+      "edge_alpha_p95": 0.38745,
+      "whole_crop_alpha_mae": 0.00826
+    },
+    {
+      "mode": "filtered-snap",
+      "image_size": [
+        1920,
+        799
+      ],
+      "edge_pixels": 1016,
+      "edge_alpha_mae": 0.03206,
+      "edge_alpha_p95": 0.0837,
+      "whole_crop_alpha_mae": 0.00105
+    },
+    {
+      "mode": "native-snap",
+      "image_size": [
+        1920,
+        799
+      ],
+      "edge_pixels": 1016,
+      "edge_alpha_mae": 0.09516,
+      "edge_alpha_p95": 0.22377,
+      "whole_crop_alpha_mae": 0.00321
+    }
+  ]
+}

@@ -1,0 +1,153 @@
+PASS desktop day returning: starts at the welcome page with no hidden editor 
+PASS desktop day returning: primary label matches saved draft 
+PASS desktop day returning: primary action fits the first viewport 
+PASS desktop day returning: touch targets are at least 44px 
+PASS desktop day returning: no horizontal or outer document scroll 
+PASS desktop day returning: readable body and action contrast 5.01, 9.26
+PASS desktop day returning: theme changes both start and workspace 
+PASS desktop day returning: welcome is inert while the library is open 
+PASS desktop day returning: opening library preserves its notes 
+PASS desktop day returning: library close returns to an interactive start 
+PASS desktop day returning: continue opens the chosen note and focuses writing 
+PASS desktop day returning: entry keeps the chosen curve and painted edges from its first frame 29 painted samples, max 0.303px
+PASS desktop day returning: entry preserves paper and night settings 
+PASS desktop day returning: brand returns home without losing draft 
+PASS desktop day returning: continue does not create duplicate blank pages 
+PASS desktop day returning: library selection opens writing with the original text 
+PASS desktop day returning: new page is blank and leaves the previous note 
+PASS desktop day returning: new page creates exactly one additional note 
+PASS desktop day new: starts at the welcome page with no hidden editor 
+PASS desktop day new: primary label matches saved draft 
+PASS desktop day new: primary action fits the first viewport 
+PASS desktop day new: touch targets are at least 44px 
+PASS desktop day new: no horizontal or outer document scroll 
+PASS desktop day new: readable body and action contrast 5.01, 9.26
+PASS desktop day new: theme changes both start and workspace 
+PASS desktop day new: welcome is inert while the library is open 
+PASS desktop day new: opening library preserves its notes 
+PASS desktop day new: library close returns to an interactive start 
+PASS desktop day new: continue opens the chosen note and focuses writing 
+PASS desktop day new: entry keeps the chosen curve and painted edges from its first frame 22 painted samples, max 0.303px
+PASS desktop day new: entry preserves paper and night settings 
+PASS desktop day new: brand returns home without losing draft 
+PASS desktop day new: continue does not create duplicate blank pages 
+PASS desktop day new: library selection opens writing with the original text 
+PASS desktop night returning: starts at the welcome page with no hidden editor 
+PASS desktop night returning: primary label matches saved draft 
+PASS desktop night returning: primary action fits the first viewport 
+PASS desktop night returning: touch targets are at least 44px 
+PASS desktop night returning: no horizontal or outer document scroll 
+PASS desktop night returning: readable body and action contrast 7.29, 11.55
+PASS desktop night returning: theme changes both start and workspace 
+PASS desktop night returning: welcome is inert while the library is open 
+PASS desktop night returning: opening library preserves its notes 
+PASS desktop night returning: library close returns to an interactive start 
+PASS desktop night returning: continue opens the chosen note and focuses writing 
+PASS desktop night returning: entry keeps the chosen curve and painted edges from its first frame 32 painted samples, max 0.303px
+PASS desktop night returning: entry preserves paper and night settings 
+PASS desktop night returning: brand returns home without losing draft 
+PASS desktop night returning: continue does not create duplicate blank pages 
+PASS desktop night returning: library selection opens writing with the original text 
+PASS desktop night returning: new page is blank and leaves the previous note 
+PASS desktop night returning: new page creates exactly one additional note 
+PASS desktop night new: starts at the welcome page with no hidden editor 
+PASS desktop night new: primary label matches saved draft 
+PASS desktop night new: primary action fits the first viewport 
+PASS desktop night new: touch targets are at least 44px 
+PASS desktop night new: no horizontal or outer document scroll 
+PASS desktop night new: readable body and action contrast 7.29, 11.55
+PASS desktop night new: theme changes both start and workspace 
+PASS desktop night new: welcome is inert while the library is open 
+PASS desktop night new: opening library preserves its notes 
+PASS desktop night new: library close returns to an interactive start 
+PASS desktop night new: continue opens the chosen note and focuses writing 
+PASS desktop night new: entry keeps the chosen curve and painted edges from its first frame 26 painted samples, max 0.303px
+PASS desktop night new: entry preserves paper and night settings 
+PASS desktop night new: brand returns home without losing draft 
+PASS desktop night new: continue does not create duplicate blank pages 
+PASS desktop night new: library selection opens writing with the original text 
+PASS phone day returning: starts at the welcome page with no hidden editor 
+PASS phone day returning: primary label matches saved draft 
+PASS phone day returning: primary action fits the first viewport 
+PASS phone day returning: touch targets are at least 44px 
+PASS phone day returning: no horizontal or outer document scroll 
+PASS phone day returning: readable body and action contrast 5.01, 9.26
+PASS phone day returning: theme changes both start and workspace 
+PASS phone day returning: welcome is inert while the library is open 
+PASS phone day returning: opening library preserves its notes 
+PASS phone day returning: library close returns to an interactive start 
+PASS phone day returning: continue opens the chosen note and focuses writing 
+PASS phone day returning: entry keeps the chosen curve and painted edges from its first frame 12 painted samples, max 1.218px
+PASS phone day returning: entry preserves paper and night settings 
+PASS phone day returning: brand returns home without losing draft 
+PASS phone day returning: continue does not create duplicate blank pages 
+PASS phone day returning: library selection opens writing with the original text 
+PASS phone day returning: new page is blank and leaves the previous note 
+PASS phone day returning: new page creates exactly one additional note 
+PASS phone day new: starts at the welcome page with no hidden editor 
+PASS phone day new: primary label matches saved draft 
+PASS phone day new: primary action fits the first viewport 
+PASS phone day new: touch targets are at least 44px 
+PASS phone day new: no horizontal or outer document scroll 
+PASS phone day new: readable body and action contrast 5.01, 9.26
+PASS phone day new: theme changes both start and workspace 
+PASS phone day new: welcome is inert while the library is open 
+PASS phone day new: opening library preserves its notes 
+PASS phone day new: library close returns to an interactive start 
+PASS phone day new: continue opens the chosen note and focuses writing 
+PASS phone day new: entry keeps the chosen curve and painted edges from its first frame 28 painted samples, max 1.218px
+PASS phone day new: entry preserves paper and night settings 
+PASS phone day new: brand returns home without losing draft 
+PASS phone day new: continue does not create duplicate blank pages 
+PASS phone day new: library selection opens writing with the original text 
+PASS phone night returning: starts at the welcome page with no hidden editor 
+PASS phone night returning: primary label matches saved draft 
+PASS phone night returning: primary action fits the first viewport 
+PASS phone night returning: touch targets are at least 44px 
+PASS phone night returning: no horizontal or outer document scroll 
+PASS phone night returning: readable body and action contrast 7.29, 11.55
+PASS phone night returning: theme changes both start and workspace 
+PASS phone night returning: welcome is inert while the library is open 
+PASS phone night returning: opening library preserves its notes 
+PASS phone night returning: library close returns to an interactive start 
+PASS phone night returning: continue opens the chosen note and focuses writing 
+PASS phone night returning: entry keeps the chosen curve and painted edges from its first frame 26 painted samples, max 1.218px
+PASS phone night returning: entry preserves paper and night settings 
+PASS phone night returning: brand returns home without losing draft 
+PASS phone night returning: continue does not create duplicate blank pages 
+PASS phone night returning: library selection opens writing with the original text 
+PASS phone night returning: new page is blank and leaves the previous note 
+PASS phone night returning: new page creates exactly one additional note 
+PASS phone night new: starts at the welcome page with no hidden editor 
+PASS phone night new: primary label matches saved draft 
+PASS phone night new: primary action fits the first viewport 
+PASS phone night new: touch targets are at least 44px 
+PASS phone night new: no horizontal or outer document scroll 
+PASS phone night new: readable body and action contrast 7.29, 11.55
+PASS phone night new: theme changes both start and workspace 
+PASS phone night new: welcome is inert while the library is open 
+PASS phone night new: opening library preserves its notes 
+PASS phone night new: library close returns to an interactive start 
+PASS phone night new: continue opens the chosen note and focuses writing 
+PASS phone night new: entry keeps the chosen curve and painted edges from its first frame 28 painted samples, max 1.218px
+PASS phone night new: entry preserves paper and night settings 
+PASS phone night new: brand returns home without losing draft 
+PASS phone night new: continue does not create duplicate blank pages 
+PASS phone night new: library selection opens writing with the original text 
+PASS compact 360x640: primary fits compact viewport
+PASS compact 360x640: no horizontal document or page overflow
+PASS compact 360x640: long title stays within its text box
+PASS compact 360x640: one vertical scrolling region
+PASS compact 320x568: primary fits compact viewport
+PASS compact 320x568: no horizontal document or page overflow
+PASS compact 320x568: long title stays within its text box
+PASS compact 320x568: one vertical scrolling region
+PASS compact 900x640: primary fits compact viewport
+PASS compact 900x640: no horizontal document or page overflow
+PASS compact 900x640: long title stays within its text box
+PASS compact 900x640: one vertical scrolling region
+PASS compact 390x844: primary fits compact viewport
+PASS compact 390x844: no horizontal document or page overflow
+PASS compact 390x844: long title stays within its text box
+PASS compact 390x844: one vertical scrolling region
+PASS compact 390x844: empty workspace opens a new blank page

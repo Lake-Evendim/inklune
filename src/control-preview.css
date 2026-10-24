@@ -1,0 +1,36 @@
+.app.control-preview { height:auto; min-height:100dvh; overflow:auto; background:#f7f7f3; color:var(--ui-ink); padding:36px clamp(22px,4vw,64px) 50px; }
+.app.control-preview.night { background:#090909; }
+.control-preview-header { max-width:1340px; margin:0 auto 36px; display:flex; align-items:center; justify-content:space-between; gap:28px; }
+.control-preview-brand { font:25px Borel,cursive; color:var(--ui-ink); text-decoration:none; }
+.control-preview-header h1 { margin:14px 0 10px; font-size:30px; line-height:1.4; font-weight:500; }
+.control-preview-header p,.control-gallery-heading p,.control-live header p { color:var(--ui-muted); font-size:13px; line-height:1.7; margin:0; }
+.preview-toggle { display:flex; flex-shrink:0; gap:2px; padding:3px; border:1px solid var(--ui-line); border-radius:8px; background:var(--ui-sunk); }
+.preview-toggle button { min-height:34px; padding:7px 12px; border-radius:5px; color:var(--ui-muted); font-size:12px; white-space:nowrap; }
+.preview-toggle button[aria-pressed=true] { background:var(--ui-selected); color:var(--ui-ink); box-shadow:0 1px 0 var(--ui-lip) inset; }
+.control-gallery,.control-live { max-width:1340px; margin:0 auto 35px; }
+.control-gallery-heading { display:flex; gap:20px; align-items:baseline; margin-bottom:18px; }
+.control-gallery h2,.control-live h2 { margin:0; font-size:19px; font-weight:500; }
+.flower-design-grid { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:16px; }
+.flower-design-card { display:block; padding:0 0 17px; border:1px solid var(--ui-line); border-radius:12px; overflow:hidden; background:var(--ui-raised); text-align:left; color:var(--ui-ink); }
+.flower-design-card.selected,.slider-design-card.selected { border-color:var(--ui-accent); }
+.flower-card-paper { position:relative; display:block; margin:14px 14px 17px; height:200px; border-radius:3px 9px 3px 3px; background-size:300px; background-color:#f7f7f3; color:#464640; box-shadow:0 1px 0 #ffffff80 inset,0 3px 8px #00000012; }
+.night .flower-card-paper { background-color:#414141; background-blend-mode:multiply; color:#b6b6ad; }
+.flower-card-paper .flower-drawing { position:absolute; bottom:16px; left:50%; width:76px; height:112px; transform:translateX(-50%); }
+.design-card-title { display:flex; align-items:center; justify-content:space-between; gap:10px; width:100%; font-size:14px; line-height:1.5; color:var(--ui-ink); }
+.flower-design-card .design-card-title { padding-inline:18px; }
+.design-card-description { display:block; color:var(--ui-muted); font-size:12px; line-height:1.75; }
+.flower-design-card .design-card-description { padding:7px 18px 0; }
+.slider-design-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:16px; }
+.app.control-preview .slider-design-card.settings-panel { position:relative; inset:auto; display:block; width:auto; height:auto; padding:20px; border-radius:12px; animation:none; box-shadow:0 1px 0 var(--ui-lip) inset; overflow:visible; }
+.slider-design-card .design-card-description { margin:7px 0 0; min-height:42px; }
+.app.control-preview .slider-design-card .range-label { font-size:12px; margin:20px 0; }
+.design-select { color:var(--ui-muted); font-size:12px; padding:8px 0; min-height:32px; }
+.design-select[aria-pressed=true] { color:var(--ui-ink); }
+.control-live { border:1px solid var(--ui-line); border-radius:15px; overflow:hidden; background:var(--ui-panel); }
+.control-live>header { display:flex; justify-content:space-between; align-items:center; gap:20px; padding:20px 24px; }
+.control-live header p { margin-top:6px; }
+.control-live-tools { display:flex; gap:12px; align-items:center; flex-wrap:wrap; }
+.control-live-tools a { color:var(--ui-muted); display:flex; align-items:center; gap:6px; font-size:12px; text-decoration:none; }
+.control-live iframe { display:block; width:100%; height:740px; border:0; background:#090909; }
+.control-live>footer { padding:16px 24px; font-size:12px; color:var(--ui-muted); border-top:1px solid var(--ui-line); }
+@media(max-width:760px) { .app.control-preview { padding:24px 16px; } .control-preview-header { align-items:flex-start; gap:14px; } .control-preview-header h1 { font-size:23px; } .flower-design-grid { grid-template-columns:repeat(2,minmax(0,1fr)); gap:10px; } .flower-card-paper { margin:10px; height:165px; } .flower-design-card .design-card-title { padding:0 12px; font-size:13px; } .flower-design-card .design-card-description { padding:7px 12px 0; } .slider-design-grid { grid-template-columns:1fr; } .control-gallery-heading,.control-live>header { display:block; } .control-gallery-heading p { margin-top:7px; } .control-live-tools { margin-top:17px; gap:10px; } .control-live>header { padding:18px 14px; } .preview-toggle button { padding-inline:8px; } .control-live iframe { height:760px; } .control-live>footer { padding-inline:14px; } }

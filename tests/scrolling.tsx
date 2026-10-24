@@ -1,0 +1,87 @@
+// Isolated native-scroll regression. No saved notes or preferences are touched.
+import React, { useState } from 'react';
+import { createRoot } from 'react-dom/client';
+import '@fontsource/courier-prime/400.css';
+import '../src/styles.css';
+import '../src/motion.css';
+import '../src/materials.css';
+import '../src/typing.css';
+import '../src/ui.css';
+import Editor from '../src/Editor';
+import { createNote, defaults } from '../src/storage';
+const lines = Array.from({ length: 60 }, (_, i) => `${String(i + 1).padStart(2, '0')}. 清晰的文字随纸页移动。`).join('\n');
+function Fixture() {
+  const [note, setNote] = useState(() => createNote('一行文字。'));
+  const [fontSize, setFontSize] = useState(19);
+  const [focusVersion, setFocusVersion] = useState(0);
+  const [results, setResults] = useState<string[]>([]);
+  const [running, setRunning] = useState(false);
+  const wait = (ms = 300) => new Promise(r => setTimeout(r, ms));
+  const run = async () => {
+    setRunning(true); await document.fonts.ready; await wait(900); const report: string[] = [];
+    const check = (label: string, pass: boolean) => { report.push(`${pass ? 'PASS' : 'FAIL'} ${label}`); setResults([...report]); };
+    const desk = document.querySelector<HTMLElement>('.desk')!, root = document.querySelector<HTMLElement>('.typewriter-assembly')!, paper = document.querySelector<HTMLElement>('.paper')!, input = document.querySelector('textarea')!;
+    input.readOnly=true;
+    const feed = () => parseFloat(root.style.getPropertyValue('--paper-feed')) || 0;
+    const synchronized = () => Math.abs(feed() - desk.scrollTop) < 1;
+    const layout = () => document.documentElement.scrollHeight <= innerHeight && document.documentElement.scrollWidth <= innerWidth;
+    const update = (value: string, type: string) => {
+      input.dispatchEvent(new InputEvent('beforeinput', { bubbles: true, inputType: type }));
+      Object.getOwnPropertyDescriptor(HTMLTextAreaElement.prototype, 'value')!.set!.call(input, value);
+      input.setSelectionRange(value.length, value.length);
+      input.dispatchEvent(new InputEvent('input', { bubbles: true, inputType: type }));
+    };
+    const select = (offset: number) => { input.setSelectionRange(offset, offset); document.dispatchEvent(new Event('selectionchange')); input.dispatchEvent(new KeyboardEvent('keyup', { bubbles: true, key: 'ArrowUp' })); };
+    setNote(createNote('一行文字。')); await wait();
+    const top = root.getBoundingClientRect().top;
+    check('short note needs no scroll track', desk.scrollHeight === desk.clientHeight && feed() === 0);
+    check('document has no outer scroll or horizontal overflow', layout());
+    check('desktop reading width is preserved', innerWidth <= 760 || paper.clientWidth >= 600);
+    input.focus({ preventScroll: true }); update(lines, 'insertFromPaste'); await wait();
+    check('long paste reveals its final row', feed() > 500 && synchronized());
+    check('paste is preserved completely', input.value === lines && input.selectionStart === lines.length);
+    const first = document.querySelector<HTMLElement>('.ink-glyph')!;
+    const beforeFeed = feed(), beforeTop = first.getBoundingClientRect().top;
+    desk.scrollTo({ top: beforeFeed / 2 }); await wait();
+    check(`native scrollbar and paper position agree (feed ${feed().toFixed(2)}, native ${desk.scrollTop}, motion ${root.dataset.motion})`, synchronized());
+    const rollCanvas=document.querySelector<HTMLCanvasElement>('.paper-roll-canvas')!;
+    check('layout stays fixed while visual feed follows native scroll', Math.abs(first.getBoundingClientRect().top-beforeTop)<.1 && Math.abs(Number(rollCanvas.dataset.feed)-feed())<.01 && beforeFeed-feed()>100);
+    const texture = document.querySelector<HTMLElement>('.paper-texture')!;
+    check('paper grain follows the feed within a finite sheet layer', rollCanvas.dataset.stockReady==='true' && getComputedStyle(texture).display==='none' && rollCanvas.getBoundingClientRect().height===root.clientHeight);
+    check('paper and textarea do not become separate scroll containers', paper.scrollTop === 0 && input.scrollTop === 0);
+    check('sheet stays in the same viewport while browsing', Math.abs(root.getBoundingClientRect().top - top) < 1);
+    const readingFeed = feed();
+    setNote(n => ({ ...n, bookmark: '#9aa47e' })); await wait();
+    check(`unrelated UI updates preserve browsing position (${readingFeed.toFixed(2)}→${feed().toFixed(2)})`, Math.abs(feed() - readingFeed) < 1);
+    setFocusVersion(v => v + 1); await wait();
+    check('returning focus preserves browsing position', Math.abs(feed() - readingFeed) < 1);
+    select(0); await wait();
+    check(`offscreen first-row selection scrolls to the top (feed ${feed().toFixed(2)}, native ${desk.scrollTop.toFixed(2)}, caret ${input.selectionStart}, active ${document.activeElement?.className})`, feed() === 0 && desk.scrollTop === 0);
+    select(lines.length); await wait();
+    check('offscreen final-row selection scrolls into view', feed() > 500 && synchronized());
+    const endFeed = feed(); select(lines.length - 2); await wait();
+    check('visible selection preserves browsing position', Math.abs(feed() - endFeed) < 1);
+    desk.scrollTo({ top: 0 }); await wait();
+    check('native scroll reaches the first row without moving the room', synchronized() && feed() === 0 && Math.abs(root.getBoundingClientRect().top - top) < 1);
+    const strikes = Number(root.dataset.strikes || 0);
+    select(lines.length); await wait(); update(lines + 'A', 'insertText'); await wait();
+    for (let attempts = 0; root.dataset.motion !== 'idle' && attempts < 100; attempts++) await wait(30);
+    check(`typing after browsing strikes once and returns to idle (strikes ${strikes}→${root.dataset.strikes}, motion ${root.dataset.motion})`, Number(root.dataset.strikes || 0) === strikes + 1 && root.dataset.motion === 'idle');
+    check('typing follows the same native scroll track', synchronized());
+    update(lines + 'A\n', 'insertLineBreak'); await wait();
+    check('return advances paper without a second scroll position', feed() > endFeed && synchronized());
+    for (const size of [15, 25, 19]) {
+      setFontSize(size); await wait();
+      check(`font ${size} keeps caret visible and scroll synchronized`, synchronized() && parseFloat(root.style.getPropertyValue('--carriage-y')) + 37 * paper.clientWidth / 430 <= root.clientHeight + 1 && layout());
+    }
+    const canvas = document.querySelector<HTMLCanvasElement>('.mechanism-canvas');
+    check('WebGL canvas retains physical sheet scale', !!canvas && root.classList.contains('has-3d') && Math.abs(canvas.getBoundingClientRect().height - paper.clientHeight) < 1);
+    setNote(createNote('新纸页。')); await wait();
+    check('new short note resets position and removes the scroll range', synchronized() && feed() === 0 && desk.scrollHeight === desk.clientHeight);
+    setNote(createNote(lines)); await wait();
+    check('loading another long note restores its editing position', synchronized() && feed() > 500);
+    input.readOnly=false;setRunning(false);
+  };
+  return <div className="app night"><header className="app-header"><span>单一纸页滚动</span><button disabled={running} onClick={run}>检查滚动交互</button></header><main className="desk"><Editor note={note} settings={{ ...defaults, night: true, paper: 'lined', fontSize, sound: false }} onChange={(text, traces, inkSeeds) => setNote(n => ({ ...n, text, traces, inkSeeds }))} onNight={() => {}} onLightChange={() => {}} onBookmark={() => {}} focusVersion={focusVersion} onFocusChange={() => {}} /></main><pre data-scroll-report style={{ position: 'fixed', left: 12, top: 90, width: 245, maxHeight: 210, overflow: 'auto', fontSize: 10, zIndex: 30, background: '#1b1b1b', whiteSpace: 'pre-wrap' }}>{results.join('\n')}</pre></div>;
+}
+createRoot(document.getElementById('root')!).render(<React.StrictMode><Fixture /></React.StrictMode>);

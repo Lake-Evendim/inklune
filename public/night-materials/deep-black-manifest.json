@@ -1,0 +1,62 @@
+{
+  "black-fog": {
+    "landscape": [
+      2560,
+      1600
+    ],
+    "portrait": [
+      1600,
+      2400
+    ],
+    "rgbMin": 2,
+    "rgbMax": 21,
+    "median": 11.0,
+    "p95": 19.0,
+    "neutralRGB": true
+  },
+  "obsidian": {
+    "landscape": [
+      2560,
+      1600
+    ],
+    "portrait": [
+      1600,
+      2400
+    ],
+    "rgbMin": 2,
+    "rgbMax": 34,
+    "median": 8.0,
+    "p95": 27.0,
+    "neutralRGB": true
+  },
+  "velvet": {
+    "landscape": [
+      2560,
+      1600
+    ],
+    "portrait": [
+      1600,
+      2400
+    ],
+    "rgbMin": 4,
+    "rgbMax": 15,
+    "median": 11.0,
+    "p95": 13.0,
+    "neutralRGB": true
+  },
+  "inkstone": {
+    "landscape": [
+      2560,
+      1600
+    ],
+    "portrait": [
+      1600,
+      2400
+    ],
+    "rgbMin": 7,
+    "rgbMax": 17,
+    "median": 13.0,
+    "p95": 16.0,
+    "neutralRGB": true
+  }
+}

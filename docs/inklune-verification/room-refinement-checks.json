@@ -1,0 +1,94 @@
+{
+  "script": "./assets/index-Crnu6QyE.js",
+  "css": "./assets/index-CXMbKhhi.css",
+  "servedBuildMatches": true,
+  "comparisonEntryServed": true,
+  "materials": {
+    "snow": {
+      "dimensions": [
+        2048,
+        2048
+      ],
+      "lossless": true,
+      "displayScaleStd": 3.259,
+      "seamToAdjacentRatio": 1.004,
+      "servedMatches": true
+    },
+    "milk": {
+      "dimensions": [
+        2048,
+        2048
+      ],
+      "lossless": true,
+      "displayScaleStd": 4.101,
+      "seamToAdjacentRatio": 1.012,
+      "servedMatches": true
+    },
+    "ivory": {
+      "dimensions": [
+        2048,
+        2048
+      ],
+      "lossless": true,
+      "displayScaleStd": 4.268,
+      "seamToAdjacentRatio": 1.018,
+      "servedMatches": true
+    },
+    "oat": {
+      "dimensions": [
+        2048,
+        2048
+      ],
+      "lossless": true,
+      "displayScaleStd": 4.736,
+      "seamToAdjacentRatio": 1.027,
+      "servedMatches": true
+    },
+    "linen": {
+      "dimensions": [
+        2048,
+        2048
+      ],
+      "lossless": true,
+      "displayScaleStd": 3.234,
+      "seamToAdjacentRatio": 1.086,
+      "servedMatches": true
+    },
+    "book": {
+      "dimensions": [
+        2048,
+        2048
+      ],
+      "lossless": true,
+      "displayScaleStd": 2.471,
+      "seamToAdjacentRatio": 1.01,
+      "servedMatches": true
+    },
+    "graphite": {
+      "dimensions": [
+        2048,
+        2048
+      ],
+      "lossless": true,
+      "displayScaleStd": 2.264,
+      "seamToAdjacentRatio": 1.047,
+      "servedMatches": true
+    }
+  },
+  "simulatedDOMChecks": 103,
+  "existingTests": 18,
+  "build": "passed",
+  "browserCheckTypeScript": "passed",
+  "browserVisualVerification": "pending: cua_repl connection timeout",
+  "protectedSourceFilesUnchanged": [
+    "src/Wordmark.tsx",
+    "src/brand.css",
+    "src/typing.ts",
+    "src/paperGeometry.ts",
+    "src/lamp.ts",
+    "src/mechanismModel.ts",
+    "src/Library.tsx",
+    "src/storage.ts",
+    "src/Editor.tsx"
+  ]
+}

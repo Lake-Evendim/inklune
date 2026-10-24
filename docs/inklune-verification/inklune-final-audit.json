@@ -1,0 +1,41 @@
+{
+  "changedSourceFiles": [
+    "src/App.tsx",
+    "src/Editor.tsx",
+    "src/export.ts",
+    "src/Library.tsx",
+    "src/main.tsx",
+    "src/start-gallery.css",
+    "src/start.css",
+    "src/startDesigns.ts",
+    "src/StartGallery.tsx",
+    "src/StartPage.tsx"
+  ],
+  "removedUnusedSourceFiles": [
+    "src/assets/start-serif-OFL.txt",
+    "src/assets/start-serif.woff2",
+    "src/start-collection.css",
+    "src/start-variants.css",
+    "src/StartArtwork.tsx",
+    "src/StartCollectionArt.tsx"
+  ],
+  "protectedMechanicsUnchanged": true,
+  "coverage": {
+    "ratio": 0.9997562085554544,
+    "total": 61528,
+    "missing": 15,
+    "pass": true
+  },
+  "designChecks": 1098,
+  "entryChecks": 153,
+  "unitChecks": 18,
+  "productionStorageUnchanged": true,
+  "script": "./assets/index-BnnmiVwv.js",
+  "galleryHoverCorrected": true,
+  "addedBrandSources": [
+    "src/Wordmark.tsx",
+    "src/brand.css",
+    "src/assets/borel-latin.woff2",
+    "src/assets/Borel-OFL.txt"
+  ]
+}

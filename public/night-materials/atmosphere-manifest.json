@@ -1,0 +1,38 @@
+{
+  "hazy": {
+    "landscape": [
+      2560,
+      1600
+    ],
+    "portrait": [
+      1600,
+      2400
+    ],
+    "rgbMax": 68,
+    "file": "hazy.webp"
+  },
+  "ebony": {
+    "landscape": [
+      2560,
+      1600
+    ],
+    "portrait": [
+      1600,
+      2400
+    ],
+    "rgbMax": 53,
+    "file": "ebony.webp"
+  },
+  "golden": {
+    "landscape": [
+      2560,
+      1600
+    ],
+    "portrait": [
+      1600,
+      2400
+    ],
+    "rgbMax": 80,
+    "file": "golden.webp"
+  }
+}

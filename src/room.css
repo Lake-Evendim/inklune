@@ -1,0 +1,16 @@
+/* Both rooms stay mounted so the editor can prepare before entry. */
+.room-layer { position:absolute; inset:0; width:100%; height:100dvh; isolation:isolate; overflow:hidden; opacity:0; pointer-events:none; }
+.room-start-layer { z-index:2; }
+.room-writer-layer { z-index:1; }
+.room-layer.room-visible { opacity:1; pointer-events:auto; }
+.room-moving .room-layer { pointer-events:none; }
+.room-moving .start-primary { visibility:hidden; transform:none; transition:none; }
+/* One rounded box owns the button edge; do not clip it a second time in the room. */
+.room-transition-surface { position:absolute; left:0; top:0; width:0; height:0; z-index:4; opacity:0; pointer-events:none; overflow:hidden; }
+.room-transition-label { position:absolute; display:flex; align-items:center; justify-content:center; white-space:nowrap; }
+.room-layer[aria-hidden="true"] * { animation-play-state:paused!important; }
+@media print {
+ .room-transition-surface { display:none; }
+ .room-start-layer { display:none; }
+ .room-writer-layer { position:relative; height:auto; overflow:visible; opacity:1; }
+}

@@ -1,0 +1,225 @@
+/* Writing room: one sheet, a quiet header, and one set of tools. */
+.app { height:100dvh; min-height:0; }
+.app-header { height:76px; margin:0 36px; border:0; }
+.document-identity { display:flex; align-items:center; gap:25px; }
+.brand { padding:0; }
+.brand-word { font-size:25px; letter-spacing:0; padding-top:4px; color:#d4d2c8; }
+.document-identity .save-state { min-width:0; color:#777871; font-size:10px; gap:7px; }
+.save-state i { width:3px; height:3px; box-shadow:none; }
+.header-actions { gap:22px; }
+.theme-toggle { color:#94948a; width:28px; height:28px; }
+.document-counter { display:flex; align-items:center; gap:10px; font:12px 'Courier Prime',monospace; font-variant-numeric:tabular-nums; color:#85867f; }
+.document-counter>span:first-child { color:#bbbcb2; }
+.document-counter .counter-divider { color:#51534d; }
+.document-counter.at-limit>span:first-child { color:#d4a071; }
+.desk { --paper-frame-height:calc(100dvh - 192px); height:calc(100dvh - 76px); max-width:none; padding:20px 24px 96px; overflow-y:auto; overflow-x:hidden; overscroll-behavior-y:contain; scrollbar-width:thin; scrollbar-color:#76776b70 transparent; touch-action:pan-y pinch-zoom; overflow-anchor:none; scroll-behavior:auto; }
+/* The native desk track is the only scrolling surface. Its sticky viewport
+   keeps the sheet and mechanism in the room; track position advances the roll.
+   Preserve desktop paper/type scale rather than scaling with window height. */
+.desk .paper-scroll-track { height:calc(var(--paper-frame-height) + var(--feed-range,0px)); }
+.desk .typewriter-assembly { position:sticky; top:0; height:var(--paper-frame-height); }
+.desk .writing-area { margin-top:min(22.5%,calc(var(--paper-frame-height) * .32)); }
+.typewriter-assembly { width:min(720px,calc(100vw - 112px)); overflow:clip; }
+.paper,.paper.curved { height:auto; min-height:calc(100dvh - 192px); aspect-ratio:.76; }
+.writer-dock { position:fixed; bottom:20px; left:50%; transform:translateX(-50%); display:flex; align-items:center; gap:5px; padding:7px 10px; z-index:26; background:#272827; border:1px solid #ffffff0e; border-radius:12px; box-shadow:0 4px 16px #0002; }
+.dock-button,.writer-dock .export-trigger { width:58px; height:49px; padding:5px 0; margin:0; border:0; border-radius:7px; box-shadow:none; color:#aaa99f; display:flex; flex-direction:column; justify-content:center; align-items:center; gap:7px; background:none; font-size:10px; }
+.dock-button:hover,.writer-dock .export-trigger:hover,.dock-button.active,.writer-dock .export-trigger.active { color:#eeece1; background:#ffffff08; }
+.writer-dock .export-menu { bottom:76px; top:auto; right:-58px; width:282px; border-radius:10px; padding:13px; border-color:#ffffff14; box-shadow:0 16px 35px #0005; background:#2b2c2a; }
+.export-menu .menu-caption { margin:6px 10px 13px; font-size:11px; color:#8d8e83; }
+.export-menu button { font-size:12px; padding:13px 10px; }
+.export-menu small { font-size:9px; color:#777c70; }
+.panel-backdrop { inset:0; z-index:35; background:#00000012; backdrop-filter:none; }
+.settings-panel,.library-panel,.night .settings-panel,.night .library-panel { top:86px; bottom:24px; max-height:none; width:432px; border:1px solid #ffffff24; border-radius:14px; background:#e9e8df; color:#34372f; box-shadow:0 24px 70px #0005; z-index:40; }
+.settings-panel { right:24px; }
+.library-panel { left:24px; width:388px; }
+.panel-header { padding:0 26px; height:86px; border:0; }
+.panel-title { display:block; font-size:18px; font-weight:500; letter-spacing:0; }
+.panel-subtitle { display:block; margin-top:8px; font-size:11px; color:#878a7d; }
+.panel-header .icon-button { color:#7c8172; width:30px; height:30px; }
+.studio-tabs { display:flex; margin:0 26px; border-bottom:1px solid #747b6320; flex-shrink:0; }
+.studio-tabs button { position:relative; flex:1; padding:13px 0 16px; font-size:13px; color:#7e8275; }
+.studio-tabs button[aria-selected=true] { color:#303b29; }
+.studio-tabs button[aria-selected=true]::after { content:''; position:absolute; bottom:-1px; left:18%; right:18%; height:2px; background:#6e7e5f; pointer-events:none; }
+.settings-scroll { padding:0 26px; overscroll-behavior:contain; scrollbar-color:#8d947555 transparent; }
+.setting-section { padding:25px 0 30px; border:0; }
+.section-intro { margin:0 0 24px; }
+.section-intro h3 { font-size:14px; font-weight:500; margin:0 0 9px; color:#3c4434; }
+.section-intro p { font-size:12px; color:#7c8272; line-height:1.7; margin:0; }
+.paper-options { grid-template-columns:repeat(3,1fr); gap:22px 16px; }
+.paper-option { font-size:12px; color:#777d6d; }
+.paper-swatch,.paper-option:nth-child(even) .paper-swatch { height:94px; transform:none; border-radius:4px; margin-bottom:12px; background-size:210px; box-shadow:0 2px 4px #383b2514; border-color:#8d92712b; }
+.paper-option.selected .paper-swatch { outline:1px solid #788869; outline-offset:4px; }
+.paper-option.selected,.night .paper-option.selected { color:#37452c; }
+.shape-setting { padding-top:25px; margin-top:28px; border-top:1px solid #747b6320; }
+.setting-row { font-size:12px; margin-top:25px; min-height:32px; }
+.segmented { padding:3px; background:#7b856a0c; border-color:#7b856a14; }
+.segmented button { padding:7px 12px; min-width:49px; font-size:11px; }
+.segmented button.active,.night .segmented button.active { background:#f8f8f1; color:#3d4930; box-shadow:0 1px 3px #444b2913; }
+.kit-gallery { margin:0 -9px; }
+.kit-option { font-size:12px; }
+.kit-option.selected { border-color:#8795757d; background:#7c896b08; }
+.kit-title i { color:#8e7450; }
+.kit-loading { height:336px; padding-top:80px; text-align:center; color:#858a7c; font-size:12px; }
+.setting-sublabel { margin-top:25px; font-size:12px; }
+.capsule-options { margin-top:15px; }
+.capsule-options button { gap:10px; font-size:9px; }
+.enamel-swatch { width:28px; height:28px; }
+.kit-combinations { margin-top:25px; padding-top:3px; border-top:1px solid #747b6320; }
+.setting-row select { max-width:176px; font:11px 'DM Sans','Microsoft YaHei',sans-serif; padding:9px 24px 9px 11px; border:1px solid #8c95782c; background:#f4f5ed; border-radius:6px; }
+.range-label { font-size:12px; row-gap:19px; margin:30px 0 37px; color:#505847; }
+.range-label output { color:#8a907f; font-size:11px; }
+.range-label input { height:3px; background:linear-gradient(90deg,#8c987a,#c4c9b9); }
+.range-label input::-webkit-slider-thumb { width:14px; height:14px; background:#f9faf3; border-color:#9fa98d; }
+.ink-specimen { background:#f5f4eb; border:1px solid #a3a98e26; border-radius:5px; font-family:'Courier Prime','Microsoft YaHei',monospace; line-height:1.6; padding:28px 22px; min-height:132px; color:#33392e; }
+.switch { width:34px; height:20px; padding:3px; background:#b7bdab; }
+.switch.on { background:#859473; }
+.switch.on span { transform:translateX(14px); }
+.keyboard-shortcuts { margin-top:38px; padding-top:25px; border-top:1px solid #747b6320; }
+.keyboard-shortcuts>span { display:flex; justify-content:space-between; color:#899080; font-size:10px; margin-bottom:16px; }
+.keyboard-shortcuts kbd { font:10px 'DM Sans',sans-serif; color:#777e6b; }
+.light-mode { margin-bottom:28px; padding:16px 18px; background:#7b856a0c; border-radius:6px; }
+.settings-done { height:60px; margin:0 26px; border-top:1px solid #747b6320; font-size:12px; color:#48593a; }
+.settings-done:hover { background:none; color:#20351b; }
+.library-tools { padding:0 26px; }
+.library-tabs { margin-top:22px; }
+.search-box { padding:13px; background:#f4f5ec; border:1px solid #929b7b24; border-radius:6px; }
+.search-box input { font-size:12px; }
+.library-scroll { padding:0 26px; overscroll-behavior:contain; }
+.note-group h3 { font-size:11px; margin-bottom:15px; }
+.note-card,.note-card.active { border:0; border-bottom:1px solid #929b7b24; border-radius:0; background:none!important; box-shadow:none; transform:none!important; margin:0; }
+.note-card.active { background:#78876709!important; border-left:2px solid #8e9e78; }
+.note-select { padding:16px 14px 17px; }
+.note-card strong { font:16px/1.5 'Courier Prime','Microsoft YaHei',monospace; color:#424a38; }
+.note-card p { font:11px/1.8 'DM Sans','Microsoft YaHei',sans-serif; max-width:100%; color:#969c8b; }
+.note-card-date { font:10px 'DM Sans',sans-serif; color:#9da491; }
+.note-card-count { font-size:9px; color:#939d84; }
+.note-delete { right:9px; bottom:10px; }
+.library-footer { padding:18px 26px 22px; }
+.library-footer p { display:none; }
+.new-letter { border-radius:6px; padding:13px; background:#7d8e6710; font-size:12px; }
+.library-empty p { font-size:14px; }
+.toast,.night .toast { bottom:101px; background:#30312e; border-color:#ffffff12; border-radius:8px; box-shadow:0 8px 24px #0003; }
+/* Lighting has a dedicated settings tab; keep the sheet free of tiny sliders. */
+.night-light-controls { display:none; }
+.focus-mode .app-header { opacity:1; pointer-events:auto; height:76px; }
+.focus-mode .document-identity,.focus-mode .theme-toggle { visibility:hidden; pointer-events:none; }
+.focus-mode .document-counter { opacity:.45; }
+.focus-mode .writer-dock { display:none; }
+.exit-focus { top:21px; left:30px; right:auto; width:30px; height:30px; color:#92968a; }
+.about-dialog { background:#e9e8df; border-radius:14px; }
+.about-dialog h2 { font:23px 'Microsoft YaHei',sans-serif; letter-spacing:0; }
+.about-dialog .brand-word { color:#424b36; }
+@media(min-width:1600px) { .typewriter-assembly { width:760px; } }
+@media(max-width:760px) {
+ .app-header { height:62px; margin:0 22px; }
+ .brand-word { font-size:23px; }
+ .document-identity .save-state { display:none; }
+ .header-actions { gap:16px; }
+ .header-actions>.theme-toggle { display:flex; }
+ .document-counter { font-size:11px; gap:8px; }
+ .desk { --paper-frame-height:calc(100dvh - 180px); height:calc(100dvh - 62px); padding:20px 14px 98px; }
+ .typewriter-assembly { width:calc(100vw - 28px); }
+ .paper,.paper.curved,.focus-mode .paper,.focus-mode .paper.curved { height:max(520px,calc(100dvh - 180px)); min-height:0; aspect-ratio:auto; }
+ .writer-dock { bottom:14px; gap:3px; padding:6px 8px; max-width:calc(100vw - 28px); border-radius:11px; }
+ .dock-button,.writer-dock .export-trigger { width:55px; height:46px; font-size:9px; }
+ .writer-dock .export-menu { bottom:71px; right:-54px; width:270px; }
+ .settings-panel,.library-panel,.night .settings-panel,.night .library-panel { top:60px; bottom:0; right:0; left:0; width:100%; height:calc(100dvh - 60px); border-radius:18px 18px 0 0; }
+ .panel-header { height:82px; padding:0 25px; }
+ .studio-tabs { margin-inline:25px; }
+ .settings-scroll { padding-inline:25px; }
+ .section-intro { margin-bottom:23px; }
+ .paper-options { gap:22px 15px; }
+ .paper-swatch,.paper-option:nth-child(even) .paper-swatch { height:87px; }
+ .settings-done { height:64px; padding-bottom:env(safe-area-inset-bottom); margin-inline:25px; }
+ .setting-row select { max-width:161px; }
+ .kit-combinations .segmented button { padding-inline:9px; min-width:43px; }
+ .library-footer { padding-bottom:max(24px,env(safe-area-inset-bottom)); }
+ .focus-mode .app-header { height:62px; }
+ .exit-focus { left:19px; top:15px; }
+ .toast { bottom:90px; }
+}
+@media print { .app { height:auto; } .app-header,.writer-dock,.document-counter { display:none!important; } .desk { height:auto; padding:0; overflow:visible; } .desk .paper-scroll-track { height:auto; } .desk .typewriter-assembly { position:relative; top:auto; height:auto; } .desk .writing-area { margin-top:22.5%; } .typewriter-assembly { width:100%; overflow:visible; } .paper,.paper.curved { height:auto!important; aspect-ratio:auto; } }
+
+/* Room revision: paper occupies the height; tools sit beside the desk. */
+.app-header,.focus-mode .app-header { height:52px; margin:0 28px; }
+.brand-word { font-size:22px; }
+.document-identity { gap:18px; }
+.document-identity .save-state { font-size:11px; color:#989990; }
+.header-actions { gap:22px; }
+.theme-toggle { width:36px; height:36px; }
+.document-counter { font:12px 'DM Sans','Microsoft YaHei',sans-serif; gap:7px; }
+.document-counter>span:first-child { color:#dbdbd2; }
+.desk { --paper-frame-height:calc(100dvh - 72px); height:calc(100dvh - 52px); padding:8px 80px 12px; }
+.desk .writing-area { margin-top:var(--paper-writing-top,min(22.5%,calc(var(--paper-frame-height) * .27))); }
+.typewriter-assembly { width:min(780px,calc(100vw - 176px)); }
+.paper,.paper.curved { min-height:calc(100dvh - 72px); }
+.writer-dock { left:26px; top:50%; bottom:auto; transform:translateY(-50%); flex-direction:column; gap:5px; padding:7px; border-radius:14px; background:#242524; border-color:#ffffff12; box-shadow:0 6px 24px #0002; }
+.dock-button,.writer-dock .export-trigger { position:relative; width:40px; height:40px; padding:0; border-radius:8px; }
+.dock-button>span,.writer-dock .export-trigger>span { position:absolute; left:54px; top:7px; padding:7px 10px; border-radius:5px; color:#e5e5dc; background:#363835; white-space:nowrap; pointer-events:none; opacity:0; transform:translateX(-4px); transition:opacity 120ms,transform 120ms; font-size:11px; }
+.dock-button:hover>span,.dock-button:focus-visible>span,.writer-dock .export-trigger:hover>span,.writer-dock .export-trigger:focus-visible>span { opacity:1; transform:none; }
+.dock-button:hover,.writer-dock .export-trigger:hover,.dock-button.active,.writer-dock .export-trigger.active { background:#ffffff0d; color:#f1f1e9; }
+.writer-dock .export-menu { left:56px; right:auto; bottom:auto; top:0; width:270px; }
+.settings-panel,.library-panel,.night .settings-panel,.night .library-panel { top:60px; bottom:12px; border-radius:12px; width:408px; border-color:#ffffff1c; background:#e7e7e0; }
+.settings-panel { right:12px; }
+.library-panel { left:92px; }
+.panel-header { height:72px; padding-inline:24px; }
+.panel-title { font-size:17px; }
+.panel-subtitle { margin-top:6px; }
+.studio-tabs { margin-inline:24px; }
+.studio-tabs button { padding:12px 0 14px; }
+.settings-scroll { padding-inline:24px; }
+.setting-section { padding:22px 0 24px; }
+.paper-options { gap:20px 16px; }
+.paper-swatch,.paper-option:nth-child(even) .paper-swatch { height:84px; }
+.settings-done { height:48px; margin-inline:24px; }
+.kit-gallery { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:5px; margin:0 -6px; }
+.kit-option { height:auto; min-height:110px; padding:6px 2px 12px; border-radius:7px; }
+.kit-preview { display:block; width:100%; height:auto; aspect-ratio:2; object-fit:contain; margin-bottom:8px; }
+.kit-preview-holder { display:block; width:100%; }
+.kit-title { font-size:11px; }
+.kit-title i { display:block; margin:5px 0 0; font-size:9px; }
+.capsule-anchor { top:calc(var(--carriage-y) - 10.5px * var(--mechanism-scale,1)); }
+.carriage { top:calc(var(--carriage-y) - 4px * var(--mechanism-scale,1)); }
+
+.toast,.night .toast { bottom:20px; }
+.exit-focus { top:9px; left:28px; }
+button:focus-visible { outline:2px solid #a9b99a; outline-offset:3px; }
+@media(min-width:1600px) { .typewriter-assembly { width:820px; } }
+@media(max-width:760px) {
+ .app-header,.focus-mode .app-header { height:46px; margin:0 16px; }
+ .brand-word { font-size:21px; }
+ .header-actions { gap:13px; }
+ .document-counter { font-size:11px; }
+ .desk { --paper-frame-height:calc(100dvh - 108px - env(safe-area-inset-bottom)); height:calc(100dvh - 46px); padding:4px 10px calc(58px + env(safe-area-inset-bottom)); }
+ .typewriter-assembly { width:calc(100vw - 20px); }
+ .paper,.paper.curved,.focus-mode .paper,.focus-mode .paper.curved { height:max(520px,calc(100dvh - 108px)); min-height:0; }
+ .writer-dock { top:auto; left:50%; bottom:calc(8px + env(safe-area-inset-bottom)); transform:translateX(-50%); flex-direction:row; gap:12px; padding:4px 9px; border-radius:13px; }
+ .dock-button,.writer-dock .export-trigger { width:40px; height:40px; }
+ .dock-button>span,.writer-dock .export-trigger>span { display:none; }
+ .writer-dock .export-menu { left:auto; right:-50px; top:auto; bottom:56px; }
+ .settings-panel,.library-panel,.night .settings-panel,.night .library-panel { top:46px; bottom:0; left:0; right:0; width:100%; height:calc(100dvh - 46px); border-radius:14px 14px 0 0; }
+ .settings-done { height:52px; padding-bottom:env(safe-area-inset-bottom); }
+ .focus-mode .desk { --paper-frame-height:calc(100dvh - 50px); padding-bottom:0; }
+ .exit-focus { top:6px; left:14px; }
+ .toast,.night .toast { bottom:70px; }
+}
+@media print { .desk { height:auto; padding:0; } .typewriter-assembly { width:100%; } }
+
+/* Geometric rolling surface; DOM remains the authoritative editable layout. */
+.paper-roll-canvas { position:absolute; inset:0; width:100%; height:100%; z-index:4; display:none; touch-action:pan-y; }
+.has-paper-roll .paper-roll-canvas { display:block; }
+.has-paper-roll .paper-illumination { visibility:hidden; }
+.has-paper-roll .paper-texture,.has-paper-roll .ink-text { opacity:0; }
+.has-paper-roll .writing-area { background-image:none; }
+.has-paper-roll .writing-input { pointer-events:none; }
+.paper,.paper.curved,.night .paper,.night .paper.curved { border-radius:2px; clip-path:inset(.5px 0 0 round 2px); }
+.paper::after,.night .paper::after { display:none; }
+@media print { .paper-roll-canvas { display:none!important; } .has-paper-roll .paper-texture { opacity:1; } .has-paper-roll .ink-text { opacity:var(--ink-opacity); } }
+
+.has-paper-roll .paper-content { z-index:5; pointer-events:none; transform:none; will-change:auto; }
+.has-paper-roll .paper-texture { display:none; }
+
+
+.has-paper-roll .paper-surface { --paper-feed:0px; }
+.has-paper-roll .writing-input { opacity:0; transform:translate3d(0,calc(-1 * var(--native-input-feed,0px)),0); }
+.has-paper-roll .writing-input::selection { background:transparent; }

@@ -1,0 +1,1 @@
+<!doctype html><meta charset="utf-8"><title>纸页保存状态检查</title><pre id="snapshot"></pre><script>document.querySelector('pre').textContent=JSON.stringify(Object.fromEntries(Object.keys(localStorage).filter(k=>k.startsWith('platen')).map(k=>[k,localStorage.getItem(k)])),null,2)</script>

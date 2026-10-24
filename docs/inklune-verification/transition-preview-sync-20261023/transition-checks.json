@@ -1,0 +1,1019 @@
+{
+  "pass": true,
+  "checks": [
+    {
+      "name": "desktop-day uses latest high resolution logo and arc pacing",
+      "pass": true,
+      "renderer": "continuous-coverage",
+      "coverage": "area-average",
+      "unassigned": "0",
+      "canvas": [
+        912,
+        249
+      ],
+      "sourceWidth": 3648,
+      "sampling": "4",
+      "bundle": [
+        "http://127.0.0.1:5174/assets/index-ChtVksrF.js"
+      ],
+      "crossingMs": 17.105891532381293,
+      "crossingSpeedRatio": 0.9999999999999934
+    },
+    {
+      "name": "desktop-day-aperture displays the fixed k at 970ms",
+      "pass": true,
+      "maxAlphaDelta": 0
+    },
+    {
+      "name": "desktop-day-aperture preserves the actual unfinished logo",
+      "pass": true,
+      "copies": 0,
+      "deltas": [],
+      "emptyCloneCanvases": 0
+    },
+    {
+      "name": "desktop-day-aperture completes and cleans up",
+      "pass": true
+    },
+    {
+      "name": "desktop-day-signature displays the fixed k at 970ms",
+      "pass": true,
+      "maxAlphaDelta": 0
+    },
+    {
+      "name": "desktop-day-signature preserves the actual unfinished logo",
+      "pass": true,
+      "copies": 1,
+      "deltas": [
+        0
+      ],
+      "emptyCloneCanvases": 0
+    },
+    {
+      "name": "desktop-day-signature completes and cleans up",
+      "pass": true
+    },
+    {
+      "name": "desktop-day-contour displays the fixed k at 970ms",
+      "pass": true,
+      "maxAlphaDelta": 0
+    },
+    {
+      "name": "desktop-day-contour preserves the actual unfinished logo",
+      "pass": true,
+      "copies": 0,
+      "deltas": [],
+      "emptyCloneCanvases": 0
+    },
+    {
+      "name": "desktop-day-contour completes and cleans up",
+      "pass": true
+    },
+    {
+      "name": "desktop-day-inkflow displays the fixed k at 970ms",
+      "pass": true,
+      "maxAlphaDelta": 0
+    },
+    {
+      "name": "desktop-day-inkflow preserves the actual unfinished logo",
+      "pass": true,
+      "copies": 0,
+      "deltas": [],
+      "emptyCloneCanvases": 0
+    },
+    {
+      "name": "desktop-day-inkflow completes and cleans up",
+      "pass": true
+    },
+    {
+      "name": "desktop-day-gates displays the fixed k at 970ms",
+      "pass": true,
+      "maxAlphaDelta": 0
+    },
+    {
+      "name": "desktop-day-gates preserves the actual unfinished logo",
+      "pass": true,
+      "copies": 2,
+      "deltas": [
+        0,
+        0
+      ],
+      "emptyCloneCanvases": 0
+    },
+    {
+      "name": "desktop-day-gates completes and cleans up",
+      "pass": true
+    },
+    {
+      "name": "desktop-day-canopy displays the fixed k at 970ms",
+      "pass": true,
+      "maxAlphaDelta": 0
+    },
+    {
+      "name": "desktop-day-canopy preserves the actual unfinished logo",
+      "pass": true,
+      "copies": 0,
+      "deltas": [],
+      "emptyCloneCanvases": 0
+    },
+    {
+      "name": "desktop-day-canopy completes and cleans up",
+      "pass": true
+    },
+    {
+      "name": "desktop-day-focus displays the fixed k at 970ms",
+      "pass": true,
+      "maxAlphaDelta": 0
+    },
+    {
+      "name": "desktop-day-focus preserves the actual unfinished logo",
+      "pass": true,
+      "copies": 0,
+      "deltas": [],
+      "emptyCloneCanvases": 0
+    },
+    {
+      "name": "desktop-day-focus completes and cleans up",
+      "pass": true
+    },
+    {
+      "name": "desktop-day-lightpass displays the fixed k at 970ms",
+      "pass": true,
+      "maxAlphaDelta": 0
+    },
+    {
+      "name": "desktop-day-lightpass preserves the actual unfinished logo",
+      "pass": true,
+      "copies": 0,
+      "deltas": [],
+      "emptyCloneCanvases": 0
+    },
+    {
+      "name": "desktop-day-lightpass completes and cleans up",
+      "pass": true
+    },
+    {
+      "name": "desktop-night uses latest high resolution logo and arc pacing",
+      "pass": true,
+      "renderer": "continuous-coverage",
+      "coverage": "area-average",
+      "unassigned": "0",
+      "canvas": [
+        912,
+        249
+      ],
+      "sourceWidth": 3648,
+      "sampling": "4",
+      "bundle": [
+        "http://127.0.0.1:5174/assets/index-ChtVksrF.js"
+      ],
+      "crossingMs": 17.105891532381293,
+      "crossingSpeedRatio": 0.9999999999999934
+    },
+    {
+      "name": "desktop-night-aperture displays the fixed k at 970ms",
+      "pass": true,
+      "maxAlphaDelta": 0
+    },
+    {
+      "name": "desktop-night-aperture preserves the actual unfinished logo",
+      "pass": true,
+      "copies": 0,
+      "deltas": [],
+      "emptyCloneCanvases": 0
+    },
+    {
+      "name": "desktop-night-aperture completes and cleans up",
+      "pass": true
+    },
+    {
+      "name": "desktop-night-signature displays the fixed k at 970ms",
+      "pass": true,
+      "maxAlphaDelta": 0
+    },
+    {
+      "name": "desktop-night-signature preserves the actual unfinished logo",
+      "pass": true,
+      "copies": 1,
+      "deltas": [
+        0
+      ],
+      "emptyCloneCanvases": 0
+    },
+    {
+      "name": "desktop-night-signature completes and cleans up",
+      "pass": true
+    },
+    {
+      "name": "desktop-night-contour displays the fixed k at 970ms",
+      "pass": true,
+      "maxAlphaDelta": 0
+    },
+    {
+      "name": "desktop-night-contour preserves the actual unfinished logo",
+      "pass": true,
+      "copies": 0,
+      "deltas": [],
+      "emptyCloneCanvases": 0
+    },
+    {
+      "name": "desktop-night-contour completes and cleans up",
+      "pass": true
+    },
+    {
+      "name": "desktop-night-inkflow displays the fixed k at 970ms",
+      "pass": true,
+      "maxAlphaDelta": 0
+    },
+    {
+      "name": "desktop-night-inkflow preserves the actual unfinished logo",
+      "pass": true,
+      "copies": 0,
+      "deltas": [],
+      "emptyCloneCanvases": 0
+    },
+    {
+      "name": "desktop-night-inkflow completes and cleans up",
+      "pass": true
+    },
+    {
+      "name": "desktop-night-gates displays the fixed k at 970ms",
+      "pass": true,
+      "maxAlphaDelta": 0
+    },
+    {
+      "name": "desktop-night-gates preserves the actual unfinished logo",
+      "pass": true,
+      "copies": 2,
+      "deltas": [
+        0,
+        0
+      ],
+      "emptyCloneCanvases": 0
+    },
+    {
+      "name": "desktop-night-gates completes and cleans up",
+      "pass": true
+    },
+    {
+      "name": "desktop-night-canopy displays the fixed k at 970ms",
+      "pass": true,
+      "maxAlphaDelta": 0
+    },
+    {
+      "name": "desktop-night-canopy preserves the actual unfinished logo",
+      "pass": true,
+      "copies": 0,
+      "deltas": [],
+      "emptyCloneCanvases": 0
+    },
+    {
+      "name": "desktop-night-canopy completes and cleans up",
+      "pass": true
+    },
+    {
+      "name": "desktop-night-focus displays the fixed k at 970ms",
+      "pass": true,
+      "maxAlphaDelta": 0
+    },
+    {
+      "name": "desktop-night-focus preserves the actual unfinished logo",
+      "pass": true,
+      "copies": 0,
+      "deltas": [],
+      "emptyCloneCanvases": 0
+    },
+    {
+      "name": "desktop-night-focus completes and cleans up",
+      "pass": true
+    },
+    {
+      "name": "desktop-night-lightpass displays the fixed k at 970ms",
+      "pass": true,
+      "maxAlphaDelta": 0
+    },
+    {
+      "name": "desktop-night-lightpass preserves the actual unfinished logo",
+      "pass": true,
+      "copies": 0,
+      "deltas": [],
+      "emptyCloneCanvases": 0
+    },
+    {
+      "name": "desktop-night-lightpass completes and cleans up",
+      "pass": true
+    },
+    {
+      "name": "phone-day uses latest high resolution logo and arc pacing",
+      "pass": true,
+      "renderer": "continuous-coverage",
+      "coverage": "area-average",
+      "unassigned": "0",
+      "canvas": [
+        354,
+        97
+      ],
+      "sourceWidth": 1416,
+      "sampling": "4",
+      "bundle": [
+        "http://127.0.0.1:5174/assets/index-ChtVksrF.js"
+      ],
+      "crossingMs": 17.105891532381293,
+      "crossingSpeedRatio": 0.9999999999999934
+    },
+    {
+      "name": "phone-day-aperture displays the fixed k at 970ms",
+      "pass": true,
+      "maxAlphaDelta": 0
+    },
+    {
+      "name": "phone-day-aperture preserves the actual unfinished logo",
+      "pass": true,
+      "copies": 0,
+      "deltas": [],
+      "emptyCloneCanvases": 0
+    },
+    {
+      "name": "phone-day-aperture completes and cleans up",
+      "pass": true
+    },
+    {
+      "name": "phone-day-signature displays the fixed k at 970ms",
+      "pass": true,
+      "maxAlphaDelta": 0
+    },
+    {
+      "name": "phone-day-signature preserves the actual unfinished logo",
+      "pass": true,
+      "copies": 1,
+      "deltas": [
+        0
+      ],
+      "emptyCloneCanvases": 0
+    },
+    {
+      "name": "phone-day-signature completes and cleans up",
+      "pass": true
+    },
+    {
+      "name": "phone-day-contour displays the fixed k at 970ms",
+      "pass": true,
+      "maxAlphaDelta": 0
+    },
+    {
+      "name": "phone-day-contour preserves the actual unfinished logo",
+      "pass": true,
+      "copies": 0,
+      "deltas": [],
+      "emptyCloneCanvases": 0
+    },
+    {
+      "name": "phone-day-contour completes and cleans up",
+      "pass": true
+    },
+    {
+      "name": "phone-day-inkflow displays the fixed k at 970ms",
+      "pass": true,
+      "maxAlphaDelta": 0
+    },
+    {
+      "name": "phone-day-inkflow preserves the actual unfinished logo",
+      "pass": true,
+      "copies": 0,
+      "deltas": [],
+      "emptyCloneCanvases": 0
+    },
+    {
+      "name": "phone-day-inkflow completes and cleans up",
+      "pass": true
+    },
+    {
+      "name": "phone-day-gates displays the fixed k at 970ms",
+      "pass": true,
+      "maxAlphaDelta": 0
+    },
+    {
+      "name": "phone-day-gates preserves the actual unfinished logo",
+      "pass": true,
+      "copies": 2,
+      "deltas": [
+        0,
+        0
+      ],
+      "emptyCloneCanvases": 0
+    },
+    {
+      "name": "phone-day-gates completes and cleans up",
+      "pass": true
+    },
+    {
+      "name": "phone-day-canopy displays the fixed k at 970ms",
+      "pass": true,
+      "maxAlphaDelta": 0
+    },
+    {
+      "name": "phone-day-canopy preserves the actual unfinished logo",
+      "pass": true,
+      "copies": 0,
+      "deltas": [],
+      "emptyCloneCanvases": 0
+    },
+    {
+      "name": "phone-day-canopy completes and cleans up",
+      "pass": true
+    },
+    {
+      "name": "phone-day-focus displays the fixed k at 970ms",
+      "pass": true,
+      "maxAlphaDelta": 0
+    },
+    {
+      "name": "phone-day-focus preserves the actual unfinished logo",
+      "pass": true,
+      "copies": 0,
+      "deltas": [],
+      "emptyCloneCanvases": 0
+    },
+    {
+      "name": "phone-day-focus completes and cleans up",
+      "pass": true
+    },
+    {
+      "name": "phone-day-lightpass displays the fixed k at 970ms",
+      "pass": true,
+      "maxAlphaDelta": 0
+    },
+    {
+      "name": "phone-day-lightpass preserves the actual unfinished logo",
+      "pass": true,
+      "copies": 0,
+      "deltas": [],
+      "emptyCloneCanvases": 0
+    },
+    {
+      "name": "phone-day-lightpass completes and cleans up",
+      "pass": true
+    },
+    {
+      "name": "phone-night uses latest high resolution logo and arc pacing",
+      "pass": true,
+      "renderer": "continuous-coverage",
+      "coverage": "area-average",
+      "unassigned": "0",
+      "canvas": [
+        354,
+        97
+      ],
+      "sourceWidth": 1416,
+      "sampling": "4",
+      "bundle": [
+        "http://127.0.0.1:5174/assets/index-ChtVksrF.js"
+      ],
+      "crossingMs": 17.105891532381293,
+      "crossingSpeedRatio": 0.9999999999999934
+    },
+    {
+      "name": "phone-night-aperture displays the fixed k at 970ms",
+      "pass": true,
+      "maxAlphaDelta": 0
+    },
+    {
+      "name": "phone-night-aperture preserves the actual unfinished logo",
+      "pass": true,
+      "copies": 0,
+      "deltas": [],
+      "emptyCloneCanvases": 0
+    },
+    {
+      "name": "phone-night-aperture completes and cleans up",
+      "pass": true
+    },
+    {
+      "name": "phone-night-signature displays the fixed k at 970ms",
+      "pass": true,
+      "maxAlphaDelta": 0
+    },
+    {
+      "name": "phone-night-signature preserves the actual unfinished logo",
+      "pass": true,
+      "copies": 1,
+      "deltas": [
+        0
+      ],
+      "emptyCloneCanvases": 0
+    },
+    {
+      "name": "phone-night-signature completes and cleans up",
+      "pass": true
+    },
+    {
+      "name": "phone-night-contour displays the fixed k at 970ms",
+      "pass": true,
+      "maxAlphaDelta": 0
+    },
+    {
+      "name": "phone-night-contour preserves the actual unfinished logo",
+      "pass": true,
+      "copies": 0,
+      "deltas": [],
+      "emptyCloneCanvases": 0
+    },
+    {
+      "name": "phone-night-contour completes and cleans up",
+      "pass": true
+    },
+    {
+      "name": "phone-night-inkflow displays the fixed k at 970ms",
+      "pass": true,
+      "maxAlphaDelta": 0
+    },
+    {
+      "name": "phone-night-inkflow preserves the actual unfinished logo",
+      "pass": true,
+      "copies": 0,
+      "deltas": [],
+      "emptyCloneCanvases": 0
+    },
+    {
+      "name": "phone-night-inkflow completes and cleans up",
+      "pass": true
+    },
+    {
+      "name": "phone-night-gates displays the fixed k at 970ms",
+      "pass": true,
+      "maxAlphaDelta": 0
+    },
+    {
+      "name": "phone-night-gates preserves the actual unfinished logo",
+      "pass": true,
+      "copies": 2,
+      "deltas": [
+        0,
+        0
+      ],
+      "emptyCloneCanvases": 0
+    },
+    {
+      "name": "phone-night-gates completes and cleans up",
+      "pass": true
+    },
+    {
+      "name": "phone-night-canopy displays the fixed k at 970ms",
+      "pass": true,
+      "maxAlphaDelta": 0
+    },
+    {
+      "name": "phone-night-canopy preserves the actual unfinished logo",
+      "pass": true,
+      "copies": 0,
+      "deltas": [],
+      "emptyCloneCanvases": 0
+    },
+    {
+      "name": "phone-night-canopy completes and cleans up",
+      "pass": true
+    },
+    {
+      "name": "phone-night-focus displays the fixed k at 970ms",
+      "pass": true,
+      "maxAlphaDelta": 0
+    },
+    {
+      "name": "phone-night-focus preserves the actual unfinished logo",
+      "pass": true,
+      "copies": 0,
+      "deltas": [],
+      "emptyCloneCanvases": 0
+    },
+    {
+      "name": "phone-night-focus completes and cleans up",
+      "pass": true
+    },
+    {
+      "name": "phone-night-lightpass displays the fixed k at 970ms",
+      "pass": true,
+      "maxAlphaDelta": 0
+    },
+    {
+      "name": "phone-night-lightpass preserves the actual unfinished logo",
+      "pass": true,
+      "copies": 0,
+      "deltas": [],
+      "emptyCloneCanvases": 0
+    },
+    {
+      "name": "phone-night-lightpass completes and cleans up",
+      "pass": true
+    },
+    {
+      "name": "no browser exceptions",
+      "pass": true
+    }
+  ],
+  "transitions": [
+    {
+      "name": "desktop-day-aperture",
+      "renderer": "continuous-coverage",
+      "crossingMs": 17.105891532381293,
+      "pixelAlphaDelta": 0,
+      "snapshot": {
+        "copies": 0,
+        "deltas": [],
+        "emptyCloneCanvases": 0
+      },
+      "pass": true
+    },
+    {
+      "name": "desktop-day-signature",
+      "renderer": "continuous-coverage",
+      "crossingMs": 17.105891532381293,
+      "pixelAlphaDelta": 0,
+      "snapshot": {
+        "copies": 1,
+        "deltas": [
+          0
+        ],
+        "emptyCloneCanvases": 0
+      },
+      "pass": true
+    },
+    {
+      "name": "desktop-day-contour",
+      "renderer": "continuous-coverage",
+      "crossingMs": 17.105891532381293,
+      "pixelAlphaDelta": 0,
+      "snapshot": {
+        "copies": 0,
+        "deltas": [],
+        "emptyCloneCanvases": 0
+      },
+      "pass": true
+    },
+    {
+      "name": "desktop-day-inkflow",
+      "renderer": "continuous-coverage",
+      "crossingMs": 17.105891532381293,
+      "pixelAlphaDelta": 0,
+      "snapshot": {
+        "copies": 0,
+        "deltas": [],
+        "emptyCloneCanvases": 0
+      },
+      "pass": true
+    },
+    {
+      "name": "desktop-day-gates",
+      "renderer": "continuous-coverage",
+      "crossingMs": 17.105891532381293,
+      "pixelAlphaDelta": 0,
+      "snapshot": {
+        "copies": 2,
+        "deltas": [
+          0,
+          0
+        ],
+        "emptyCloneCanvases": 0
+      },
+      "pass": true
+    },
+    {
+      "name": "desktop-day-canopy",
+      "renderer": "continuous-coverage",
+      "crossingMs": 17.105891532381293,
+      "pixelAlphaDelta": 0,
+      "snapshot": {
+        "copies": 0,
+        "deltas": [],
+        "emptyCloneCanvases": 0
+      },
+      "pass": true
+    },
+    {
+      "name": "desktop-day-focus",
+      "renderer": "continuous-coverage",
+      "crossingMs": 17.105891532381293,
+      "pixelAlphaDelta": 0,
+      "snapshot": {
+        "copies": 0,
+        "deltas": [],
+        "emptyCloneCanvases": 0
+      },
+      "pass": true
+    },
+    {
+      "name": "desktop-day-lightpass",
+      "renderer": "continuous-coverage",
+      "crossingMs": 17.105891532381293,
+      "pixelAlphaDelta": 0,
+      "snapshot": {
+        "copies": 0,
+        "deltas": [],
+        "emptyCloneCanvases": 0
+      },
+      "pass": true
+    },
+    {
+      "name": "desktop-night-aperture",
+      "renderer": "continuous-coverage",
+      "crossingMs": 17.105891532381293,
+      "pixelAlphaDelta": 0,
+      "snapshot": {
+        "copies": 0,
+        "deltas": [],
+        "emptyCloneCanvases": 0
+      },
+      "pass": true
+    },
+    {
+      "name": "desktop-night-signature",
+      "renderer": "continuous-coverage",
+      "crossingMs": 17.105891532381293,
+      "pixelAlphaDelta": 0,
+      "snapshot": {
+        "copies": 1,
+        "deltas": [
+          0
+        ],
+        "emptyCloneCanvases": 0
+      },
+      "pass": true
+    },
+    {
+      "name": "desktop-night-contour",
+      "renderer": "continuous-coverage",
+      "crossingMs": 17.105891532381293,
+      "pixelAlphaDelta": 0,
+      "snapshot": {
+        "copies": 0,
+        "deltas": [],
+        "emptyCloneCanvases": 0
+      },
+      "pass": true
+    },
+    {
+      "name": "desktop-night-inkflow",
+      "renderer": "continuous-coverage",
+      "crossingMs": 17.105891532381293,
+      "pixelAlphaDelta": 0,
+      "snapshot": {
+        "copies": 0,
+        "deltas": [],
+        "emptyCloneCanvases": 0
+      },
+      "pass": true
+    },
+    {
+      "name": "desktop-night-gates",
+      "renderer": "continuous-coverage",
+      "crossingMs": 17.105891532381293,
+      "pixelAlphaDelta": 0,
+      "snapshot": {
+        "copies": 2,
+        "deltas": [
+          0,
+          0
+        ],
+        "emptyCloneCanvases": 0
+      },
+      "pass": true
+    },
+    {
+      "name": "desktop-night-canopy",
+      "renderer": "continuous-coverage",
+      "crossingMs": 17.105891532381293,
+      "pixelAlphaDelta": 0,
+      "snapshot": {
+        "copies": 0,
+        "deltas": [],
+        "emptyCloneCanvases": 0
+      },
+      "pass": true
+    },
+    {
+      "name": "desktop-night-focus",
+      "renderer": "continuous-coverage",
+      "crossingMs": 17.105891532381293,
+      "pixelAlphaDelta": 0,
+      "snapshot": {
+        "copies": 0,
+        "deltas": [],
+        "emptyCloneCanvases": 0
+      },
+      "pass": true
+    },
+    {
+      "name": "desktop-night-lightpass",
+      "renderer": "continuous-coverage",
+      "crossingMs": 17.105891532381293,
+      "pixelAlphaDelta": 0,
+      "snapshot": {
+        "copies": 0,
+        "deltas": [],
+        "emptyCloneCanvases": 0
+      },
+      "pass": true
+    },
+    {
+      "name": "phone-day-aperture",
+      "renderer": "continuous-coverage",
+      "crossingMs": 17.105891532381293,
+      "pixelAlphaDelta": 0,
+      "snapshot": {
+        "copies": 0,
+        "deltas": [],
+        "emptyCloneCanvases": 0
+      },
+      "pass": true
+    },
+    {
+      "name": "phone-day-signature",
+      "renderer": "continuous-coverage",
+      "crossingMs": 17.105891532381293,
+      "pixelAlphaDelta": 0,
+      "snapshot": {
+        "copies": 1,
+        "deltas": [
+          0
+        ],
+        "emptyCloneCanvases": 0
+      },
+      "pass": true
+    },
+    {
+      "name": "phone-day-contour",
+      "renderer": "continuous-coverage",
+      "crossingMs": 17.105891532381293,
+      "pixelAlphaDelta": 0,
+      "snapshot": {
+        "copies": 0,
+        "deltas": [],
+        "emptyCloneCanvases": 0
+      },
+      "pass": true
+    },
+    {
+      "name": "phone-day-inkflow",
+      "renderer": "continuous-coverage",
+      "crossingMs": 17.105891532381293,
+      "pixelAlphaDelta": 0,
+      "snapshot": {
+        "copies": 0,
+        "deltas": [],
+        "emptyCloneCanvases": 0
+      },
+      "pass": true
+    },
+    {
+      "name": "phone-day-gates",
+      "renderer": "continuous-coverage",
+      "crossingMs": 17.105891532381293,
+      "pixelAlphaDelta": 0,
+      "snapshot": {
+        "copies": 2,
+        "deltas": [
+          0,
+          0
+        ],
+        "emptyCloneCanvases": 0
+      },
+      "pass": true
+    },
+    {
+      "name": "phone-day-canopy",
+      "renderer": "continuous-coverage",
+      "crossingMs": 17.105891532381293,
+      "pixelAlphaDelta": 0,
+      "snapshot": {
+        "copies": 0,
+        "deltas": [],
+        "emptyCloneCanvases": 0
+      },
+      "pass": true
+    },
+    {
+      "name": "phone-day-focus",
+      "renderer": "continuous-coverage",
+      "crossingMs": 17.105891532381293,
+      "pixelAlphaDelta": 0,
+      "snapshot": {
+        "copies": 0,
+        "deltas": [],
+        "emptyCloneCanvases": 0
+      },
+      "pass": true
+    },
+    {
+      "name": "phone-day-lightpass",
+      "renderer": "continuous-coverage",
+      "crossingMs": 17.105891532381293,
+      "pixelAlphaDelta": 0,
+      "snapshot": {
+        "copies": 0,
+        "deltas": [],
+        "emptyCloneCanvases": 0
+      },
+      "pass": true
+    },
+    {
+      "name": "phone-night-aperture",
+      "renderer": "continuous-coverage",
+      "crossingMs": 17.105891532381293,
+      "pixelAlphaDelta": 0,
+      "snapshot": {
+        "copies": 0,
+        "deltas": [],
+        "emptyCloneCanvases": 0
+      },
+      "pass": true
+    },
+    {
+      "name": "phone-night-signature",
+      "renderer": "continuous-coverage",
+      "crossingMs": 17.105891532381293,
+      "pixelAlphaDelta": 0,
+      "snapshot": {
+        "copies": 1,
+        "deltas": [
+          0
+        ],
+        "emptyCloneCanvases": 0
+      },
+      "pass": true
+    },
+    {
+      "name": "phone-night-contour",
+      "renderer": "continuous-coverage",
+      "crossingMs": 17.105891532381293,
+      "pixelAlphaDelta": 0,
+      "snapshot": {
+        "copies": 0,
+        "deltas": [],
+        "emptyCloneCanvases": 0
+      },
+      "pass": true
+    },
+    {
+      "name": "phone-night-inkflow",
+      "renderer": "continuous-coverage",
+      "crossingMs": 17.105891532381293,
+      "pixelAlphaDelta": 0,
+      "snapshot": {
+        "copies": 0,
+        "deltas": [],
+        "emptyCloneCanvases": 0
+      },
+      "pass": true
+    },
+    {
+      "name": "phone-night-gates",
+      "renderer": "continuous-coverage",
+      "crossingMs": 17.105891532381293,
+      "pixelAlphaDelta": 0,
+      "snapshot": {
+        "copies": 2,
+        "deltas": [
+          0,
+          0
+        ],
+        "emptyCloneCanvases": 0
+      },
+      "pass": true
+    },
+    {
+      "name": "phone-night-canopy",
+      "renderer": "continuous-coverage",
+      "crossingMs": 17.105891532381293,
+      "pixelAlphaDelta": 0,
+      "snapshot": {
+        "copies": 0,
+        "deltas": [],
+        "emptyCloneCanvases": 0
+      },
+      "pass": true
+    },
+    {
+      "name": "phone-night-focus",
+      "renderer": "continuous-coverage",
+      "crossingMs": 17.105891532381293,
+      "pixelAlphaDelta": 0,
+      "snapshot": {
+        "copies": 0,
+        "deltas": [],
+        "emptyCloneCanvases": 0
+      },
+      "pass": true
+    },
+    {
+      "name": "phone-night-lightpass",
+      "renderer": "continuous-coverage",
+      "crossingMs": 17.105891532381293,
+      "pixelAlphaDelta": 0,
+      "snapshot": {
+        "copies": 0,
+        "deltas": [],
+        "emptyCloneCanvases": 0
+      },
+      "pass": true
+    }
+  ]
+}

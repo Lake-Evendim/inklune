@@ -1,0 +1,79 @@
+{
+  "snow": {
+    "size": [
+      2048,
+      2048
+    ],
+    "std": 3.379,
+    "displayStd": 3.203,
+    "bytes": 1295536,
+    "base": "#fafaf7",
+    "file": "snow-v2.webp"
+  },
+  "milk": {
+    "size": [
+      2048,
+      2048
+    ],
+    "std": 4.14,
+    "displayStd": 4.063,
+    "bytes": 1720602,
+    "base": "#f7f5ed",
+    "file": "milk-v2.webp"
+  },
+  "ivory": {
+    "size": [
+      2048,
+      2048
+    ],
+    "std": 4.259,
+    "displayStd": 4.268,
+    "bytes": 1130654,
+    "base": "#f4efdf",
+    "file": "ivory-v2.webp"
+  },
+  "oat": {
+    "size": [
+      2048,
+      2048
+    ],
+    "std": 4.75,
+    "displayStd": 4.736,
+    "bytes": 1206938,
+    "base": "#eee7d9",
+    "file": "oat-v2.webp"
+  },
+  "linen": {
+    "size": [
+      2048,
+      2048
+    ],
+    "std": 3.217,
+    "displayStd": 3.234,
+    "bytes": 1041580,
+    "base": "#f4f1e8",
+    "file": "linen-v2.webp"
+  },
+  "book": {
+    "size": [
+      2048,
+      2048
+    ],
+    "std": 2.421,
+    "displayStd": 2.464,
+    "bytes": 988834,
+    "base": "#f9f7f0",
+    "file": "book-v2.webp"
+  },
+  "graphite": {
+    "size": [
+      2048,
+      2048
+    ],
+    "std": 2.208,
+    "displayStd": 2.264,
+    "bytes": 1158122,
+    "base": "#202122",
+    "file": "graphite-v2.webp"
+  }
+}

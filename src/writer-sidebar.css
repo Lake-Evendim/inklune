@@ -1,0 +1,33 @@
+/* The paper owns the full height; tools rest in the right-hand margin. */
+.app .desk { --desk-height:calc(100dvh - 52px); --desk-top:8px; --desk-bottom:12px; --paper-frame-height:calc(var(--desk-height) - var(--desk-top) - var(--desk-bottom)); height:var(--desk-height); padding:var(--desk-top) 100px var(--desk-bottom); }
+.app .paper,.app .paper.curved { min-height:var(--paper-frame-height); }
+.app .desk .typewriter-assembly { width:min(780px,100%); }
+.app.tools-collapsed .desk { padding-inline:60px; }
+.app .writer-dock { inset:50% 18px auto auto; transform:translateY(-50%); flex-direction:column; gap:5px; width:66px; max-width:none; max-height:calc(100dvh - 88px); padding:7px; border-radius:15px; }
+.app .writer-dock .dock-actions { display:flex; flex-direction:column; align-items:center; gap:4px; width:100%; }
+.app .writer-dock .dock-actions[hidden] { display:none; }
+.app .writer-dock :is(.dock-button,.export-trigger) { width:50px; min-width:0; height:54px; flex-direction:column; gap:6px; padding:6px 3px; border-radius:9px; }
+.app .writer-dock :is(.dock-button,.export-trigger)>span { font-size:11px; }
+.app .writer-dock .dock-divider { width:28px; height:1px; margin:3px 0; box-shadow:0 1px var(--ui-lip); }
+.app .writer-dock .export-wrapper { position:static; }
+.app .writer-dock .export-menu { inset:50% calc(100% + 12px) auto auto; transform:translateY(-50%); width:min(318px,calc(100vw - 112px)); max-height:calc(100dvh - 80px); }
+.app .writer-dock .dock-collapse { display:grid; place-items:center; width:44px; min-height:34px; padding:7px; color:var(--ui-muted); border-radius:8px; border-top:1px solid var(--ui-line); }
+.app .writer-dock .dock-collapse:hover { color:var(--ui-ink); background:var(--ui-hover); }
+.app .writer-dock.is-collapsed { width:44px; padding:0; border-radius:12px; }
+.app .writer-dock.is-collapsed .dock-collapse { min-height:44px; border:0; }
+.app .toast { bottom:24px; }
+.app.focus-mode .desk { --desk-bottom:12px; --paper-frame-height:calc(var(--desk-height) - var(--desk-top) - var(--desk-bottom)); padding-inline:60px; padding-bottom:var(--desk-bottom); }
+.app.focus-mode .paper { min-height:var(--paper-frame-height); }
+@media(max-width:760px) {
+ .app .desk { --desk-height:calc(100dvh - 46px); --desk-top:5px; --desk-bottom:calc(12px + env(safe-area-inset-bottom)); padding:var(--desk-top) 74px var(--desk-bottom) 10px; }
+ .app .paper,.app .paper.curved,.app.focus-mode .paper { height:auto; min-height:var(--paper-frame-height); }
+ .app.tools-collapsed .desk,.app.focus-mode .desk { padding-inline:10px; }
+ .app .writer-dock { right:8px; bottom:auto; width:58px; padding:5px; gap:3px; }
+ .app .writer-dock :is(.dock-button,.export-trigger) { width:46px; height:49px; }
+ .app .writer-dock .export-menu { width:min(318px,calc(100vw - 90px)); inset:50% calc(100% + 8px) auto auto; }
+ .app .writer-dock .dock-collapse { width:44px; }
+ .app.focus-mode .desk { --desk-bottom:calc(12px + env(safe-area-inset-bottom)); padding-bottom:var(--desk-bottom); }
+ .app .toast { bottom:calc(18px + env(safe-area-inset-bottom)); }
+}
+@media(max-height:430px) { .app .writer-dock :is(.dock-button,.export-trigger) { height:38px; gap:3px; } .app .writer-dock :is(.dock-button,.export-trigger)>span { font-size:10px; } .app .writer-dock .dock-divider { margin:0; } .app .writer-dock .dock-collapse { min-height:28px; } }
+@media print { .app .desk { height:auto; padding:0; } .app .paper { min-height:0; } }

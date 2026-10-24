@@ -1,0 +1,16 @@
+{
+  "script": "./assets/index-CyQ7DL0o.js",
+  "animation": "dot-write",
+  "clips": 12,
+  "dash": "1px, 2px",
+  "duration": "2200",
+  "parts": 18,
+  "path": "M71 84Q65 91 62 101",
+  "time": "0.11s",
+  "width": "36px",
+  "errors": [],
+  "replayed": [
+    "desktop-day",
+    "phone-night"
+  ]
+}

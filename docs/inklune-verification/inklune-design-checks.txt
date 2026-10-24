@@ -1,0 +1,1098 @@
+PASS quiet 1280x720 day: correct design appears without hidden writer 
+PASS quiet 1280x720 day: original Borel wordmark is large and geometrically centered 820.0px
+PASS quiet 1280x720 day: primary remains visible and enabled during entrance 
+PASS quiet 1280x720 day: logo and copy keep a clear gap 
+PASS quiet 1280x720 day: start brand has no visible legacy name 
+PASS quiet 1280x720 day: primary action fits first viewport 597.1px
+PASS quiet 1280x720 day: touch targets are at least 44px 
+PASS quiet 1280x720 day: no horizontal overflow or competing outer scroll 
+PASS quiet 1280x720 day: body and primary contrast meet 4.5 5.82 / 12.68
+PASS quiet 1280x720 day: footer contrast meets 4.5 5.82
+PASS quiet 1280x720 day: header controls do not overlap or escape 
+PASS quiet 1280x720 day: day/night retains layout and draft 
+PASS quiet 1280x720 day: library receives focus and blocks background 
+PASS quiet 1280x720 day: continue preserves exact note and focuses editor 
+PASS quiet 1280x720 day: return retains adopted design 
+PASS quiet 1280x720 night: correct design appears without hidden writer 
+PASS quiet 1280x720 night: original Borel wordmark is large and geometrically centered 820.0px
+PASS quiet 1280x720 night: primary remains visible and enabled during entrance 
+PASS quiet 1280x720 night: logo and copy keep a clear gap 
+PASS quiet 1280x720 night: start brand has no visible legacy name 
+PASS quiet 1280x720 night: primary action fits first viewport 597.1px
+PASS quiet 1280x720 night: touch targets are at least 44px 
+PASS quiet 1280x720 night: no horizontal overflow or competing outer scroll 
+PASS quiet 1280x720 night: body and primary contrast meet 4.5 7.81 / 12.77
+PASS quiet 1280x720 night: footer contrast meets 4.5 7.81
+PASS quiet 1280x720 night: header controls do not overlap or escape 
+PASS quiet 1280x720 night: day/night retains layout and draft 
+PASS quiet 390x844 day: correct design appears without hidden writer 
+PASS quiet 390x844 day: original Borel wordmark is large and geometrically centered 335.7px
+PASS quiet 390x844 day: primary remains visible and enabled during entrance 
+PASS quiet 390x844 day: logo and copy keep a clear gap 
+PASS quiet 390x844 day: start brand has no visible legacy name 
+PASS quiet 390x844 day: primary action fits first viewport 593.4px
+PASS quiet 390x844 day: touch targets are at least 44px 
+PASS quiet 390x844 day: no horizontal overflow or competing outer scroll start-atmosphere:390.3999938964844,start-header:390.3999938964844,start-main:390.3999938964844,start-footer:390.3999938964844
+PASS quiet 390x844 day: body and primary contrast meet 4.5 5.82 / 12.68
+PASS quiet 390x844 day: footer contrast meets 4.5 5.82
+PASS quiet 390x844 day: header controls do not overlap or escape 
+PASS quiet 390x844 day: day/night retains layout and draft 
+PASS quiet 390x844 night: correct design appears without hidden writer 
+PASS quiet 390x844 night: original Borel wordmark is large and geometrically centered 335.7px
+PASS quiet 390x844 night: primary remains visible and enabled during entrance 
+PASS quiet 390x844 night: logo and copy keep a clear gap 
+PASS quiet 390x844 night: start brand has no visible legacy name 
+PASS quiet 390x844 night: primary action fits first viewport 593.4px
+PASS quiet 390x844 night: touch targets are at least 44px 
+PASS quiet 390x844 night: no horizontal overflow or competing outer scroll start-atmosphere:390.3999938964844,start-header:390.3999938964844,start-main:390.3999938964844,start-footer:390.3999938964844
+PASS quiet 390x844 night: body and primary contrast meet 4.5 7.81 / 12.77
+PASS quiet 390x844 night: footer contrast meets 4.5 7.81
+PASS quiet 390x844 night: header controls do not overlap or escape 
+PASS quiet 390x844 night: day/night retains layout and draft 
+PASS quiet 360x640 day: correct design appears without hidden writer 
+PASS quiet 360x640 day: original Borel wordmark is large and geometrically centered 309.6px
+PASS quiet 360x640 day: primary remains visible and enabled during entrance 
+PASS quiet 360x640 day: logo and copy keep a clear gap 
+PASS quiet 360x640 day: start brand has no visible legacy name 
+PASS quiet 360x640 day: primary action fits first viewport 487.8px
+PASS quiet 360x640 day: touch targets are at least 44px 
+PASS quiet 360x640 day: no horizontal overflow or competing outer scroll 
+PASS quiet 360x640 day: body and primary contrast meet 4.5 5.82 / 12.68
+PASS quiet 360x640 day: footer contrast meets 4.5 5.82
+PASS quiet 360x640 day: header controls do not overlap or escape 
+PASS quiet 360x640 day: day/night retains layout and draft 
+PASS quiet 360x640 night: correct design appears without hidden writer 
+PASS quiet 360x640 night: original Borel wordmark is large and geometrically centered 309.6px
+PASS quiet 360x640 night: primary remains visible and enabled during entrance 
+PASS quiet 360x640 night: logo and copy keep a clear gap 
+PASS quiet 360x640 night: start brand has no visible legacy name 
+PASS quiet 360x640 night: primary action fits first viewport 487.8px
+PASS quiet 360x640 night: touch targets are at least 44px 
+PASS quiet 360x640 night: no horizontal overflow or competing outer scroll 
+PASS quiet 360x640 night: body and primary contrast meet 4.5 7.81 / 12.77
+PASS quiet 360x640 night: footer contrast meets 4.5 7.81
+PASS quiet 360x640 night: header controls do not overlap or escape 
+PASS quiet 360x640 night: day/night retains layout and draft 
+PASS quiet 320x568 day: correct design appears without hidden writer 
+PASS quiet 320x568 day: original Borel wordmark is large and geometrically centered 275.2px
+PASS quiet 320x568 day: primary remains visible and enabled during entrance 
+PASS quiet 320x568 day: logo and copy keep a clear gap 
+PASS quiet 320x568 day: start brand has no visible legacy name 
+PASS quiet 320x568 day: primary action fits first viewport 432.1px
+PASS quiet 320x568 day: touch targets are at least 44px 
+PASS quiet 320x568 day: no horizontal overflow or competing outer scroll 
+PASS quiet 320x568 day: body and primary contrast meet 4.5 5.82 / 12.68
+PASS quiet 320x568 day: footer contrast meets 4.5 5.82
+PASS quiet 320x568 day: header controls do not overlap or escape 
+PASS quiet 320x568 day: day/night retains layout and draft 
+PASS quiet 320x568 night: correct design appears without hidden writer 
+PASS quiet 320x568 night: original Borel wordmark is large and geometrically centered 275.2px
+PASS quiet 320x568 night: primary remains visible and enabled during entrance 
+PASS quiet 320x568 night: logo and copy keep a clear gap 
+PASS quiet 320x568 night: start brand has no visible legacy name 
+PASS quiet 320x568 night: primary action fits first viewport 432.1px
+PASS quiet 320x568 night: touch targets are at least 44px 
+PASS quiet 320x568 night: no horizontal overflow or competing outer scroll 
+PASS quiet 320x568 night: body and primary contrast meet 4.5 7.81 / 12.77
+PASS quiet 320x568 night: footer contrast meets 4.5 7.81
+PASS quiet 320x568 night: header controls do not overlap or escape 
+PASS quiet 320x568 night: day/night retains layout and draft 
+PASS quiet 900x640 day: correct design appears without hidden writer 
+PASS quiet 900x640 day: original Borel wordmark is large and geometrically centered 684.0px
+PASS quiet 900x640 day: primary remains visible and enabled during entrance 
+PASS quiet 900x640 day: logo and copy keep a clear gap 
+PASS quiet 900x640 day: start brand has no visible legacy name 
+PASS quiet 900x640 day: primary action fits first viewport 538.5px
+PASS quiet 900x640 day: touch targets are at least 44px 
+PASS quiet 900x640 day: no horizontal overflow or competing outer scroll 
+PASS quiet 900x640 day: body and primary contrast meet 4.5 5.82 / 12.68
+PASS quiet 900x640 day: footer contrast meets 4.5 5.82
+PASS quiet 900x640 day: header controls do not overlap or escape 
+PASS quiet 900x640 day: day/night retains layout and draft 
+PASS quiet 900x640 night: correct design appears without hidden writer 
+PASS quiet 900x640 night: original Borel wordmark is large and geometrically centered 684.0px
+PASS quiet 900x640 night: primary remains visible and enabled during entrance 
+PASS quiet 900x640 night: logo and copy keep a clear gap 
+PASS quiet 900x640 night: start brand has no visible legacy name 
+PASS quiet 900x640 night: primary action fits first viewport 538.5px
+PASS quiet 900x640 night: touch targets are at least 44px 
+PASS quiet 900x640 night: no horizontal overflow or competing outer scroll 
+PASS quiet 900x640 night: body and primary contrast meet 4.5 7.81 / 12.77
+PASS quiet 900x640 night: footer contrast meets 4.5 7.81
+PASS quiet 900x640 night: header controls do not overlap or escape 
+PASS quiet 900x640 night: day/night retains layout and draft 
+PASS nord 1280x720 day: correct design appears without hidden writer 
+PASS nord 1280x720 day: original Borel wordmark is large and geometrically centered 820.0px
+PASS nord 1280x720 day: primary remains visible and enabled during entrance 
+PASS nord 1280x720 day: logo and copy keep a clear gap 
+PASS nord 1280x720 day: start brand has no visible legacy name 
+PASS nord 1280x720 day: primary action fits first viewport 597.1px
+PASS nord 1280x720 day: touch targets are at least 44px 
+PASS nord 1280x720 day: no horizontal overflow or competing outer scroll 
+PASS nord 1280x720 day: body and primary contrast meet 4.5 4.92 / 8.19
+PASS nord 1280x720 day: footer contrast meets 4.5 4.92
+PASS nord 1280x720 day: header controls do not overlap or escape 
+PASS nord 1280x720 day: day/night retains layout and draft 
+PASS nord 1280x720 day: library receives focus and blocks background 
+PASS nord 1280x720 day: continue preserves exact note and focuses editor 
+PASS nord 1280x720 day: return retains adopted design 
+PASS nord 1280x720 night: correct design appears without hidden writer 
+PASS nord 1280x720 night: original Borel wordmark is large and geometrically centered 820.0px
+PASS nord 1280x720 night: primary remains visible and enabled during entrance 
+PASS nord 1280x720 night: logo and copy keep a clear gap 
+PASS nord 1280x720 night: start brand has no visible legacy name 
+PASS nord 1280x720 night: primary action fits first viewport 597.1px
+PASS nord 1280x720 night: touch targets are at least 44px 
+PASS nord 1280x720 night: no horizontal overflow or competing outer scroll 
+PASS nord 1280x720 night: body and primary contrast meet 4.5 7.35 / 12.43
+PASS nord 1280x720 night: footer contrast meets 4.5 7.35
+PASS nord 1280x720 night: header controls do not overlap or escape 
+PASS nord 1280x720 night: day/night retains layout and draft 
+PASS nord 390x844 day: correct design appears without hidden writer 
+PASS nord 390x844 day: original Borel wordmark is large and geometrically centered 335.7px
+PASS nord 390x844 day: primary remains visible and enabled during entrance 
+PASS nord 390x844 day: logo and copy keep a clear gap 
+PASS nord 390x844 day: start brand has no visible legacy name 
+PASS nord 390x844 day: primary action fits first viewport 593.4px
+PASS nord 390x844 day: touch targets are at least 44px 
+PASS nord 390x844 day: no horizontal overflow or competing outer scroll start-atmosphere:390.3999938964844,start-light:390.3999938964844,start-header:390.3999938964844,start-main:390.3999938964844,start-footer:390.3999938964844
+PASS nord 390x844 day: body and primary contrast meet 4.5 4.92 / 8.19
+PASS nord 390x844 day: footer contrast meets 4.5 4.92
+PASS nord 390x844 day: header controls do not overlap or escape 
+PASS nord 390x844 day: day/night retains layout and draft 
+PASS nord 390x844 night: correct design appears without hidden writer 
+PASS nord 390x844 night: original Borel wordmark is large and geometrically centered 335.7px
+PASS nord 390x844 night: primary remains visible and enabled during entrance 
+PASS nord 390x844 night: logo and copy keep a clear gap 
+PASS nord 390x844 night: start brand has no visible legacy name 
+PASS nord 390x844 night: primary action fits first viewport 593.4px
+PASS nord 390x844 night: touch targets are at least 44px 
+PASS nord 390x844 night: no horizontal overflow or competing outer scroll start-atmosphere:390.3999938964844,start-light:390.3999938964844,start-header:390.3999938964844,start-main:390.3999938964844,start-footer:390.3999938964844
+PASS nord 390x844 night: body and primary contrast meet 4.5 7.35 / 12.43
+PASS nord 390x844 night: footer contrast meets 4.5 7.35
+PASS nord 390x844 night: header controls do not overlap or escape 
+PASS nord 390x844 night: day/night retains layout and draft 
+PASS nord 360x640 day: correct design appears without hidden writer 
+PASS nord 360x640 day: original Borel wordmark is large and geometrically centered 309.6px
+PASS nord 360x640 day: primary remains visible and enabled during entrance 
+PASS nord 360x640 day: logo and copy keep a clear gap 
+PASS nord 360x640 day: start brand has no visible legacy name 
+PASS nord 360x640 day: primary action fits first viewport 487.8px
+PASS nord 360x640 day: touch targets are at least 44px 
+PASS nord 360x640 day: no horizontal overflow or competing outer scroll 
+PASS nord 360x640 day: body and primary contrast meet 4.5 4.92 / 8.19
+PASS nord 360x640 day: footer contrast meets 4.5 4.92
+PASS nord 360x640 day: header controls do not overlap or escape 
+PASS nord 360x640 day: day/night retains layout and draft 
+PASS nord 360x640 night: correct design appears without hidden writer 
+PASS nord 360x640 night: original Borel wordmark is large and geometrically centered 309.6px
+PASS nord 360x640 night: primary remains visible and enabled during entrance 
+PASS nord 360x640 night: logo and copy keep a clear gap 
+PASS nord 360x640 night: start brand has no visible legacy name 
+PASS nord 360x640 night: primary action fits first viewport 487.8px
+PASS nord 360x640 night: touch targets are at least 44px 
+PASS nord 360x640 night: no horizontal overflow or competing outer scroll 
+PASS nord 360x640 night: body and primary contrast meet 4.5 7.35 / 12.43
+PASS nord 360x640 night: footer contrast meets 4.5 7.35
+PASS nord 360x640 night: header controls do not overlap or escape 
+PASS nord 360x640 night: day/night retains layout and draft 
+PASS nord 320x568 day: correct design appears without hidden writer 
+PASS nord 320x568 day: original Borel wordmark is large and geometrically centered 275.2px
+PASS nord 320x568 day: primary remains visible and enabled during entrance 
+PASS nord 320x568 day: logo and copy keep a clear gap 
+PASS nord 320x568 day: start brand has no visible legacy name 
+PASS nord 320x568 day: primary action fits first viewport 432.1px
+PASS nord 320x568 day: touch targets are at least 44px 
+PASS nord 320x568 day: no horizontal overflow or competing outer scroll 
+PASS nord 320x568 day: body and primary contrast meet 4.5 4.92 / 8.19
+PASS nord 320x568 day: footer contrast meets 4.5 4.92
+PASS nord 320x568 day: header controls do not overlap or escape 
+PASS nord 320x568 day: day/night retains layout and draft 
+PASS nord 320x568 night: correct design appears without hidden writer 
+PASS nord 320x568 night: original Borel wordmark is large and geometrically centered 275.2px
+PASS nord 320x568 night: primary remains visible and enabled during entrance 
+PASS nord 320x568 night: logo and copy keep a clear gap 
+PASS nord 320x568 night: start brand has no visible legacy name 
+PASS nord 320x568 night: primary action fits first viewport 432.1px
+PASS nord 320x568 night: touch targets are at least 44px 
+PASS nord 320x568 night: no horizontal overflow or competing outer scroll 
+PASS nord 320x568 night: body and primary contrast meet 4.5 7.35 / 12.43
+PASS nord 320x568 night: footer contrast meets 4.5 7.35
+PASS nord 320x568 night: header controls do not overlap or escape 
+PASS nord 320x568 night: day/night retains layout and draft 
+PASS nord 900x640 day: correct design appears without hidden writer 
+PASS nord 900x640 day: original Borel wordmark is large and geometrically centered 684.0px
+PASS nord 900x640 day: primary remains visible and enabled during entrance 
+PASS nord 900x640 day: logo and copy keep a clear gap 
+PASS nord 900x640 day: start brand has no visible legacy name 
+PASS nord 900x640 day: primary action fits first viewport 538.5px
+PASS nord 900x640 day: touch targets are at least 44px 
+PASS nord 900x640 day: no horizontal overflow or competing outer scroll 
+PASS nord 900x640 day: body and primary contrast meet 4.5 4.92 / 8.19
+PASS nord 900x640 day: footer contrast meets 4.5 4.92
+PASS nord 900x640 day: header controls do not overlap or escape 
+PASS nord 900x640 day: day/night retains layout and draft 
+PASS nord 900x640 night: correct design appears without hidden writer 
+PASS nord 900x640 night: original Borel wordmark is large and geometrically centered 684.0px
+PASS nord 900x640 night: primary remains visible and enabled during entrance 
+PASS nord 900x640 night: logo and copy keep a clear gap 
+PASS nord 900x640 night: start brand has no visible legacy name 
+PASS nord 900x640 night: primary action fits first viewport 538.5px
+PASS nord 900x640 night: touch targets are at least 44px 
+PASS nord 900x640 night: no horizontal overflow or competing outer scroll 
+PASS nord 900x640 night: body and primary contrast meet 4.5 7.35 / 12.43
+PASS nord 900x640 night: footer contrast meets 4.5 7.35
+PASS nord 900x640 night: header controls do not overlap or escape 
+PASS nord 900x640 night: day/night retains layout and draft 
+PASS letter 1280x720 day: correct design appears without hidden writer 
+PASS letter 1280x720 day: original Borel wordmark is large and geometrically centered 820.0px
+PASS letter 1280x720 day: primary remains visible and enabled during entrance 
+PASS letter 1280x720 day: logo and copy keep a clear gap 
+PASS letter 1280x720 day: start brand has no visible legacy name 
+PASS letter 1280x720 day: primary action fits first viewport 597.1px
+PASS letter 1280x720 day: touch targets are at least 44px 
+PASS letter 1280x720 day: no horizontal overflow or competing outer scroll 
+PASS letter 1280x720 day: body and primary contrast meet 4.5 5.01 / 9.26
+PASS letter 1280x720 day: footer contrast meets 4.5 5.01
+PASS letter 1280x720 day: header controls do not overlap or escape 
+PASS letter 1280x720 day: day/night retains layout and draft 
+PASS letter 1280x720 day: library receives focus and blocks background 
+PASS letter 1280x720 day: continue preserves exact note and focuses editor 
+PASS letter 1280x720 day: return retains adopted design 
+PASS letter 1280x720 night: correct design appears without hidden writer 
+PASS letter 1280x720 night: original Borel wordmark is large and geometrically centered 820.0px
+PASS letter 1280x720 night: primary remains visible and enabled during entrance 
+PASS letter 1280x720 night: logo and copy keep a clear gap 
+PASS letter 1280x720 night: start brand has no visible legacy name 
+PASS letter 1280x720 night: primary action fits first viewport 597.1px
+PASS letter 1280x720 night: touch targets are at least 44px 
+PASS letter 1280x720 night: no horizontal overflow or competing outer scroll 
+PASS letter 1280x720 night: body and primary contrast meet 4.5 7.29 / 11.55
+PASS letter 1280x720 night: footer contrast meets 4.5 7.29
+PASS letter 1280x720 night: header controls do not overlap or escape 
+PASS letter 1280x720 night: day/night retains layout and draft 
+PASS letter 390x844 day: correct design appears without hidden writer 
+PASS letter 390x844 day: original Borel wordmark is large and geometrically centered 335.7px
+PASS letter 390x844 day: primary remains visible and enabled during entrance 
+PASS letter 390x844 day: logo and copy keep a clear gap 
+PASS letter 390x844 day: start brand has no visible legacy name 
+PASS letter 390x844 day: primary action fits first viewport 593.4px
+PASS letter 390x844 day: touch targets are at least 44px 
+PASS letter 390x844 day: no horizontal overflow or competing outer scroll start-atmosphere:390.3999938964844,start-light:390.3999938964844,start-header:390.3999938964844,start-main:390.3999938964844,start-footer:390.3999938964844
+PASS letter 390x844 day: body and primary contrast meet 4.5 5.01 / 9.26
+PASS letter 390x844 day: footer contrast meets 4.5 5.01
+PASS letter 390x844 day: header controls do not overlap or escape 
+PASS letter 390x844 day: day/night retains layout and draft 
+PASS letter 390x844 night: correct design appears without hidden writer 
+PASS letter 390x844 night: original Borel wordmark is large and geometrically centered 335.7px
+PASS letter 390x844 night: primary remains visible and enabled during entrance 
+PASS letter 390x844 night: logo and copy keep a clear gap 
+PASS letter 390x844 night: start brand has no visible legacy name 
+PASS letter 390x844 night: primary action fits first viewport 593.4px
+PASS letter 390x844 night: touch targets are at least 44px 
+PASS letter 390x844 night: no horizontal overflow or competing outer scroll start-atmosphere:390.3999938964844,start-light:390.3999938964844,start-header:390.3999938964844,start-main:390.3999938964844,start-footer:390.3999938964844
+PASS letter 390x844 night: body and primary contrast meet 4.5 7.29 / 11.55
+PASS letter 390x844 night: footer contrast meets 4.5 7.29
+PASS letter 390x844 night: header controls do not overlap or escape 
+PASS letter 390x844 night: day/night retains layout and draft 
+PASS letter 360x640 day: correct design appears without hidden writer 
+PASS letter 360x640 day: original Borel wordmark is large and geometrically centered 309.6px
+PASS letter 360x640 day: primary remains visible and enabled during entrance 
+PASS letter 360x640 day: logo and copy keep a clear gap 
+PASS letter 360x640 day: start brand has no visible legacy name 
+PASS letter 360x640 day: primary action fits first viewport 487.8px
+PASS letter 360x640 day: touch targets are at least 44px 
+PASS letter 360x640 day: no horizontal overflow or competing outer scroll 
+PASS letter 360x640 day: body and primary contrast meet 4.5 5.01 / 9.26
+PASS letter 360x640 day: footer contrast meets 4.5 5.01
+PASS letter 360x640 day: header controls do not overlap or escape 
+PASS letter 360x640 day: day/night retains layout and draft 
+PASS letter 360x640 night: correct design appears without hidden writer 
+PASS letter 360x640 night: original Borel wordmark is large and geometrically centered 309.6px
+PASS letter 360x640 night: primary remains visible and enabled during entrance 
+PASS letter 360x640 night: logo and copy keep a clear gap 
+PASS letter 360x640 night: start brand has no visible legacy name 
+PASS letter 360x640 night: primary action fits first viewport 487.8px
+PASS letter 360x640 night: touch targets are at least 44px 
+PASS letter 360x640 night: no horizontal overflow or competing outer scroll 
+PASS letter 360x640 night: body and primary contrast meet 4.5 7.29 / 11.55
+PASS letter 360x640 night: footer contrast meets 4.5 7.29
+PASS letter 360x640 night: header controls do not overlap or escape 
+PASS letter 360x640 night: day/night retains layout and draft 
+PASS letter 320x568 day: correct design appears without hidden writer 
+PASS letter 320x568 day: original Borel wordmark is large and geometrically centered 275.2px
+PASS letter 320x568 day: primary remains visible and enabled during entrance 
+PASS letter 320x568 day: logo and copy keep a clear gap 
+PASS letter 320x568 day: start brand has no visible legacy name 
+PASS letter 320x568 day: primary action fits first viewport 432.1px
+PASS letter 320x568 day: touch targets are at least 44px 
+PASS letter 320x568 day: no horizontal overflow or competing outer scroll 
+PASS letter 320x568 day: body and primary contrast meet 4.5 5.01 / 9.26
+PASS letter 320x568 day: footer contrast meets 4.5 5.01
+PASS letter 320x568 day: header controls do not overlap or escape 
+PASS letter 320x568 day: day/night retains layout and draft 
+PASS letter 320x568 night: correct design appears without hidden writer 
+PASS letter 320x568 night: original Borel wordmark is large and geometrically centered 275.2px
+PASS letter 320x568 night: primary remains visible and enabled during entrance 
+PASS letter 320x568 night: logo and copy keep a clear gap 
+PASS letter 320x568 night: start brand has no visible legacy name 
+PASS letter 320x568 night: primary action fits first viewport 432.1px
+PASS letter 320x568 night: touch targets are at least 44px 
+PASS letter 320x568 night: no horizontal overflow or competing outer scroll 
+PASS letter 320x568 night: body and primary contrast meet 4.5 7.29 / 11.55
+PASS letter 320x568 night: footer contrast meets 4.5 7.29
+PASS letter 320x568 night: header controls do not overlap or escape 
+PASS letter 320x568 night: day/night retains layout and draft 
+PASS letter 900x640 day: correct design appears without hidden writer 
+PASS letter 900x640 day: original Borel wordmark is large and geometrically centered 684.0px
+PASS letter 900x640 day: primary remains visible and enabled during entrance 
+PASS letter 900x640 day: logo and copy keep a clear gap 
+PASS letter 900x640 day: start brand has no visible legacy name 
+PASS letter 900x640 day: primary action fits first viewport 538.5px
+PASS letter 900x640 day: touch targets are at least 44px 
+PASS letter 900x640 day: no horizontal overflow or competing outer scroll 
+PASS letter 900x640 day: body and primary contrast meet 4.5 5.01 / 9.26
+PASS letter 900x640 day: footer contrast meets 4.5 5.01
+PASS letter 900x640 day: header controls do not overlap or escape 
+PASS letter 900x640 day: day/night retains layout and draft 
+PASS letter 900x640 night: correct design appears without hidden writer 
+PASS letter 900x640 night: original Borel wordmark is large and geometrically centered 684.0px
+PASS letter 900x640 night: primary remains visible and enabled during entrance 
+PASS letter 900x640 night: logo and copy keep a clear gap 
+PASS letter 900x640 night: start brand has no visible legacy name 
+PASS letter 900x640 night: primary action fits first viewport 538.5px
+PASS letter 900x640 night: touch targets are at least 44px 
+PASS letter 900x640 night: no horizontal overflow or competing outer scroll 
+PASS letter 900x640 night: body and primary contrast meet 4.5 7.29 / 11.55
+PASS letter 900x640 night: footer contrast meets 4.5 7.29
+PASS letter 900x640 night: header controls do not overlap or escape 
+PASS letter 900x640 night: day/night retains layout and draft 
+PASS japandi 1280x720 day: correct design appears without hidden writer 
+PASS japandi 1280x720 day: original Borel wordmark is large and geometrically centered 820.0px
+PASS japandi 1280x720 day: primary remains visible and enabled during entrance 
+PASS japandi 1280x720 day: logo and copy keep a clear gap 
+PASS japandi 1280x720 day: start brand has no visible legacy name 
+PASS japandi 1280x720 day: primary action fits first viewport 597.1px
+PASS japandi 1280x720 day: touch targets are at least 44px 
+PASS japandi 1280x720 day: no horizontal overflow or competing outer scroll 
+PASS japandi 1280x720 day: body and primary contrast meet 4.5 4.70 / 8.28
+PASS japandi 1280x720 day: footer contrast meets 4.5 4.70
+PASS japandi 1280x720 day: header controls do not overlap or escape 
+PASS japandi 1280x720 day: day/night retains layout and draft 
+PASS japandi 1280x720 day: library receives focus and blocks background 
+PASS japandi 1280x720 day: continue preserves exact note and focuses editor 
+PASS japandi 1280x720 day: return retains adopted design 
+PASS japandi 1280x720 night: correct design appears without hidden writer 
+PASS japandi 1280x720 night: original Borel wordmark is large and geometrically centered 820.0px
+PASS japandi 1280x720 night: primary remains visible and enabled during entrance 
+PASS japandi 1280x720 night: logo and copy keep a clear gap 
+PASS japandi 1280x720 night: start brand has no visible legacy name 
+PASS japandi 1280x720 night: primary action fits first viewport 597.1px
+PASS japandi 1280x720 night: touch targets are at least 44px 
+PASS japandi 1280x720 night: no horizontal overflow or competing outer scroll 
+PASS japandi 1280x720 night: body and primary contrast meet 4.5 7.54 / 11.54
+PASS japandi 1280x720 night: footer contrast meets 4.5 7.54
+PASS japandi 1280x720 night: header controls do not overlap or escape 
+PASS japandi 1280x720 night: day/night retains layout and draft 
+PASS japandi 390x844 day: correct design appears without hidden writer 
+PASS japandi 390x844 day: original Borel wordmark is large and geometrically centered 335.7px
+PASS japandi 390x844 day: primary remains visible and enabled during entrance 
+PASS japandi 390x844 day: logo and copy keep a clear gap 
+PASS japandi 390x844 day: start brand has no visible legacy name 
+PASS japandi 390x844 day: primary action fits first viewport 593.4px
+PASS japandi 390x844 day: touch targets are at least 44px 
+PASS japandi 390x844 day: no horizontal overflow or competing outer scroll start-atmosphere:390.3999938964844,start-plane:390.3999938964844,start-header:390.3999938964844,start-main:390.3999938964844,start-footer:390.3999938964844
+PASS japandi 390x844 day: body and primary contrast meet 4.5 4.70 / 8.28
+PASS japandi 390x844 day: footer contrast meets 4.5 4.70
+PASS japandi 390x844 day: header controls do not overlap or escape 
+PASS japandi 390x844 day: day/night retains layout and draft 
+PASS japandi 390x844 night: correct design appears without hidden writer 
+PASS japandi 390x844 night: original Borel wordmark is large and geometrically centered 335.7px
+PASS japandi 390x844 night: primary remains visible and enabled during entrance 
+PASS japandi 390x844 night: logo and copy keep a clear gap 
+PASS japandi 390x844 night: start brand has no visible legacy name 
+PASS japandi 390x844 night: primary action fits first viewport 593.4px
+PASS japandi 390x844 night: touch targets are at least 44px 
+PASS japandi 390x844 night: no horizontal overflow or competing outer scroll start-atmosphere:390.3999938964844,start-plane:390.3999938964844,start-header:390.3999938964844,start-main:390.3999938964844,start-footer:390.3999938964844
+PASS japandi 390x844 night: body and primary contrast meet 4.5 7.54 / 11.54
+PASS japandi 390x844 night: footer contrast meets 4.5 7.54
+PASS japandi 390x844 night: header controls do not overlap or escape 
+PASS japandi 390x844 night: day/night retains layout and draft 
+PASS japandi 360x640 day: correct design appears without hidden writer 
+PASS japandi 360x640 day: original Borel wordmark is large and geometrically centered 309.6px
+PASS japandi 360x640 day: primary remains visible and enabled during entrance 
+PASS japandi 360x640 day: logo and copy keep a clear gap 
+PASS japandi 360x640 day: start brand has no visible legacy name 
+PASS japandi 360x640 day: primary action fits first viewport 487.8px
+PASS japandi 360x640 day: touch targets are at least 44px 
+PASS japandi 360x640 day: no horizontal overflow or competing outer scroll 
+PASS japandi 360x640 day: body and primary contrast meet 4.5 4.70 / 8.28
+PASS japandi 360x640 day: footer contrast meets 4.5 4.70
+PASS japandi 360x640 day: header controls do not overlap or escape 
+PASS japandi 360x640 day: day/night retains layout and draft 
+PASS japandi 360x640 night: correct design appears without hidden writer 
+PASS japandi 360x640 night: original Borel wordmark is large and geometrically centered 309.6px
+PASS japandi 360x640 night: primary remains visible and enabled during entrance 
+PASS japandi 360x640 night: logo and copy keep a clear gap 
+PASS japandi 360x640 night: start brand has no visible legacy name 
+PASS japandi 360x640 night: primary action fits first viewport 487.8px
+PASS japandi 360x640 night: touch targets are at least 44px 
+PASS japandi 360x640 night: no horizontal overflow or competing outer scroll 
+PASS japandi 360x640 night: body and primary contrast meet 4.5 7.54 / 11.54
+PASS japandi 360x640 night: footer contrast meets 4.5 7.54
+PASS japandi 360x640 night: header controls do not overlap or escape 
+PASS japandi 360x640 night: day/night retains layout and draft 
+PASS japandi 320x568 day: correct design appears without hidden writer 
+PASS japandi 320x568 day: original Borel wordmark is large and geometrically centered 275.2px
+PASS japandi 320x568 day: primary remains visible and enabled during entrance 
+PASS japandi 320x568 day: logo and copy keep a clear gap 
+PASS japandi 320x568 day: start brand has no visible legacy name 
+PASS japandi 320x568 day: primary action fits first viewport 432.1px
+PASS japandi 320x568 day: touch targets are at least 44px 
+PASS japandi 320x568 day: no horizontal overflow or competing outer scroll 
+PASS japandi 320x568 day: body and primary contrast meet 4.5 4.70 / 8.28
+PASS japandi 320x568 day: footer contrast meets 4.5 4.70
+PASS japandi 320x568 day: header controls do not overlap or escape 
+PASS japandi 320x568 day: day/night retains layout and draft 
+PASS japandi 320x568 night: correct design appears without hidden writer 
+PASS japandi 320x568 night: original Borel wordmark is large and geometrically centered 275.2px
+PASS japandi 320x568 night: primary remains visible and enabled during entrance 
+PASS japandi 320x568 night: logo and copy keep a clear gap 
+PASS japandi 320x568 night: start brand has no visible legacy name 
+PASS japandi 320x568 night: primary action fits first viewport 432.1px
+PASS japandi 320x568 night: touch targets are at least 44px 
+PASS japandi 320x568 night: no horizontal overflow or competing outer scroll 
+PASS japandi 320x568 night: body and primary contrast meet 4.5 7.54 / 11.54
+PASS japandi 320x568 night: footer contrast meets 4.5 7.54
+PASS japandi 320x568 night: header controls do not overlap or escape 
+PASS japandi 320x568 night: day/night retains layout and draft 
+PASS japandi 900x640 day: correct design appears without hidden writer 
+PASS japandi 900x640 day: original Borel wordmark is large and geometrically centered 684.0px
+PASS japandi 900x640 day: primary remains visible and enabled during entrance 
+PASS japandi 900x640 day: logo and copy keep a clear gap 
+PASS japandi 900x640 day: start brand has no visible legacy name 
+PASS japandi 900x640 day: primary action fits first viewport 538.5px
+PASS japandi 900x640 day: touch targets are at least 44px 
+PASS japandi 900x640 day: no horizontal overflow or competing outer scroll 
+PASS japandi 900x640 day: body and primary contrast meet 4.5 4.70 / 8.28
+PASS japandi 900x640 day: footer contrast meets 4.5 4.70
+PASS japandi 900x640 day: header controls do not overlap or escape 
+PASS japandi 900x640 day: day/night retains layout and draft 
+PASS japandi 900x640 night: correct design appears without hidden writer 
+PASS japandi 900x640 night: original Borel wordmark is large and geometrically centered 684.0px
+PASS japandi 900x640 night: primary remains visible and enabled during entrance 
+PASS japandi 900x640 night: logo and copy keep a clear gap 
+PASS japandi 900x640 night: start brand has no visible legacy name 
+PASS japandi 900x640 night: primary action fits first viewport 538.5px
+PASS japandi 900x640 night: touch targets are at least 44px 
+PASS japandi 900x640 night: no horizontal overflow or competing outer scroll 
+PASS japandi 900x640 night: body and primary contrast meet 4.5 7.54 / 11.54
+PASS japandi 900x640 night: footer contrast meets 4.5 7.54
+PASS japandi 900x640 night: header controls do not overlap or escape 
+PASS japandi 900x640 night: day/night retains layout and draft 
+PASS nocturne 1280x720 day: correct design appears without hidden writer 
+PASS nocturne 1280x720 day: original Borel wordmark is large and geometrically centered 820.0px
+PASS nocturne 1280x720 day: primary remains visible and enabled during entrance 
+PASS nocturne 1280x720 day: logo and copy keep a clear gap 
+PASS nocturne 1280x720 day: start brand has no visible legacy name 
+PASS nocturne 1280x720 day: primary action fits first viewport 597.1px
+PASS nocturne 1280x720 day: touch targets are at least 44px 
+PASS nocturne 1280x720 day: no horizontal overflow or competing outer scroll 
+PASS nocturne 1280x720 day: body and primary contrast meet 4.5 7.86 / 12.74
+PASS nocturne 1280x720 day: footer contrast meets 4.5 7.86
+PASS nocturne 1280x720 day: header controls do not overlap or escape 
+PASS nocturne 1280x720 day: day/night retains layout and draft 
+PASS nocturne 1280x720 day: library receives focus and blocks background 
+PASS nocturne 1280x720 day: continue preserves exact note and focuses editor 
+PASS nocturne 1280x720 day: return retains adopted design 
+PASS nocturne 1280x720 night: correct design appears without hidden writer 
+PASS nocturne 1280x720 night: original Borel wordmark is large and geometrically centered 820.0px
+PASS nocturne 1280x720 night: primary remains visible and enabled during entrance 
+PASS nocturne 1280x720 night: logo and copy keep a clear gap 
+PASS nocturne 1280x720 night: start brand has no visible legacy name 
+PASS nocturne 1280x720 night: primary action fits first viewport 597.1px
+PASS nocturne 1280x720 night: touch targets are at least 44px 
+PASS nocturne 1280x720 night: no horizontal overflow or competing outer scroll 
+PASS nocturne 1280x720 night: body and primary contrast meet 4.5 8.64 / 14.01
+PASS nocturne 1280x720 night: footer contrast meets 4.5 8.64
+PASS nocturne 1280x720 night: header controls do not overlap or escape 
+PASS nocturne 1280x720 night: day/night retains layout and draft 
+PASS nocturne 390x844 day: correct design appears without hidden writer 
+PASS nocturne 390x844 day: original Borel wordmark is large and geometrically centered 335.7px
+PASS nocturne 390x844 day: primary remains visible and enabled during entrance 
+PASS nocturne 390x844 day: logo and copy keep a clear gap 
+PASS nocturne 390x844 day: start brand has no visible legacy name 
+PASS nocturne 390x844 day: primary action fits first viewport 593.4px
+PASS nocturne 390x844 day: touch targets are at least 44px 
+PASS nocturne 390x844 day: no horizontal overflow or competing outer scroll start-atmosphere:390.3999938964844,start-light:695.1999816894531,start-header:390.3999938964844,start-main:390.3999938964844,start-footer:390.3999938964844
+PASS nocturne 390x844 day: body and primary contrast meet 4.5 7.86 / 12.74
+PASS nocturne 390x844 day: footer contrast meets 4.5 7.86
+PASS nocturne 390x844 day: header controls do not overlap or escape 
+PASS nocturne 390x844 day: day/night retains layout and draft 
+PASS nocturne 390x844 night: correct design appears without hidden writer 
+PASS nocturne 390x844 night: original Borel wordmark is large and geometrically centered 335.7px
+PASS nocturne 390x844 night: primary remains visible and enabled during entrance 
+PASS nocturne 390x844 night: logo and copy keep a clear gap 
+PASS nocturne 390x844 night: start brand has no visible legacy name 
+PASS nocturne 390x844 night: primary action fits first viewport 593.4px
+PASS nocturne 390x844 night: touch targets are at least 44px 
+PASS nocturne 390x844 night: no horizontal overflow or competing outer scroll start-atmosphere:390.3999938964844,start-light:695.1999816894531,start-header:390.3999938964844,start-main:390.3999938964844,start-footer:390.3999938964844
+PASS nocturne 390x844 night: body and primary contrast meet 4.5 8.64 / 14.01
+PASS nocturne 390x844 night: footer contrast meets 4.5 8.64
+PASS nocturne 390x844 night: header controls do not overlap or escape 
+PASS nocturne 390x844 night: day/night retains layout and draft 
+PASS nocturne 360x640 day: correct design appears without hidden writer 
+PASS nocturne 360x640 day: original Borel wordmark is large and geometrically centered 309.6px
+PASS nocturne 360x640 day: primary remains visible and enabled during entrance 
+PASS nocturne 360x640 day: logo and copy keep a clear gap 
+PASS nocturne 360x640 day: start brand has no visible legacy name 
+PASS nocturne 360x640 day: primary action fits first viewport 487.8px
+PASS nocturne 360x640 day: touch targets are at least 44px 
+PASS nocturne 360x640 day: no horizontal overflow or competing outer scroll start-light:680
+PASS nocturne 360x640 day: body and primary contrast meet 4.5 7.86 / 12.74
+PASS nocturne 360x640 day: footer contrast meets 4.5 7.86
+PASS nocturne 360x640 day: header controls do not overlap or escape 
+PASS nocturne 360x640 day: day/night retains layout and draft 
+PASS nocturne 360x640 night: correct design appears without hidden writer 
+PASS nocturne 360x640 night: original Borel wordmark is large and geometrically centered 309.6px
+PASS nocturne 360x640 night: primary remains visible and enabled during entrance 
+PASS nocturne 360x640 night: logo and copy keep a clear gap 
+PASS nocturne 360x640 night: start brand has no visible legacy name 
+PASS nocturne 360x640 night: primary action fits first viewport 487.8px
+PASS nocturne 360x640 night: touch targets are at least 44px 
+PASS nocturne 360x640 night: no horizontal overflow or competing outer scroll start-light:680
+PASS nocturne 360x640 night: body and primary contrast meet 4.5 8.64 / 14.01
+PASS nocturne 360x640 night: footer contrast meets 4.5 8.64
+PASS nocturne 360x640 night: header controls do not overlap or escape 
+PASS nocturne 360x640 night: day/night retains layout and draft 
+PASS nocturne 320x568 day: correct design appears without hidden writer 
+PASS nocturne 320x568 day: original Borel wordmark is large and geometrically centered 275.2px
+PASS nocturne 320x568 day: primary remains visible and enabled during entrance 
+PASS nocturne 320x568 day: logo and copy keep a clear gap 
+PASS nocturne 320x568 day: start brand has no visible legacy name 
+PASS nocturne 320x568 day: primary action fits first viewport 432.1px
+PASS nocturne 320x568 day: touch targets are at least 44px 
+PASS nocturne 320x568 day: no horizontal overflow or competing outer scroll start-light:660
+PASS nocturne 320x568 day: body and primary contrast meet 4.5 7.86 / 12.74
+PASS nocturne 320x568 day: footer contrast meets 4.5 7.86
+PASS nocturne 320x568 day: header controls do not overlap or escape 
+PASS nocturne 320x568 day: day/night retains layout and draft 
+PASS nocturne 320x568 night: correct design appears without hidden writer 
+PASS nocturne 320x568 night: original Borel wordmark is large and geometrically centered 275.2px
+PASS nocturne 320x568 night: primary remains visible and enabled during entrance 
+PASS nocturne 320x568 night: logo and copy keep a clear gap 
+PASS nocturne 320x568 night: start brand has no visible legacy name 
+PASS nocturne 320x568 night: primary action fits first viewport 432.1px
+PASS nocturne 320x568 night: touch targets are at least 44px 
+PASS nocturne 320x568 night: no horizontal overflow or competing outer scroll start-light:660
+PASS nocturne 320x568 night: body and primary contrast meet 4.5 8.64 / 14.01
+PASS nocturne 320x568 night: footer contrast meets 4.5 8.64
+PASS nocturne 320x568 night: header controls do not overlap or escape 
+PASS nocturne 320x568 night: day/night retains layout and draft 
+PASS nocturne 900x640 day: correct design appears without hidden writer 
+PASS nocturne 900x640 day: original Borel wordmark is large and geometrically centered 684.0px
+PASS nocturne 900x640 day: primary remains visible and enabled during entrance 
+PASS nocturne 900x640 day: logo and copy keep a clear gap 
+PASS nocturne 900x640 day: start brand has no visible legacy name 
+PASS nocturne 900x640 day: primary action fits first viewport 538.5px
+PASS nocturne 900x640 day: touch targets are at least 44px 
+PASS nocturne 900x640 day: no horizontal overflow or competing outer scroll start-light:950
+PASS nocturne 900x640 day: body and primary contrast meet 4.5 7.86 / 12.74
+PASS nocturne 900x640 day: footer contrast meets 4.5 7.86
+PASS nocturne 900x640 day: header controls do not overlap or escape 
+PASS nocturne 900x640 day: day/night retains layout and draft 
+PASS nocturne 900x640 night: correct design appears without hidden writer 
+PASS nocturne 900x640 night: original Borel wordmark is large and geometrically centered 684.0px
+PASS nocturne 900x640 night: primary remains visible and enabled during entrance 
+PASS nocturne 900x640 night: logo and copy keep a clear gap 
+PASS nocturne 900x640 night: start brand has no visible legacy name 
+PASS nocturne 900x640 night: primary action fits first viewport 538.5px
+PASS nocturne 900x640 night: touch targets are at least 44px 
+PASS nocturne 900x640 night: no horizontal overflow or competing outer scroll start-light:950
+PASS nocturne 900x640 night: body and primary contrast meet 4.5 8.64 / 14.01
+PASS nocturne 900x640 night: footer contrast meets 4.5 8.64
+PASS nocturne 900x640 night: header controls do not overlap or escape 
+PASS nocturne 900x640 night: day/night retains layout and draft 
+PASS focus 1280x720 day: correct design appears without hidden writer 
+PASS focus 1280x720 day: original Borel wordmark is large and geometrically centered 820.0px
+PASS focus 1280x720 day: primary remains visible and enabled during entrance 
+PASS focus 1280x720 day: logo and copy keep a clear gap 
+PASS focus 1280x720 day: start brand has no visible legacy name 
+PASS focus 1280x720 day: primary action fits first viewport 597.1px
+PASS focus 1280x720 day: touch targets are at least 44px 
+PASS focus 1280x720 day: no horizontal overflow or competing outer scroll 
+PASS focus 1280x720 day: body and primary contrast meet 4.5 7.89 / 12.99
+PASS focus 1280x720 day: footer contrast meets 4.5 7.89
+PASS focus 1280x720 day: header controls do not overlap or escape 
+PASS focus 1280x720 day: day/night retains layout and draft 
+PASS focus 1280x720 day: library receives focus and blocks background 
+PASS focus 1280x720 day: continue preserves exact note and focuses editor 
+PASS focus 1280x720 day: return retains adopted design 
+PASS focus 1280x720 night: correct design appears without hidden writer 
+PASS focus 1280x720 night: original Borel wordmark is large and geometrically centered 820.0px
+PASS focus 1280x720 night: primary remains visible and enabled during entrance 
+PASS focus 1280x720 night: logo and copy keep a clear gap 
+PASS focus 1280x720 night: start brand has no visible legacy name 
+PASS focus 1280x720 night: primary action fits first viewport 597.1px
+PASS focus 1280x720 night: touch targets are at least 44px 
+PASS focus 1280x720 night: no horizontal overflow or competing outer scroll 
+PASS focus 1280x720 night: body and primary contrast meet 4.5 8.63 / 14.21
+PASS focus 1280x720 night: footer contrast meets 4.5 8.63
+PASS focus 1280x720 night: header controls do not overlap or escape 
+PASS focus 1280x720 night: day/night retains layout and draft 
+PASS focus 390x844 day: correct design appears without hidden writer 
+PASS focus 390x844 day: original Borel wordmark is large and geometrically centered 335.7px
+PASS focus 390x844 day: primary remains visible and enabled during entrance 
+PASS focus 390x844 day: logo and copy keep a clear gap 
+PASS focus 390x844 day: start brand has no visible legacy name 
+PASS focus 390x844 day: primary action fits first viewport 593.4px
+PASS focus 390x844 day: touch targets are at least 44px 
+PASS focus 390x844 day: no horizontal overflow or competing outer scroll start-atmosphere:390.3999938964844,start-light:390.3999938964844,start-header:390.3999938964844,start-main:390.3999938964844,start-footer:390.3999938964844
+PASS focus 390x844 day: body and primary contrast meet 4.5 7.89 / 12.99
+PASS focus 390x844 day: footer contrast meets 4.5 7.89
+PASS focus 390x844 day: header controls do not overlap or escape 
+PASS focus 390x844 day: day/night retains layout and draft 
+PASS focus 390x844 night: correct design appears without hidden writer 
+PASS focus 390x844 night: original Borel wordmark is large and geometrically centered 335.7px
+PASS focus 390x844 night: primary remains visible and enabled during entrance 
+PASS focus 390x844 night: logo and copy keep a clear gap 
+PASS focus 390x844 night: start brand has no visible legacy name 
+PASS focus 390x844 night: primary action fits first viewport 593.4px
+PASS focus 390x844 night: touch targets are at least 44px 
+PASS focus 390x844 night: no horizontal overflow or competing outer scroll start-atmosphere:390.3999938964844,start-light:390.3999938964844,start-header:390.3999938964844,start-main:390.3999938964844,start-footer:390.3999938964844
+PASS focus 390x844 night: body and primary contrast meet 4.5 8.63 / 14.21
+PASS focus 390x844 night: footer contrast meets 4.5 8.63
+PASS focus 390x844 night: header controls do not overlap or escape 
+PASS focus 390x844 night: day/night retains layout and draft 
+PASS focus 360x640 day: correct design appears without hidden writer 
+PASS focus 360x640 day: original Borel wordmark is large and geometrically centered 309.6px
+PASS focus 360x640 day: primary remains visible and enabled during entrance 
+PASS focus 360x640 day: logo and copy keep a clear gap 
+PASS focus 360x640 day: start brand has no visible legacy name 
+PASS focus 360x640 day: primary action fits first viewport 487.8px
+PASS focus 360x640 day: touch targets are at least 44px 
+PASS focus 360x640 day: no horizontal overflow or competing outer scroll 
+PASS focus 360x640 day: body and primary contrast meet 4.5 7.89 / 12.99
+PASS focus 360x640 day: footer contrast meets 4.5 7.89
+PASS focus 360x640 day: header controls do not overlap or escape 
+PASS focus 360x640 day: day/night retains layout and draft 
+PASS focus 360x640 night: correct design appears without hidden writer 
+PASS focus 360x640 night: original Borel wordmark is large and geometrically centered 309.6px
+PASS focus 360x640 night: primary remains visible and enabled during entrance 
+PASS focus 360x640 night: logo and copy keep a clear gap 
+PASS focus 360x640 night: start brand has no visible legacy name 
+PASS focus 360x640 night: primary action fits first viewport 487.8px
+PASS focus 360x640 night: touch targets are at least 44px 
+PASS focus 360x640 night: no horizontal overflow or competing outer scroll 
+PASS focus 360x640 night: body and primary contrast meet 4.5 8.63 / 14.21
+PASS focus 360x640 night: footer contrast meets 4.5 8.63
+PASS focus 360x640 night: header controls do not overlap or escape 
+PASS focus 360x640 night: day/night retains layout and draft 
+PASS focus 320x568 day: correct design appears without hidden writer 
+PASS focus 320x568 day: original Borel wordmark is large and geometrically centered 275.2px
+PASS focus 320x568 day: primary remains visible and enabled during entrance 
+PASS focus 320x568 day: logo and copy keep a clear gap 
+PASS focus 320x568 day: start brand has no visible legacy name 
+PASS focus 320x568 day: primary action fits first viewport 432.1px
+PASS focus 320x568 day: touch targets are at least 44px 
+PASS focus 320x568 day: no horizontal overflow or competing outer scroll 
+PASS focus 320x568 day: body and primary contrast meet 4.5 7.89 / 12.99
+PASS focus 320x568 day: footer contrast meets 4.5 7.89
+PASS focus 320x568 day: header controls do not overlap or escape 
+PASS focus 320x568 day: day/night retains layout and draft 
+PASS focus 320x568 night: correct design appears without hidden writer 
+PASS focus 320x568 night: original Borel wordmark is large and geometrically centered 275.2px
+PASS focus 320x568 night: primary remains visible and enabled during entrance 
+PASS focus 320x568 night: logo and copy keep a clear gap 
+PASS focus 320x568 night: start brand has no visible legacy name 
+PASS focus 320x568 night: primary action fits first viewport 432.1px
+PASS focus 320x568 night: touch targets are at least 44px 
+PASS focus 320x568 night: no horizontal overflow or competing outer scroll 
+PASS focus 320x568 night: body and primary contrast meet 4.5 8.63 / 14.21
+PASS focus 320x568 night: footer contrast meets 4.5 8.63
+PASS focus 320x568 night: header controls do not overlap or escape 
+PASS focus 320x568 night: day/night retains layout and draft 
+PASS focus 900x640 day: correct design appears without hidden writer 
+PASS focus 900x640 day: original Borel wordmark is large and geometrically centered 684.0px
+PASS focus 900x640 day: primary remains visible and enabled during entrance 
+PASS focus 900x640 day: logo and copy keep a clear gap 
+PASS focus 900x640 day: start brand has no visible legacy name 
+PASS focus 900x640 day: primary action fits first viewport 538.5px
+PASS focus 900x640 day: touch targets are at least 44px 
+PASS focus 900x640 day: no horizontal overflow or competing outer scroll 
+PASS focus 900x640 day: body and primary contrast meet 4.5 7.89 / 12.99
+PASS focus 900x640 day: footer contrast meets 4.5 7.89
+PASS focus 900x640 day: header controls do not overlap or escape 
+PASS focus 900x640 day: day/night retains layout and draft 
+PASS focus 900x640 night: correct design appears without hidden writer 
+PASS focus 900x640 night: original Borel wordmark is large and geometrically centered 684.0px
+PASS focus 900x640 night: primary remains visible and enabled during entrance 
+PASS focus 900x640 night: logo and copy keep a clear gap 
+PASS focus 900x640 night: start brand has no visible legacy name 
+PASS focus 900x640 night: primary action fits first viewport 538.5px
+PASS focus 900x640 night: touch targets are at least 44px 
+PASS focus 900x640 night: no horizontal overflow or competing outer scroll 
+PASS focus 900x640 night: body and primary contrast meet 4.5 8.63 / 14.21
+PASS focus 900x640 night: footer contrast meets 4.5 8.63
+PASS focus 900x640 night: header controls do not overlap or escape 
+PASS focus 900x640 night: day/night retains layout and draft 
+PASS glass 1280x720 day: correct design appears without hidden writer 
+PASS glass 1280x720 day: original Borel wordmark is large and geometrically centered 820.0px
+PASS glass 1280x720 day: primary remains visible and enabled during entrance 
+PASS glass 1280x720 day: logo and copy keep a clear gap 
+PASS glass 1280x720 day: start brand has no visible legacy name 
+PASS glass 1280x720 day: primary action fits first viewport 597.1px
+PASS glass 1280x720 day: touch targets are at least 44px 
+PASS glass 1280x720 day: no horizontal overflow or competing outer scroll 
+PASS glass 1280x720 day: body and primary contrast meet 4.5 4.64 / 8.21
+PASS glass 1280x720 day: footer contrast meets 4.5 4.64
+PASS glass 1280x720 day: header controls do not overlap or escape 
+PASS glass 1280x720 day: day/night retains layout and draft 
+PASS glass 1280x720 day: library receives focus and blocks background 
+PASS glass 1280x720 day: continue preserves exact note and focuses editor 
+PASS glass 1280x720 day: return retains adopted design 
+PASS glass 1280x720 night: correct design appears without hidden writer 
+PASS glass 1280x720 night: original Borel wordmark is large and geometrically centered 820.0px
+PASS glass 1280x720 night: primary remains visible and enabled during entrance 
+PASS glass 1280x720 night: logo and copy keep a clear gap 
+PASS glass 1280x720 night: start brand has no visible legacy name 
+PASS glass 1280x720 night: primary action fits first viewport 597.1px
+PASS glass 1280x720 night: touch targets are at least 44px 
+PASS glass 1280x720 night: no horizontal overflow or competing outer scroll 
+PASS glass 1280x720 night: body and primary contrast meet 4.5 7.76 / 12.19
+PASS glass 1280x720 night: footer contrast meets 4.5 7.76
+PASS glass 1280x720 night: header controls do not overlap or escape 
+PASS glass 1280x720 night: day/night retains layout and draft 
+PASS glass 390x844 day: correct design appears without hidden writer 
+PASS glass 390x844 day: original Borel wordmark is large and geometrically centered 335.7px
+PASS glass 390x844 day: primary remains visible and enabled during entrance 
+PASS glass 390x844 day: logo and copy keep a clear gap 
+PASS glass 390x844 day: start brand has no visible legacy name 
+PASS glass 390x844 day: primary action fits first viewport 593.4px
+PASS glass 390x844 day: touch targets are at least 44px 
+PASS glass 390x844 day: no horizontal overflow or competing outer scroll start-atmosphere:390.3999938964844,start-light:390.3999938964844,start-header:390.3999938964844,start-main:390.3999938964844,start-footer:390.3999938964844
+PASS glass 390x844 day: body and primary contrast meet 4.5 4.64 / 8.21
+PASS glass 390x844 day: footer contrast meets 4.5 4.64
+PASS glass 390x844 day: header controls do not overlap or escape 
+PASS glass 390x844 day: day/night retains layout and draft 
+PASS glass 390x844 night: correct design appears without hidden writer 
+PASS glass 390x844 night: original Borel wordmark is large and geometrically centered 335.7px
+PASS glass 390x844 night: primary remains visible and enabled during entrance 
+PASS glass 390x844 night: logo and copy keep a clear gap 
+PASS glass 390x844 night: start brand has no visible legacy name 
+PASS glass 390x844 night: primary action fits first viewport 593.4px
+PASS glass 390x844 night: touch targets are at least 44px 
+PASS glass 390x844 night: no horizontal overflow or competing outer scroll start-atmosphere:390.3999938964844,start-light:390.3999938964844,start-header:390.3999938964844,start-main:390.3999938964844,start-footer:390.3999938964844
+PASS glass 390x844 night: body and primary contrast meet 4.5 7.76 / 12.19
+PASS glass 390x844 night: footer contrast meets 4.5 7.76
+PASS glass 390x844 night: header controls do not overlap or escape 
+PASS glass 390x844 night: day/night retains layout and draft 
+PASS glass 360x640 day: correct design appears without hidden writer 
+PASS glass 360x640 day: original Borel wordmark is large and geometrically centered 309.6px
+PASS glass 360x640 day: primary remains visible and enabled during entrance 
+PASS glass 360x640 day: logo and copy keep a clear gap 
+PASS glass 360x640 day: start brand has no visible legacy name 
+PASS glass 360x640 day: primary action fits first viewport 487.8px
+PASS glass 360x640 day: touch targets are at least 44px 
+PASS glass 360x640 day: no horizontal overflow or competing outer scroll 
+PASS glass 360x640 day: body and primary contrast meet 4.5 4.64 / 8.21
+PASS glass 360x640 day: footer contrast meets 4.5 4.64
+PASS glass 360x640 day: header controls do not overlap or escape 
+PASS glass 360x640 day: day/night retains layout and draft 
+PASS glass 360x640 night: correct design appears without hidden writer 
+PASS glass 360x640 night: original Borel wordmark is large and geometrically centered 309.6px
+PASS glass 360x640 night: primary remains visible and enabled during entrance 
+PASS glass 360x640 night: logo and copy keep a clear gap 
+PASS glass 360x640 night: start brand has no visible legacy name 
+PASS glass 360x640 night: primary action fits first viewport 487.8px
+PASS glass 360x640 night: touch targets are at least 44px 
+PASS glass 360x640 night: no horizontal overflow or competing outer scroll 
+PASS glass 360x640 night: body and primary contrast meet 4.5 7.76 / 12.19
+PASS glass 360x640 night: footer contrast meets 4.5 7.76
+PASS glass 360x640 night: header controls do not overlap or escape 
+PASS glass 360x640 night: day/night retains layout and draft 
+PASS glass 320x568 day: correct design appears without hidden writer 
+PASS glass 320x568 day: original Borel wordmark is large and geometrically centered 275.2px
+PASS glass 320x568 day: primary remains visible and enabled during entrance 
+PASS glass 320x568 day: logo and copy keep a clear gap 
+PASS glass 320x568 day: start brand has no visible legacy name 
+PASS glass 320x568 day: primary action fits first viewport 432.1px
+PASS glass 320x568 day: touch targets are at least 44px 
+PASS glass 320x568 day: no horizontal overflow or competing outer scroll 
+PASS glass 320x568 day: body and primary contrast meet 4.5 4.64 / 8.21
+PASS glass 320x568 day: footer contrast meets 4.5 4.64
+PASS glass 320x568 day: header controls do not overlap or escape 
+PASS glass 320x568 day: day/night retains layout and draft 
+PASS glass 320x568 night: correct design appears without hidden writer 
+PASS glass 320x568 night: original Borel wordmark is large and geometrically centered 275.2px
+PASS glass 320x568 night: primary remains visible and enabled during entrance 
+PASS glass 320x568 night: logo and copy keep a clear gap 
+PASS glass 320x568 night: start brand has no visible legacy name 
+PASS glass 320x568 night: primary action fits first viewport 432.1px
+PASS glass 320x568 night: touch targets are at least 44px 
+PASS glass 320x568 night: no horizontal overflow or competing outer scroll 
+PASS glass 320x568 night: body and primary contrast meet 4.5 7.76 / 12.19
+PASS glass 320x568 night: footer contrast meets 4.5 7.76
+PASS glass 320x568 night: header controls do not overlap or escape 
+PASS glass 320x568 night: day/night retains layout and draft 
+PASS glass 900x640 day: correct design appears without hidden writer 
+PASS glass 900x640 day: original Borel wordmark is large and geometrically centered 684.0px
+PASS glass 900x640 day: primary remains visible and enabled during entrance 
+PASS glass 900x640 day: logo and copy keep a clear gap 
+PASS glass 900x640 day: start brand has no visible legacy name 
+PASS glass 900x640 day: primary action fits first viewport 538.5px
+PASS glass 900x640 day: touch targets are at least 44px 
+PASS glass 900x640 day: no horizontal overflow or competing outer scroll 
+PASS glass 900x640 day: body and primary contrast meet 4.5 4.64 / 8.21
+PASS glass 900x640 day: footer contrast meets 4.5 4.64
+PASS glass 900x640 day: header controls do not overlap or escape 
+PASS glass 900x640 day: day/night retains layout and draft 
+PASS glass 900x640 night: correct design appears without hidden writer 
+PASS glass 900x640 night: original Borel wordmark is large and geometrically centered 684.0px
+PASS glass 900x640 night: primary remains visible and enabled during entrance 
+PASS glass 900x640 night: logo and copy keep a clear gap 
+PASS glass 900x640 night: start brand has no visible legacy name 
+PASS glass 900x640 night: primary action fits first viewport 538.5px
+PASS glass 900x640 night: touch targets are at least 44px 
+PASS glass 900x640 night: no horizontal overflow or competing outer scroll 
+PASS glass 900x640 night: body and primary contrast meet 4.5 7.76 / 12.19
+PASS glass 900x640 night: footer contrast meets 4.5 7.76
+PASS glass 900x640 night: header controls do not overlap or escape 
+PASS glass 900x640 night: day/night retains layout and draft 
+PASS organic 1280x720 day: correct design appears without hidden writer 
+PASS organic 1280x720 day: original Borel wordmark is large and geometrically centered 820.0px
+PASS organic 1280x720 day: primary remains visible and enabled during entrance 
+PASS organic 1280x720 day: logo and copy keep a clear gap 
+PASS organic 1280x720 day: start brand has no visible legacy name 
+PASS organic 1280x720 day: primary action fits first viewport 597.1px
+PASS organic 1280x720 day: touch targets are at least 44px 
+PASS organic 1280x720 day: no horizontal overflow or competing outer scroll start-plane:1664
+PASS organic 1280x720 day: body and primary contrast meet 4.5 4.81 / 7.59
+PASS organic 1280x720 day: footer contrast meets 4.5 4.81
+PASS organic 1280x720 day: header controls do not overlap or escape 
+PASS organic 1280x720 day: day/night retains layout and draft 
+PASS organic 1280x720 day: library receives focus and blocks background 
+PASS organic 1280x720 day: continue preserves exact note and focuses editor 
+PASS organic 1280x720 day: return retains adopted design 
+PASS organic 1280x720 night: correct design appears without hidden writer 
+PASS organic 1280x720 night: original Borel wordmark is large and geometrically centered 820.0px
+PASS organic 1280x720 night: primary remains visible and enabled during entrance 
+PASS organic 1280x720 night: logo and copy keep a clear gap 
+PASS organic 1280x720 night: start brand has no visible legacy name 
+PASS organic 1280x720 night: primary action fits first viewport 597.1px
+PASS organic 1280x720 night: touch targets are at least 44px 
+PASS organic 1280x720 night: no horizontal overflow or competing outer scroll start-plane:1664
+PASS organic 1280x720 night: body and primary contrast meet 4.5 7.49 / 11.62
+PASS organic 1280x720 night: footer contrast meets 4.5 7.49
+PASS organic 1280x720 night: header controls do not overlap or escape 
+PASS organic 1280x720 night: day/night retains layout and draft 
+PASS organic 390x844 day: correct design appears without hidden writer 
+PASS organic 390x844 day: original Borel wordmark is large and geometrically centered 335.7px
+PASS organic 390x844 day: primary remains visible and enabled during entrance 
+PASS organic 390x844 day: logo and copy keep a clear gap 
+PASS organic 390x844 day: start brand has no visible legacy name 
+PASS organic 390x844 day: primary action fits first viewport 593.4px
+PASS organic 390x844 day: touch targets are at least 44px 
+PASS organic 390x844 day: no horizontal overflow or competing outer scroll start-atmosphere:390.3999938964844,start-plane:507.52500915527344,start-header:390.3999938964844,start-main:390.3999938964844,start-footer:390.3999938964844
+PASS organic 390x844 day: body and primary contrast meet 4.5 4.81 / 7.59
+PASS organic 390x844 day: footer contrast meets 4.5 4.81
+PASS organic 390x844 day: header controls do not overlap or escape 
+PASS organic 390x844 day: day/night retains layout and draft 
+PASS organic 390x844 night: correct design appears without hidden writer 
+PASS organic 390x844 night: original Borel wordmark is large and geometrically centered 335.7px
+PASS organic 390x844 night: primary remains visible and enabled during entrance 
+PASS organic 390x844 night: logo and copy keep a clear gap 
+PASS organic 390x844 night: start brand has no visible legacy name 
+PASS organic 390x844 night: primary action fits first viewport 593.4px
+PASS organic 390x844 night: touch targets are at least 44px 
+PASS organic 390x844 night: no horizontal overflow or competing outer scroll start-atmosphere:390.3999938964844,start-plane:507.52500915527344,start-header:390.3999938964844,start-main:390.3999938964844,start-footer:390.3999938964844
+PASS organic 390x844 night: body and primary contrast meet 4.5 7.49 / 11.62
+PASS organic 390x844 night: footer contrast meets 4.5 7.49
+PASS organic 390x844 night: header controls do not overlap or escape 
+PASS organic 390x844 night: day/night retains layout and draft 
+PASS organic 360x640 day: correct design appears without hidden writer 
+PASS organic 360x640 day: original Borel wordmark is large and geometrically centered 309.6px
+PASS organic 360x640 day: primary remains visible and enabled during entrance 
+PASS organic 360x640 day: logo and copy keep a clear gap 
+PASS organic 360x640 day: start brand has no visible legacy name 
+PASS organic 360x640 day: primary action fits first viewport 487.8px
+PASS organic 360x640 day: touch targets are at least 44px 
+PASS organic 360x640 day: no horizontal overflow or competing outer scroll start-plane:468
+PASS organic 360x640 day: body and primary contrast meet 4.5 4.81 / 7.59
+PASS organic 360x640 day: footer contrast meets 4.5 4.81
+PASS organic 360x640 day: header controls do not overlap or escape 
+PASS organic 360x640 day: day/night retains layout and draft 
+PASS organic 360x640 night: correct design appears without hidden writer 
+PASS organic 360x640 night: original Borel wordmark is large and geometrically centered 309.6px
+PASS organic 360x640 night: primary remains visible and enabled during entrance 
+PASS organic 360x640 night: logo and copy keep a clear gap 
+PASS organic 360x640 night: start brand has no visible legacy name 
+PASS organic 360x640 night: primary action fits first viewport 487.8px
+PASS organic 360x640 night: touch targets are at least 44px 
+PASS organic 360x640 night: no horizontal overflow or competing outer scroll start-plane:468
+PASS organic 360x640 night: body and primary contrast meet 4.5 7.49 / 11.62
+PASS organic 360x640 night: footer contrast meets 4.5 7.49
+PASS organic 360x640 night: header controls do not overlap or escape 
+PASS organic 360x640 night: day/night retains layout and draft 
+PASS organic 320x568 day: correct design appears without hidden writer 
+PASS organic 320x568 day: original Borel wordmark is large and geometrically centered 275.2px
+PASS organic 320x568 day: primary remains visible and enabled during entrance 
+PASS organic 320x568 day: logo and copy keep a clear gap 
+PASS organic 320x568 day: start brand has no visible legacy name 
+PASS organic 320x568 day: primary action fits first viewport 432.1px
+PASS organic 320x568 day: touch targets are at least 44px 
+PASS organic 320x568 day: no horizontal overflow or competing outer scroll start-plane:416
+PASS organic 320x568 day: body and primary contrast meet 4.5 4.81 / 7.59
+PASS organic 320x568 day: footer contrast meets 4.5 4.81
+PASS organic 320x568 day: header controls do not overlap or escape 
+PASS organic 320x568 day: day/night retains layout and draft 
+PASS organic 320x568 night: correct design appears without hidden writer 
+PASS organic 320x568 night: original Borel wordmark is large and geometrically centered 275.2px
+PASS organic 320x568 night: primary remains visible and enabled during entrance 
+PASS organic 320x568 night: logo and copy keep a clear gap 
+PASS organic 320x568 night: start brand has no visible legacy name 
+PASS organic 320x568 night: primary action fits first viewport 432.1px
+PASS organic 320x568 night: touch targets are at least 44px 
+PASS organic 320x568 night: no horizontal overflow or competing outer scroll start-plane:416
+PASS organic 320x568 night: body and primary contrast meet 4.5 7.49 / 11.62
+PASS organic 320x568 night: footer contrast meets 4.5 7.49
+PASS organic 320x568 night: header controls do not overlap or escape 
+PASS organic 320x568 night: day/night retains layout and draft 
+PASS organic 900x640 day: correct design appears without hidden writer 
+PASS organic 900x640 day: original Borel wordmark is large and geometrically centered 684.0px
+PASS organic 900x640 day: primary remains visible and enabled during entrance 
+PASS organic 900x640 day: logo and copy keep a clear gap 
+PASS organic 900x640 day: start brand has no visible legacy name 
+PASS organic 900x640 day: primary action fits first viewport 538.5px
+PASS organic 900x640 day: touch targets are at least 44px 
+PASS organic 900x640 day: no horizontal overflow or competing outer scroll start-plane:1170
+PASS organic 900x640 day: body and primary contrast meet 4.5 4.81 / 7.59
+PASS organic 900x640 day: footer contrast meets 4.5 4.81
+PASS organic 900x640 day: header controls do not overlap or escape 
+PASS organic 900x640 day: day/night retains layout and draft 
+PASS organic 900x640 night: correct design appears without hidden writer 
+PASS organic 900x640 night: original Borel wordmark is large and geometrically centered 684.0px
+PASS organic 900x640 night: primary remains visible and enabled during entrance 
+PASS organic 900x640 night: logo and copy keep a clear gap 
+PASS organic 900x640 night: start brand has no visible legacy name 
+PASS organic 900x640 night: primary action fits first viewport 538.5px
+PASS organic 900x640 night: touch targets are at least 44px 
+PASS organic 900x640 night: no horizontal overflow or competing outer scroll start-plane:1170
+PASS organic 900x640 night: body and primary contrast meet 4.5 7.49 / 11.62
+PASS organic 900x640 night: footer contrast meets 4.5 7.49
+PASS organic 900x640 night: header controls do not overlap or escape 
+PASS organic 900x640 night: day/night retains layout and draft 
+PASS gallery 1280x720: all Inklune options with no eager preview iframes 
+PASS gallery 1280x720: thumbnails and labels retain full height 
+PASS gallery 1280x720: filter labels do not overlap 
+PASS gallery 1280x720: gallery targets meet 44px 
+PASS gallery 1280x720: one gallery scroll, no outer overflow 
+PASS gallery 1280x720: writer shortcuts blocked behind gallery 
+PASS gallery 1280x720: Tab wraps inside modal 
+PASS gallery 1280x720: Shift Tab wraps inside modal 
+PASS gallery 1280x720: preview theme leaves writer theme unchanged 
+PASS gallery 1280x720: filter 纯粹留白 shows the matching two designs 
+PASS gallery 1280x720: filter 温润自然 shows the matching two designs 
+PASS gallery 1280x720: filter 月色与深墨 shows the matching two designs 
+PASS gallery 1280x720: filter 轻质空间 shows the matching two designs 
+PASS gallery 1280x720: one actual live preview, no hidden writer 
+PASS gallery 1280x720: replay remounts the Borel stroke sequence 
+PASS gallery 1280x720: expansion leaves preference unchanged 
+PASS gallery 1280x720: phone preview is 390px document 
+PASS gallery 1280x720: next keyboard option matches preview 
+PASS gallery 1280x720: Escape returns to focused comparison option 
+PASS gallery 1280x720: Escape closes and restores launcher focus 
+PASS gallery 1280x720: adopt quiet preserves draft 
+PASS gallery 1280x720: adopt nord preserves draft 
+PASS gallery 1280x720: adopt letter preserves draft 
+PASS gallery 1280x720: adopt japandi preserves draft 
+PASS gallery 1280x720: adopt nocturne preserves draft 
+PASS gallery 1280x720: adopt focus preserves draft 
+PASS gallery 1280x720: adopt glass preserves draft 
+PASS gallery 1280x720: adopt organic preserves draft 
+PASS gallery 1280x720: isolated gallery does not persist 
+PASS gallery 390x844: all Inklune options with no eager preview iframes 
+PASS gallery 390x844: thumbnails and labels retain full height 
+PASS gallery 390x844: filter labels do not overlap 
+PASS gallery 390x844: gallery targets meet 44px 
+PASS gallery 390x844: one gallery scroll, no outer overflow 
+PASS gallery 390x844: writer shortcuts blocked behind gallery 
+PASS gallery 390x844: Tab wraps inside modal 
+PASS gallery 390x844: Shift Tab wraps inside modal 
+PASS gallery 390x844: preview theme leaves writer theme unchanged 
+PASS gallery 390x844: filter 纯粹留白 shows the matching two designs 
+PASS gallery 390x844: filter 温润自然 shows the matching two designs 
+PASS gallery 390x844: filter 月色与深墨 shows the matching two designs 
+PASS gallery 390x844: filter 轻质空间 shows the matching two designs 
+PASS gallery 390x844: one actual live preview, no hidden writer 
+PASS gallery 390x844: replay remounts the Borel stroke sequence 
+PASS gallery 390x844: expansion leaves preference unchanged 
+PASS gallery 390x844: phone preview is 390px document 
+PASS gallery 390x844: next keyboard option matches preview 
+PASS gallery 390x844: Escape returns to focused comparison option 
+PASS gallery 390x844: Escape closes and restores launcher focus 
+PASS gallery 390x844: adopt quiet preserves draft 
+PASS gallery 390x844: adopt nord preserves draft 
+PASS gallery 390x844: adopt letter preserves draft 
+PASS gallery 390x844: adopt japandi preserves draft 
+PASS gallery 390x844: adopt nocturne preserves draft 
+PASS gallery 390x844: adopt focus preserves draft 
+PASS gallery 390x844: adopt glass preserves draft 
+PASS gallery 390x844: adopt organic preserves draft 
+PASS gallery 390x844: isolated gallery does not persist 
+PASS gallery 320x568: all Inklune options with no eager preview iframes 
+PASS gallery 320x568: thumbnails and labels retain full height 
+PASS gallery 320x568: filter labels do not overlap 
+PASS gallery 320x568: gallery targets meet 44px 
+PASS gallery 320x568: one gallery scroll, no outer overflow 
+PASS gallery 320x568: writer shortcuts blocked behind gallery 
+PASS gallery 320x568: Tab wraps inside modal 
+PASS gallery 320x568: Shift Tab wraps inside modal 
+PASS gallery 320x568: preview theme leaves writer theme unchanged 
+PASS gallery 320x568: filter 纯粹留白 shows the matching two designs 
+PASS gallery 320x568: filter 温润自然 shows the matching two designs 
+PASS gallery 320x568: filter 月色与深墨 shows the matching two designs 
+PASS gallery 320x568: filter 轻质空间 shows the matching two designs 
+PASS gallery 320x568: one actual live preview, no hidden writer 
+PASS gallery 320x568: replay remounts the Borel stroke sequence 
+PASS gallery 320x568: expansion leaves preference unchanged 
+PASS gallery 320x568: phone preview is 390px document 
+PASS gallery 320x568: next keyboard option matches preview 
+PASS gallery 320x568: Escape returns to focused comparison option 
+PASS gallery 320x568: Escape closes and restores launcher focus 
+PASS gallery 320x568: adopt quiet preserves draft 
+PASS gallery 320x568: adopt nord preserves draft 
+PASS gallery 320x568: adopt letter preserves draft 
+PASS gallery 320x568: adopt japandi preserves draft 
+PASS gallery 320x568: adopt nocturne preserves draft 
+PASS gallery 320x568: adopt focus preserves draft 
+PASS gallery 320x568: adopt glass preserves draft 
+PASS gallery 320x568: adopt organic preserves draft 
+PASS gallery 320x568: isolated gallery does not persist 
+PASS legacy birch: legacy preference maps without a first-frame fallback 
+PASS legacy swiss: legacy preference maps without a first-frame fallback 
+PASS legacy deco: legacy preference maps without a first-frame fallback 
+PASS persist quiet: adopt stores a separate preference 
+PASS persist quiet: production reload retains chosen design 
+PASS persist quiet: chosen preference appears from first DOM commit and paint 2 DOM/paint samples
+PASS persist nord: adopt stores a separate preference 
+PASS persist nord: production reload retains chosen design 
+PASS persist nord: chosen preference appears from first DOM commit and paint 2 DOM/paint samples
+PASS persist letter: adopt stores a separate preference 
+PASS persist letter: production reload retains chosen design 
+PASS persist letter: chosen preference appears from first DOM commit and paint 2 DOM/paint samples
+PASS persist japandi: adopt stores a separate preference 
+PASS persist japandi: production reload retains chosen design 
+PASS persist japandi: chosen preference appears from first DOM commit and paint 2 DOM/paint samples
+PASS persist nocturne: adopt stores a separate preference 
+PASS persist nocturne: production reload retains chosen design 
+PASS persist nocturne: chosen preference appears from first DOM commit and paint 2 DOM/paint samples
+PASS persist focus: adopt stores a separate preference 
+PASS persist focus: production reload retains chosen design 
+PASS persist focus: chosen preference appears from first DOM commit and paint 2 DOM/paint samples
+PASS persist glass: adopt stores a separate preference 
+PASS persist glass: production reload retains chosen design 
+PASS persist glass: chosen preference appears from first DOM commit and paint 2 DOM/paint samples
+PASS persist organic: adopt stores a separate preference 
+PASS persist organic: production reload retains chosen design 
+PASS persist organic: chosen preference appears from first DOM commit and paint 2 DOM/paint samples

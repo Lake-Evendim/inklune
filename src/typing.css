@@ -1,0 +1,69 @@
+@import './writing-fonts.css';
+/* Straight piston motion; the stroke is measured against the printed line. */
+.typewriter-assembly { --hammer-extension: 0px; }
+.baseline-marker,.rule-baseline-marker { display:inline-block; width:0; height:0; vertical-align:baseline; }
+.capsule-sled { transform: none; }
+.capsule { min-height: 0; }
+.ink-text, .writing-input {
+  font-family: var(--writing-font-family, 'Courier Prime', 'Microsoft YaHei', 'PingFang SC', monospace);
+  line-height: 1.02;
+  letter-spacing: 0;
+  font-kerning: none;
+  font-variant-ligatures: none;
+  overflow-wrap: anywhere;
+  word-break: break-all;
+}
+.paper .writing-input, .night .paper-focused .writing-input { caret-color: transparent; }
+.ink-glyph {
+  position: relative;
+  top: var(--ink-y, 0px);
+  color:transparent;
+  background-color:var(--glyph-ink-color,var(--writing-ink-color,#232323));
+  background-image:url('./ink-grain.png');
+  background-clip:text;
+  background-repeat: repeat;
+  background-size: calc(96px * var(--mechanism-scale, 1)) calc(96px * var(--mechanism-scale, 1));
+  background-position: calc(var(--mask-x, 0px) * var(--mechanism-scale, 1)) calc(var(--mask-y, 0px) * var(--mechanism-scale, 1));
+}
+.composing-ink { opacity: .55 !important; text-decoration: underline dotted; text-underline-offset: 3px; text-decoration-color:var(--glyph-ink-color,var(--writing-ink-color,#232323)); }
+.type-hammer { left: calc(50% - 11px * var(--mechanism-scale, 1)); }
+.type-hammer b { transform: translateY(calc(-1 * var(--hammer-extension))); will-change: transform; }
+.type-hammer i { bottom:calc(-2px * var(--mechanism-scale,1)); height: calc(25px * var(--mechanism-scale, 1) + var(--hammer-extension)); clip-path:inset(0 0 calc(2px * var(--mechanism-scale,1)) 0); }
+.print-point {
+  position: absolute;
+  width: calc(4px * var(--mechanism-scale, 1));
+  height: calc(4px * var(--mechanism-scale, 1));
+  left: calc(50% - 2px * var(--mechanism-scale, 1));
+  top: calc(-21px * var(--mechanism-scale, 1) - var(--impact-travel));
+  border-radius: 50%;
+  background: #79bb50;
+  box-shadow: 0 0 0 .5px #56883830;
+  pointer-events: none;
+  animation: print-point-blink 1s steps(1, end) infinite;
+}
+/* A steady visible point during carriage motion; idle restarts on the lit phase. */
+.typewriter-assembly[data-motion]:not([data-motion='idle']) .print-point {
+  animation: none;
+  opacity: 1;
+}
+@keyframes print-point-blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .print-point { animation: none; opacity: 1; }
+}
+.capsule-lights .status-lamp { background: #9ad365; border: 1px solid #82ab58; box-shadow: 0 0 1px #b9e889; }
+.typewriter-assembly[data-motion='print'] .status-lamp,
+.typewriter-assembly[data-motion='space'] .status-lamp,
+.typewriter-assembly[data-motion='composition'] .status-lamp { background: #eea14d; border-color: #c78740; box-shadow: 0 0 2px #fbbb6c; }
+.capsule-lights .night-lamp, .capsule-lights .inactive-lamp { background: #312124; border: 1px solid #827367; box-shadow: none; }
+.night .capsule-lights .status-lamp { box-shadow: 0 0 2px #a6e274, 0 0 4px #8bbd5b40; }
+.night .capsule-lights .night-lamp { background:color-mix(in srgb,#e6a94a calc(var(--lamp-ignition,0) * 100%),#312124); border-color:#9f7136; box-shadow:0 0 2px rgb(237 183 101 / var(--lamp-ignition,0)); }
+.deleted-ink { position: absolute; top: calc(var(--trace-row) * 1lh); bottom: auto; opacity: .64; text-decoration-thickness: 1px; text-decoration-color:var(--writing-ink-color,#232323); }
+.ink-text, .writing-input { font-size: max(16px,calc(var(--type-size) * var(--mechanism-scale, 1))); }
+.ink-text { color:var(--writing-ink-color,#232323);opacity:1;text-shadow:none; }
+.night .print-point { background: #8ccd5d; box-shadow: 0 0 2px #85c95645; }
+@media print { .print-point { display: none; } }
+@media print { .has-paper-roll .ink-text { opacity:1!important; } }
+@media print { .ink-glyph { color:var(--glyph-ink-color,var(--writing-ink-color,#232323));background:none; } }

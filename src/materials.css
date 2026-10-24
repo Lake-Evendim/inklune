@@ -1,0 +1,124 @@
+/* A neutral surround and a single composite paper surface. */
+:root { background:#1b1b1b; }
+.app,.app.night { --ink:#d4d2ca; --muted:#92928d; --surface:#292929; --edge:#a5a5a51a; color:var(--ink); background:#1b1b1b; }
+.desk-grain,.desk-side-note { display:none; }
+.brand-dot { color:#b8b8ab; }
+.app-header { border-color:#b5b5b511; }
+.app-footer { color:#898982; }
+.app button:hover { color:#eeede5; }
+.export-trigger { border-color:#a5a5a52b; box-shadow:none; }
+.export-trigger:hover { background:#ffffff07; }
+.workspace-caption i { background:#aaa99b; box-shadow:none; }
+.mobile-bottom-nav,.night .mobile-bottom-nav { background:#1b1b1bed; }
+.mobile-bottom-nav button,.night .mobile-bottom-nav button { color:#b3b3a9; }
+.paper,.paper.curved,.night .paper,.night .paper.curved {
+ --paper:var(--stock-color,#eeece1); background:transparent; border:0; box-shadow:none; filter:none;
+ /* Composite the stock and lighting first, then clip once to avoid a pale AA rim.
+    The half-pixel top inset avoids a full-width raster seam at the rounded
+    boundary when the sticky viewport lands on an integer screen coordinate. */
+ isolation:isolate; overflow:visible; clip-path:inset(.5px 0 0 round 2px);
+ border-radius:2px;
+ transition:clip-path 680ms cubic-bezier(.22,.68,.24,1),border-radius 680ms cubic-bezier(.22,.68,.24,1),background 400ms ease;
+}
+.paper.curved,.night .paper.curved { border-radius:12% 12% 4% 4% / 22% 22% 3% 3%; clip-path:inset(.5px 0 0 round 12% 12% 4% 4% / 22% 22% 3% 3%); }
+.paper::before { display:none; }
+/* Keep the same composited surface throughout the morph. The curl shading
+   fades with the silhouette, including when a transition is reversed. */
+.paper::after,.night .paper::after { content:''; position:absolute; inset:0; z-index:2; pointer-events:none; opacity:0; background:linear-gradient(90deg,#4542360a,transparent 6%,transparent 94%,#4542360c),linear-gradient(180deg,#fdfcf614,transparent 7%); transition:opacity 680ms cubic-bezier(.22,.68,.24,1); }
+.paper.curved::after,.night .paper.curved::after { opacity:1; }
+@media (prefers-reduced-motion:reduce) { .paper,.paper.curved,.night .paper,.night .paper.curved,.paper::after,.night .paper::after { transition:none; } }
+.paper-content { z-index:3; }
+/* Advance the repeating stock within the sheet, without a 12,000px layer. */
+.paper-texture,.night .paper-texture { background:var(--stock-texture,url('./assets/paper-cotton.webp')) repeat; background-color:var(--paper); background-size:var(--paper-grain-size,512px); background-position:0 calc(-1 * var(--paper-feed)); transform:none; inset:0; opacity:1; mix-blend-mode:normal; image-rendering:auto; }
+.paper-heading { display:none; }
+.paper-footer { visibility:hidden; }
+
+.writing-area { margin:var(--paper-writing-top,22.5%) 20% 170px; }
+.ink-text,.night .ink-text { color:#080808; text-shadow:none; }
+
+
+.paper-illumination { position:absolute; inset:0; width:100%; height:100%; z-index:8; opacity:0; pointer-events:none; mix-blend-mode:multiply; transition:opacity 500ms ease; }
+.night .paper-illumination { opacity:1; }
+.paper-lined .writing-area {
+ background-image:linear-gradient(to bottom,#89999830 0 var(--rule-thickness,1px),transparent var(--rule-thickness,1px));
+ background-size:100% var(--rule-step,1px);
+ background-position:0 var(--rule-offset,0px);
+ background-repeat:repeat-y;
+}
+
+/* These boxes define the same dimensions as the 3D geometry and remain the
+   keyboard hit targets. CSS materials also provide a WebGL fallback. */
+.capsule { width:calc(104px * var(--mechanism-scale,1)); height:calc(43px * var(--mechanism-scale,1)); left:calc(-52px * var(--mechanism-scale,1)); border:0; border-radius:calc(22px * var(--mechanism-scale,1)); box-shadow:0 0 0 .5px #a09f9470,0 1px 1px #fff9 inset,0 -1px 2px #b1afa34a inset,0 2px 3px #0004,0 6px 6px -3px #0005; }
+.capsule-anchor { top:calc(var(--carriage-y) + var(--lamp-origin,-6.5px) * var(--mechanism-scale,1)); }
+.capsule,.mini-capsule { --capsule-light:#f3f2e9; --capsule-mid:#e9e8de; --capsule-dark:#d5d4c9; background:linear-gradient(180deg,var(--capsule-light),var(--capsule-light) 36%,var(--capsule-mid) 78%,var(--capsule-dark)); }
+.capsule-blue { --capsule-light:#4268a7; --capsule-mid:#32558e; --capsule-dark:#233d68; }
+.capsule-sage { --capsule-light:#a2ab8e; --capsule-mid:#8c9778; --capsule-dark:#758064; }
+.capsule-rose { --capsule-light:#c79293; --capsule-mid:#b77f82; --capsule-dark:#9d696e; }
+.capsule-charcoal { --capsule-light:#4c5050; --capsule-mid:#363a3a; --capsule-dark:#282c2d; }
+.capsule-lights { left:calc(12.7px * var(--mechanism-scale,1)); top:calc(20.2px * var(--mechanism-scale,1)); gap:calc(2.4px * var(--mechanism-scale,1)); }
+.capsule-lights i { width:calc(4.6px * var(--mechanism-scale,1)); height:calc(4.6px * var(--mechanism-scale,1)); border-width:calc(.3px * var(--mechanism-scale,1)); }
+.capsule-slot { display:none; }
+.capsule-shine { top:2px; left:15%; right:15%; height:calc(5px * var(--mechanism-scale,1)); opacity:.5; }
+.type-hammer { top:calc(-25px * var(--mechanism-scale,1)); width:calc(22px * var(--mechanism-scale,1)); height:calc(25px * var(--mechanism-scale,1)); }
+.type-hammer i { left:calc(9px * var(--mechanism-scale,1)); width:calc(4px * var(--mechanism-scale,1)); height:calc(23px * var(--mechanism-scale,1)); background:linear-gradient(90deg,#505050,#d2d2c8 45%,#88887e 70%,#42423e); box-shadow:1px 0 1px #0003; }
+.type-hammer b { left:0; width:calc(22px * var(--mechanism-scale,1)); height:calc(6px * var(--mechanism-scale,1)); border:0; background:linear-gradient(#aaa99f,#51514b 45%,#2a2a27); box-shadow:0 1px 2px #0005; }
+.type-hammer::after { content:none; }
+.rail { height:calc(20px * var(--mechanism-scale,1)); top:calc(5px * var(--mechanism-scale,1)); background:linear-gradient(#252829 0%,#727b7e 20%,#a5aeaf 30%,#697476 45%,#323d3f 70%,#121919 100%); border:0; box-shadow:0 1px 1px #fff3 inset,0 2px 3px #0005; }
+.rail-end { top:calc(-4px * var(--mechanism-scale,1)); height:calc(28px * var(--mechanism-scale,1)); width:calc(16px * var(--mechanism-scale,1)); background:linear-gradient(90deg,#25282a,#4c5355 55%,#24282a); border-color:#282c2d; }
+.rail-end.left { left:0; } .rail-end.right { right:0; }
+.rail-shadow { top:12px; height:17px; background:#0003; filter:blur(4px); }
+.carriage { left:0; right:0; }
+.night .capsule { background:linear-gradient(180deg,color-mix(in srgb,var(--capsule-light) 31%,#181818),color-mix(in srgb,var(--capsule-mid) 23%,#141414) 66%,color-mix(in srgb,var(--capsule-dark) 17%,#101010)); box-shadow:0 3px 4px #0007; }
+.night .capsule-shine { display:none; }
+.capsule-emitter { top:0; left:calc(50% - var(--lamp-length,20px) * var(--mechanism-scale,1) / 2); width:calc(var(--lamp-length,20px) * var(--mechanism-scale,1)); height:calc(var(--lamp-thickness,1.56px) * var(--mechanism-scale,1)); border-radius:50% / 22%; background:linear-gradient(#32352f,#262923 40%,#383b33); opacity:1; outline:none; border:0; }
+.night .capsule-emitter { background:linear-gradient(rgb(var(--lamp-lens-color) / .78),rgb(var(--lamp-lens-color)),rgb(var(--lamp-lens-color) / .6)); opacity:var(--lamp-ignition,0); transition:none; box-shadow:none; }
+.capsule-emitter { mask-image:linear-gradient(to bottom,transparent,#000 22.4%,#000 88.5%,transparent),linear-gradient(to right,transparent,#000 2%,#000 98%,transparent); mask-composite:intersect; }
+.night .capsule::after { content:none; }
+.night .rail { background:linear-gradient(#181b19,#202421 35%,#151915 65%,#121512); box-shadow:none; }
+.night .rail-brass .rail { background:linear-gradient(#201c13,#2b2619 35%,#1b1810 65%,#15120c); box-shadow:none; }
+.night .rail-end { background:linear-gradient(90deg,#171a17,#232722 50%,#171a17); border-color:#181c18; box-shadow:none; }
+.night .rail-shadow { background:#0003; filter:blur(3px); }
+.mechanism-canvas { position:absolute; inset:0; width:100%; height:100%; z-index:14; pointer-events:none; }
+.has-3d .capsule,.night .has-3d .capsule { background:transparent; box-shadow:none; border:0; }
+.has-3d .capsule:hover { filter:none; }
+.has-3d .carriage,.has-3d .type-hammer,.has-3d .capsule-lights,.has-3d .capsule-shine,.has-3d .capsule-emitter { opacity:0; }
+.capsule:focus-visible { outline:1px solid #819667; outline-offset:5px; }
+.garden-decoration { position:absolute; left:0; bottom:0; width:100%; height:auto; z-index:7; pointer-events:none; opacity:.88; }
+.night .garden-decoration { filter:brightness(.4); }
+.cobweb-decoration { position:absolute; top:calc(var(--carriage-y) + 30px * var(--mechanism-scale,1)); width:100%; height:auto; color:#5b56504d; z-index:9; pointer-events:none; }
+.night .cobweb-decoration { color:#a79b784f; }
+.paper-spider { transform-origin:47px 0; }
+.typewriter-assembly[data-motion='print'] .paper-spider { animation:spider-sway 700ms ease-out; }
+@keyframes spider-sway { 0%{transform:rotate(0)} 30%{transform:rotate(7deg)} 70%{transform:rotate(-3deg)} 100%{transform:rotate(0)} }
+
+/* The skin shelf stays quiet; previews use the very same meshes as the editor. */
+.settings-panel,.library-panel,.about-dialog { --ink:#30312b; --muted:#6d6e63; --edge:#77796c29; background:#eeece1 url('./assets/paper-cotton.webp') repeat; background-size:512px; color:var(--ink); }
+.app .settings-panel button:hover,.app .library-panel button:hover { color:#20211d; }
+.night .paper-option.selected { color:#30312b; }
+.note-card,.note-card.active { background:#eeece1 url('./assets/paper-cotton.webp'); background-size:512px; }
+.paper-options { grid-template-columns:repeat(4,1fr); row-gap:17px; }
+.paper-swatch { position:relative; overflow:hidden; background-size:200px; box-shadow:0 1px 1px #fff9 inset,0 3px 4px #514b3920; border-color:#bab5a355; }
+/* Selection removes the swatch transform; keep its decoration contained even
+   without that transform, and let clicks reach the option underneath. */
+.swatch-lined::before { content:''; position:absolute; inset:0; border-radius:inherit; pointer-events:none; background:repeating-linear-gradient(transparent 0 10px,#95a39e44 10px 11px); }
+.paper-swatch svg { position:relative; z-index:1; }
+.export-menu { background:#292929; color:#d4d2ca; }
+.segmented button.active,.night .segmented button.active { background:#f7f6ee; color:#30312b; }
+.toast,.night .toast { background:#303030; color:#d4d2ca; border-color:#7776; }
+.kit-gallery { position:relative; display:grid; grid-template-columns:repeat(3,1fr); }
+.kit-gallery canvas { position:absolute; width:100%; height:336px; top:0; left:0; pointer-events:none; }
+.kit-option { position:relative; min-width:0; height:112px; padding:0 3px 8px; border:1px solid transparent; border-radius:6px; display:flex; flex-direction:column; align-items:center; font-size:11px; }
+.kit-option.selected { border-color:#76846c80; background:#7c896b0c; }
+.kit-preview-space { height:67px; flex-shrink:0; }
+.kit-title { display:flex; flex-direction:column; align-items:center; gap:4px; }
+.kit-title i { font-size:8px; font-style:normal; color:#7f6145; }
+.setting-sublabel { display:block; font-size:11px; color:var(--muted); margin:18px 0 10px; }
+.enamel-swatch { width:25px; height:25px; border-radius:50%; box-shadow:0 1px 1px #fffa inset,0 -2px 2px #0002 inset,0 2px 2px #0002; }
+.setting-row select { max-width:140px; font:11px inherit; padding:7px 22px 7px 8px; border:1px solid #a5a19366; background:#f7f5ec; color:#3e4237; border-radius:4px; }
+.settings-panel { width:382px; }
+.settings-scroll { padding-inline:22px; }
+.night-light-controls { color:#a5a5a0; }
+.night-light-controls output { color:#a7a79f; }
+@media(max-width:760px) { .writing-area { margin:var(--paper-writing-top,22.5%) 20% 170px; } .settings-panel { width:100%; } .settings-scroll { padding-inline:25px; } }
+@media(prefers-reduced-motion:reduce) { .paper-illumination { transition:none; } .paper-spider { animation:none!important; } }
+@media print { .paper-illumination,.mechanism-canvas,.cobweb-decoration,.garden-decoration { display:none!important; } .paper,.paper.curved,.night .paper,.night .paper.curved { clip-path:none; } }

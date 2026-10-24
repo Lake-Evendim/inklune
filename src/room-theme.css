@@ -1,0 +1,37 @@
+/* Cotton by day, deep black velvet by night, shared by both rooms. */
+.app { color:var(--ui-ink); background:var(--chosen-paper,#f7f5ed); }
+.app.night { background:var(--night-base,#090909); }
+.app .room-layer { background:transparent; }
+.room-material { position:absolute; inset:0; z-index:-1; pointer-events:none; background-repeat:repeat; background-size:1024px 1024px; }
+.room-material::after { content:''; position:absolute; inset:0; background:linear-gradient(140deg,#ffffff0b,transparent 55%,#32312305); }
+.night .room-material::after { background:linear-gradient(140deg,#ffffff02,transparent 60%,#00000007); }
+.room-material-loader { position:absolute; width:1px; height:1px; opacity:0; pointer-events:none; }
+.room-material.room-atmosphere { background-repeat:no-repeat; background-size:cover; background-position:center; }
+.room-atmosphere-paint { position:absolute; inset:0; display:block; }
+.room-atmosphere-paint img { width:100%; height:100%; object-fit:cover; display:block; }
+.room-material.room-atmosphere::before { content:''; position:absolute; inset:0; z-index:1; background:var(--night-grain) repeat; background-size:1024px 1024px; mix-blend-mode:overlay; opacity:.4; }
+.night .room-material.room-atmosphere::after { z-index:2; background:linear-gradient(150deg,#00000000,#00000008); }
+.room-material[data-material="obsidian"]::before { opacity:.16; }
+.room-material[data-material="velvet"]::before { opacity:.20; }
+.room-material[data-material="inkstone"]::before { opacity:.28; }
+.app .start-quiet-design,.app .start-quiet-design.start-night { background:transparent; }
+.start-main { --start-center:calc(50% - clamp(18px,3.5vh,32px)); }
+.start-logo { left:calc((100% - var(--word-width))/2); top:calc(var(--start-center) - var(--word-height)/2); transform:none; }
+.start-copy { top:calc(var(--start-center) + var(--word-height)/2 + 28px); }
+.crisp-wordmark { position:relative; display:block; width:100%; aspect-ratio:1040/283.788; line-height:0; }
+.wordmark-surface { position:absolute; left:0; top:0; width:100%; height:100%; }
+.wordmark-surface>.inklune-wordmark { width:100%; height:100%; }
+/* Coverage is already antialiased at the exact final screen size. Preserve
+   these pixels instead of interpolating the completed raster a second time. */
+.wordmark-hd { position:absolute; inset:0; width:100%; height:100%; display:none; image-rendering:pixelated; }
+.crisp-rendered>.wordmark-surface>.inklune-wordmark { opacity:0; }
+.crisp-rendered>.wordmark-surface>.wordmark-hd { display:block; }
+.app .room-writer-layer .paper { box-shadow:0 8px 26px #34382c09; }
+.app.night .room-writer-layer .paper { box-shadow:none; }
+.room-moving.motion-aperture .room-writer-layer { z-index:3; }
+@media(max-width:760px) {
+ .start-main { --start-center:calc(50% - 24px); }
+ .start-copy { top:calc(var(--start-center) + var(--word-height)/2 + 28px); }
+}
+@media(max-height:620px) { .start-copy { top:calc(var(--start-center) + var(--word-height)/2 + 16px); } }
+@media print { .room-material { display:none; } }

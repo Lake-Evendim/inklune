@@ -1,0 +1,22 @@
+{
+  "script": "./assets/index-DDbZfDAh.js",
+  "wordmark": {
+    "clips": 7,
+    "dotDelay": "0s",
+    "finishLayer": false,
+    "firstPen": [
+      {
+        "delay": "0.12s",
+        "time": "0.092s",
+        "width": "30"
+      },
+      {
+        "delay": "0.212s",
+        "time": "0.078s",
+        "width": "24"
+      }
+    ],
+    "pens": 13
+  },
+  "errors": []
+}
