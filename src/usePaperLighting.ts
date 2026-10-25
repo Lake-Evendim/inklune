@@ -11,18 +11,15 @@ type LightingRefs = {
   drawPaper: RefObject<(() => void) | null>;
 };
 const materials = Object.fromEntries(Object.entries(paperSkins).map(([id,stock])=>[id,{ day:[1,3,5].map(i=>parseInt(stock.color.slice(i,i+2),16)),ambient:stock.ambient }]));
-// Cross sections of the official 112° / 120% night image. Coordinates in
-// source pixels on a 430px sheet, above the 20px emitter. This separates the
-// rounded aperture, expanding penumbra and longitudinal falloff.
+// Longitudinal intensity and lateral shading on a 430px sheet. Keep the
+// contour analytic so its curvature does not inherit cross-section knots.
 const sections = [
-  // height, center level, half width, edge softness, lateral rolloff
-  [0, .88, lampAperture.length/2, .55, .00], [5, .92, 19, 2.5, .00],
-  [15, .96, 32, 3, .01], [30, 1, 51, 4, .03],
-  [50, 1, 75, 7, .05], [70, .96, 96, 11, .09],
-  [90, .76, 115, 16, .14], [110, .52, 134, 23, .18],
-  [130, .36, 151, 32, .22], [150, .23, 166, 42, .23],
-  [175, .08, 184, 55, .23], [200, 0, 200, 65, .23],
-  [225, 0, 260, 75, .23],
+  // height, center level, lateral rolloff
+  [0, .88, .00], [5, .92, .00], [15, .96, .01],
+  [30, 1, .03], [50, 1, .05], [70, .96, .09],
+  [90, .76, .14], [110, .52, .18], [130, .36, .22],
+  [150, .23, .23], [175, .08, .23], [200, 0, .23],
+  [225, 0, .23],
 ];
 function profile(height: number) {
   for (let i=1;i<sections.length;i++) {
@@ -44,7 +41,7 @@ function profile(height: number) {
       return (2*t*t*t-3*t*t+1)*v+(t*t*t-2*t*t+t)*span*m0+(-2*t*t*t+3*t*t)*b[column]+(t*t*t-t*t)*span*m1;
     });
   }
-  return [0,260,75,.23];
+  return [0,.23];
 }
 export default function usePaperLighting(refs: LightingRefs, settings: Settings, ignition: RefObject<LampFrame>) {
   const field=useRef<HTMLCanvasElement | null>(null);
@@ -79,20 +76,25 @@ export default function usePaperLighting(refs: LightingRefs, settings: Settings,
       const pixels=context.createImageData(sprite.width,sprite.height);
       for(let y=0;y<sprite.height;y++) {
         const height=(upperHeight-y/ratio)/scale;
-        const [baseLevel,baseRadius,baseSoftness,rolloff]=profile(Math.max(0,height/reach));
+        const distance=Math.max(0,height/reach);
+        const [baseLevel,rolloff]=profile(distance);
         const level=baseLevel*(height<0?Math.exp(-Math.pow(height/3.5,2)):1);
         // Range and angle enlarge the cone, never the physical aperture.
         const halfSource=lampAperture.length/2;
-        const radius=halfSource+Math.max(0,baseRadius-halfSource)*reach*spread;
-        const broadPenumbra=Math.max(0,Math.min(1,(spread-1)/2.8));
-        // Penumbra grows above the finite slit. Even the widest setting
-        // starts at its two ends instead of creating a broad glowing bar.
-        const distance=Math.max(0,Math.min(1,height/(30*reach)));
-        const opening=distance*distance*(3-2*distance);
-        const softness=Math.max(.55+Math.max(0,baseSoftness-.55)*reach*Math.sqrt(spread),40*broadPenumbra*opening,radius*.20*broadPenumbra*opening);
+        // A single smooth curve rounds the launch into the widening cone.
+        // Both the aperture width and its edge remain fixed at distance zero.
+        const expansion=1.05*distance+12*-Math.expm1(-distance/16)-.0007*distance*distance;
+        const radius=halfSource+expansion*reach*spread;
+        // Angle controls the cone, not a second broad halo. Bounded growth
+        // keeps the distant edge legible while intensity fades along the beam.
+        const opening=-Math.expm1(-distance/9);
+        const softness=.55+(2.2+.065*distance)*opening*reach*Math.sqrt(spread);
         for(let x=0;x<sprite.width;x++) {
           const offset=Math.abs(x-sprite.width/2)/ratio/scale;
-          const edge=1/(1+Math.exp((offset-radius)/softness));
+          // Compact quintic feather: zero light outside the penumbra and
+          // continuous first/second derivatives at both of its boundaries.
+          const t=Math.max(0,Math.min(1,.5+(radius-offset)/(6*softness)));
+          const edge=t*t*t*(t*(6*t-15)+10);
           const lateral=Math.max(.3,1-rolloff*Math.pow(offset/Math.max(radius,1),2));
           // The reference has a cream pool with a soft gray upper falloff.
           // Exponential exposure keeps intensity adjustment continuous.
