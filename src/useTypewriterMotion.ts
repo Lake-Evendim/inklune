@@ -7,7 +7,7 @@ import { paperReturnLayout } from './paperGeometry';
 type Point = { x: number; y: number; feed: number; travel: number };
 export type MotionKind = 'print' | 'space' | 'return' | 'delete' | 'paste' | 'composition';
 export type MotionRequest = { kind: MotionKind; start?: number; end?: number; sound: boolean };
-type Action = { kind: MotionKind | 'navigate'; from: Point; contact: Point; to: Point; glyphs: HTMLElement[]; sound: boolean; started: number; duration: number; impacted: boolean; hit: boolean; wraps: boolean; lead: number };
+type Action = { kind: MotionKind | 'navigate'; from: Point; contact: Point; to: Point; glyphs: HTMLElement[]; sound: boolean; started: number; duration: number; impacted: boolean; hit: boolean; wraps: boolean; lead: number; rapid: boolean };
 type MotionRefs = {
   root: RefObject<HTMLDivElement | null>; paper: RefObject<HTMLDivElement | null>;
   mirror: RefObject<HTMLDivElement | null>; input: RefObject<HTMLTextAreaElement | null>;
@@ -34,6 +34,8 @@ export default function useTypewriterMotion(refs: MotionRefs, noteId: string, te
   const browsing = useRef(false);
   const lastMechanismPaint = useRef('');
   const selfScroll = useRef<number | null>(null);
+  const lastInputAt = useRef(-Infinity);
+  const period = useRef<{font:string;offset:number;context:CanvasRenderingContext2D}|null>(null);
 
   const paint = useCallback((extension = 0) => {
     const root = refs.root.current;
@@ -84,8 +86,7 @@ export default function useTypewriterMotion(refs: MotionRefs, noteId: string, te
     if (!paper || !mirror) return current.current;
     const returnLayout=paperReturnLayout(paper.clientWidth,frameHeight(paper));
     refs.root.current?.style.setProperty('--paper-writing-top',`${returnLayout.writingTop.toFixed(3)}px`);
-    const glyphs = [...mirror.querySelectorAll<HTMLElement>('[data-start]')];
-    const element = glyphs.find(g => Number(g.dataset.end) > offset || Number(g.dataset.start) === offset) || mirror.querySelector<HTMLElement>('.end-marker')!;
+    const element = mirror.querySelector<HTMLElement>(`[data-start="${offset}"]`) || [...mirror.querySelectorAll<HTMLElement>('[data-start]')].find(g => Number(g.dataset.end) > offset) || mirror.querySelector<HTMLElement>('.end-marker')!;
     const paperBox = paper.getBoundingClientRect(), box = element.getBoundingClientRect(), area = mirror.getBoundingClientRect();
     const style = getComputedStyle(mirror), lineHeight = paperLineStep(mirror), size = parseFloat(style.fontSize);
     // DOMRects preserve subpixel percentage margins; offsetTop rounds them.
@@ -99,10 +100,9 @@ export default function useTypewriterMotion(refs: MotionRefs, noteId: string, te
     // end marker contains text, so its bottom includes the font's descent.
     const baselineMarker = mirror.querySelector<HTMLElement>('.rule-baseline-marker')!;
     const baseline = startY + baselineMarker.getBoundingClientRect().bottom - area.top + row * lineHeight;
-    const context = document.createElement('canvas').getContext('2d')!;
-    context.font = `${size}px ${style.fontFamily}`;
-    const face = context.measureText('.');
-    const targetY = baseline - (face.actualBoundingBoxAscent - face.actualBoundingBoxDescent) / 2;
+    const font=`${size}px ${style.fontFamily}`,context=period.current?.context??document.createElement('canvas').getContext('2d')!;
+    if(period.current?.font!==font){context.font=font;const face=context.measureText('.');period.current={font,offset:(face.actualBoundingBoxAscent-face.actualBoundingBoxDescent)/2,context};}
+    const targetY = baseline - period.current!.offset;
     // The reference cursor sits at the period, close to the baseline. The
     // Rest with a visible gap below the period; extend to that exact target
     // during contact. The gap scales with both paper and rendered type size.
@@ -125,7 +125,18 @@ export default function useTypewriterMotion(refs: MotionRefs, noteId: string, te
     return { x: Math.max(min, Math.min(max, x)), y: railY - feed, feed, travel };
   }, [refs.paper, refs.mirror, refs.root, refs.scrollTrack]);
   const enqueue = useCallback((request: MotionRequest | { kind: 'navigate'; sound: boolean }, allowFeed = true) => {
-    if (request.kind === 'delete' || request.kind === 'paste') clear();
+    if (request.kind === 'paste') clear();
+    const now=performance.now(),editable=request.kind!=='navigate'&&request.kind!=='paste';
+    const rapid=editable&&(!!active.current||queue.current.length>0||now-lastInputAt.current<100);
+    if(editable)lastInputAt.current=now;
+    if(rapid||request.kind==='delete'){
+      // The text is authoritative. Reveal older ink and retain only the latest
+      // mechanical destination rather than replaying a backlog of strokes.
+      for(const action of [...queue.current,...(active.current?[active.current]:[])])for(const glyph of action.glyphs)glyph.style.visibility='';
+      queue.current=[];
+      if(active.current&&rapid){active.current.rapid=true;active.current.duration=64;active.current.wraps=false;active.current.lead=0;}
+      if(request.kind==='delete'&&active.current?.kind!=='delete')active.current=null;
+    }
     const caret = refs.selection.current, to = pointAt(caret);
     if (!allowFeed) {
       const paper = refs.paper.current!;
@@ -148,28 +159,26 @@ export default function useTypewriterMotion(refs: MotionRefs, noteId: string, te
     if (request.kind === 'print' && 'start' in request && request.start !== undefined) {
       contact = pointAt(request.start, true);
       for (const glyph of refs.mirror.current?.querySelectorAll<HTMLElement>('[data-start]') || []) {
-        if (Number(glyph.dataset.start) >= request.start && Number(glyph.dataset.start) < (request.end ?? caret)) { glyph.style.visibility = 'hidden'; glyphs.push(glyph); }
+        if (Number(glyph.dataset.start) >= request.start && Number(glyph.dataset.start) < (request.end ?? caret)) { if(!rapid)glyph.style.visibility = 'hidden'; glyphs.push(glyph); }
       }
     }
     const hit = request.kind === 'print' || request.kind === 'composition';
     const duration = hit ? 148 : request.kind === 'return' ? 280 : request.kind === 'paste' ? 120 : 90;
-    const wraps = hit && to.y + to.feed > contact.y + contact.feed + 5;
+    const wraps = !rapid && hit && to.y + to.feed > contact.y + contact.feed + 5;
     const preceding = queue.current.at(-1)?.to ?? active.current?.to ?? current.current;
-    const lead = hit && contact.y + contact.feed > preceding.y + preceding.feed + 5 && contact.x < preceding.x ? 220 : 0;
-    // Bound visual latency during fast hardware-keyboard input. Skipped impulses
-    // reveal their ink; the textarea and persisted note never lose characters.
-    if (queue.current.length >= 5) {
-      const skipped = queue.current.shift()!;
-      for (const glyph of skipped.glyphs) glyph.style.visibility = '';
+    const lead = !rapid && hit && contact.y + contact.feed > preceding.y + preceding.feed + 5 && contact.x < preceding.x ? 220 : 0;
+    if(request.kind==='delete'&&active.current?.kind==='delete'){
+      // Keep the scheduled frame alive during OS key repeat. Restarting RAF
+      // on each delete used to starve the carriage of its next painted frame.
+      active.current.from={...current.current};active.current.to=to;active.current.started=now;active.current.duration=64;schedule();return;
     }
-    queue.current.push({ kind: request.kind, from: current.current, contact, to, glyphs, sound: request.sound, started: 0, duration: duration + (wraps ? 220 : 0), impacted: false, hit, wraps, lead }); schedule();
+    queue.current.push({ kind: request.kind, from: current.current, contact, to, glyphs, sound: request.sound, started: 0, duration: rapid?64:duration + (wraps ? 220 : 0), impacted: false, hit, wraps, lead, rapid }); schedule();
   }, [refs.selection, refs.mirror, refs.paper, pointAt, schedule, clear, paint]);
   tick.current = (time: number) => {
     if (!active.current) {
       active.current = queue.current.shift() || null;
       if (!active.current) { refs.root.current?.setAttribute('data-motion', 'idle'); paint(); return; }
       const action = active.current; action.from = { ...current.current }; action.started = time;
-      if (queue.current.length > 1 && action.hit) action.duration = action.wraps ? 312 : 92;
       refs.root.current?.setAttribute('data-motion', action.kind);
       if (action.sound && !action.hit) mechanicalSound(action.kind === 'return' ? 'return' : action.kind === 'space' ? 'space' : action.kind === 'delete' ? 'delete' : 'paper');
     }
@@ -184,7 +193,7 @@ export default function useTypewriterMotion(refs: MotionRefs, noteId: string, te
     const strikeDuration = action.wraps ? action.duration - 220 : action.duration;
     // A slow GPU frame must not skip the printing face's full contact. Restart
     // the contact hold at its first rendered frame, then retract and advance.
-    if (action.hit && !action.impacted && time - action.started >= strikeDuration * .28) action.started = time - strikeDuration * .28;
+    if (action.hit && !action.rapid && !action.impacted && time - action.started >= strikeDuration * .28) action.started = time - strikeDuration * .28;
     const t = Math.min(1, (time - action.started) / action.duration);
     const strikeProgress = action.wraps ? Math.min(1, (time - action.started) / strikeDuration) : t;
     let extension = 0;
@@ -214,6 +223,7 @@ export default function useTypewriterMotion(refs: MotionRefs, noteId: string, te
     refs.root.current?.style.setProperty('--mechanism-scale', String(scale.current));
     refs.root.current?.style.setProperty('--paper-grain-size', `${scale.current * 512}px`);
     if (refs.input.current) refs.input.current.scrollTop = 0;
+    if(initialized.current&&pending.current.length){for(const action of pending.current.splice(0))enqueue(action,action.kind!=='paste');return;}
     const destination = pointAt(refs.selection.current);
     if (!initialized.current) { clear(); current.current = destination; initialized.current = true; paint(); return; }
     if (pending.current.length) for (const action of pending.current.splice(0)) enqueue(action, action.kind !== 'paste');
@@ -233,6 +243,7 @@ export default function useTypewriterMotion(refs: MotionRefs, noteId: string, te
     const change = () => { reduced.current = preference.matches; if (preference.matches) measure(true); };
     change(); preference.addEventListener('change', change);
     const resize = () => {
+      period.current=null;
       if (refs.mirror.current) { paperLineStep(refs.mirror.current, true); refs.mirror.current.dispatchEvent(new Event('paper-layout-change')); }
       clear(); measure(true); refs.drawPaper.current?.(true);
     };

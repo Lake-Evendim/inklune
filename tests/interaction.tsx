@@ -1,6 +1,7 @@
 // Development-only fixture, excluded from the production entry point.
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import { createRoot } from 'react-dom/client';
+import {flushSync} from 'react-dom';
 import '@fontsource/courier-prime/400.css';
 import '../src/styles.css';
 import '../src/motion.css';
@@ -10,8 +11,11 @@ import '../src/ui.css';
 import Editor from '../src/Editor';
 import { createNote, defaults } from '../src/storage';
 import { paperLineStep } from '../src/ruling';
+import type {LampFrame} from '../src/lampIgnition';
 
 function Fixture() {
+  const lampFrame=useRef<LampFrame>({sceneNight:false,amount:0,projection:0,phase:'off'});
+  const lampRepaint=useRef<(()=>void)|null>(null);
   const [note, setNote] = useState(() => createNote());
   const [results, setResults] = useState<string[]>([]);
   const [running, setRunning] = useState(false);
@@ -28,12 +32,16 @@ function Fixture() {
     const root = document.querySelector<HTMLElement>('.typewriter-assembly')!;
     const check = (label: string, pass: boolean) => { results.push(`${pass ? 'PASS' : 'FAIL'} ${label}`); setResults([...results]); };
     const update = (value: string, type: string, composing = false) => {
+      flushSync(()=>{
       textarea.dispatchEvent(new InputEvent('beforeinput', { bubbles: true, inputType: type, data: value, isComposing: composing }));
       Object.getOwnPropertyDescriptor(HTMLTextAreaElement.prototype, 'value')!.set!.call(textarea, value);
       textarea.setSelectionRange(value.length, value.length);
       textarea.dispatchEvent(new InputEvent('input', { bubbles: true, inputType: type, data: value, isComposing: composing }));
+      });
     };
     textarea.focus({ preventScroll: true });
+    await document.fonts.ready;
+    await wait(600);
     const strikes = () => Number(root.dataset.strikes || 0);
     let maximumTravel = 0;
     const observer = new MutationObserver(() => { maximumTravel = Math.max(maximumTravel,parseFloat(root.style.getPropertyValue('--hammer-extension')) || 0); });
@@ -78,6 +86,6 @@ function Fixture() {
     observer.disconnect();textarea.readOnly=false;
     setRunning(false);
   };
-  return <div className="app"><header className="app-header"><span>输入动作回归</span><button disabled={running} onClick={run}>Run input regression</button></header><main className="desk"><Editor note={note} settings={{ ...defaults, sound: false, deletion: 'strike' }} onChange={(text,traces,inkSeeds) => setNote(n => ({ ...n,text,traces,inkSeeds }))} onNight={() => {}} onLightChange={() => {}} onBookmark={() => {}} focusVersion={0} onFocusChange={() => {}} /></main><pre style={{position:'fixed',left:16,top:90,width:230,maxHeight:'calc(100dvh - 110px)',overflow:'auto',fontSize:11,zIndex:30,whiteSpace:'pre-wrap'}}>{results.join('\n')}</pre><output data-note hidden>{note.text}</output></div>;
+  return <div className="app"><header className="app-header"><span>输入动作回归</span><button disabled={running} onClick={run}>Run input regression</button></header><main className="desk"><Editor note={note} settings={{ ...defaults, sound: false, deletion: 'strike' }} lampControl={{frame:lampFrame,repaint:lampRepaint}} onChange={(text,traces,inkSeeds) => setNote(n => ({ ...n,text,traces,inkSeeds }))} onNight={() => {}} onLightChange={() => {}} onBookmark={() => {}} focusVersion={0} onFocusChange={() => {}} /></main><pre style={{position:'fixed',left:16,top:90,width:230,maxHeight:'calc(100dvh - 110px)',overflow:'auto',fontSize:11,zIndex:30,whiteSpace:'pre-wrap'}} data-input-regression>{results.join('\n')}</pre><output data-note hidden>{note.text}</output></div>;
 }
 createRoot(document.getElementById('root')!).render(<React.StrictMode><Fixture /></React.StrictMode>);

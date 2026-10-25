@@ -1,4 +1,4 @@
-import { useEffect, useLayoutEffect, useRef, useState } from 'react';
+import { memo, useEffect, useLayoutEffect, useRef, useState } from 'react';
 import type { CSSProperties, KeyboardEvent } from 'react';
 import type { InkTrace, Note, Settings } from './storage';
 import { diffText, glyphsFor, hashInk, inkStyle, reconcileInk } from './typing';
@@ -19,6 +19,14 @@ import FlowerBookmark from './FlowerBookmark';
 import type { FlowerDesign } from './controlDesigns';
 import { writingTypeface } from './writingFonts';
 import {paperInkColor} from './inkRendering';
+
+const InkGlyph = memo(function InkGlyph({glyph:g,composing,depth}:{glyph:Glyph;composing:boolean;depth:number}){
+  const ink=inkStyle(g.seed);
+  return <span className={`ink-glyph${composing?' composing-ink':''}`} data-start={g.start} data-end={g.end} data-seed={g.seed} style={{opacity:ink.opacity,'--ink-tone':ink.tone,'--glyph-ink-color':paperInkColor(depth,ink.tone),'--ink-y':`${ink.offsetY}px`,'--mask-x':`${ink.maskX}px`,'--mask-y':`${ink.maskY}px`} as CSSProperties}>{g.text}</span>;
+});
+const InkGlyphRun = memo(function InkGlyphRun({glyphs,compositionFrom,depth}:{glyphs:Glyph[];compositionFrom:number|null;depth:number}){
+  return <>{glyphs.map(g=><InkGlyph key={g.seed} glyph={g} composing={compositionFrom!==null&&g.start>=compositionFrom} depth={depth}/>)}</>;
+},(a,b)=>a.depth===b.depth&&a.compositionFrom===b.compositionFrom&&a.glyphs.length===b.glyphs.length&&a.glyphs.every((g,i)=>g===b.glyphs[i]));
 
 export default function Editor({ note, settings, onChange, onNight, onLightChange, onBookmark, focusVersion, onFocusChange, deferPaperShape = false, active=true, lampControl, onReady, flowerDesign }: { note: Note; settings: Settings; onChange: (text: string, traces?: InkTrace[], inkSeeds?: number[]) => void; onNight: () => void; onLightChange: (patch: Partial<Settings>) => void; onBookmark: () => void; focusVersion: number; onFocusChange: (focused: boolean) => void; deferPaperShape?: boolean; active?:boolean; lampControl: LampControl; onReady?:(key:string)=>void; flowerDesign?:FlowerDesign }) {
   const textarea = useRef<HTMLTextAreaElement>(null);
@@ -53,12 +61,17 @@ export default function Editor({ note, settings, onChange, onNight, onLightChang
   const compositionText = useRef('');
   const inputType = useRef('');
   const editRange = useRef<EditRange | undefined>(undefined);
-  const glyphData = useRef<Glyph[]>(glyphsFor(note.text, note.inkSeeds, note.id));
+  const [initialGlyphs] = useState(()=>glyphsFor(note.text,note.inkSeeds,note.id));
+  const glyphData = useRef<Glyph[]>(initialGlyphs);
   const glyphNote = useRef(note.id);
   if (glyphNote.current !== note.id) { glyphNote.current = note.id; glyphData.current = glyphsFor(note.text, note.inkSeeds, note.id); previous.current = note.text; }
   const displayText = draft ?? note.text;
   let draftIndex = 0;
   const charElements = draft === null ? glyphData.current : reconcileInk(glyphData.current, displayText, diffText(previous.current, displayText, selection.current), () => hashInk(`${note.id}:draft:${draftIndex++}`));
+  // Memoize runs, not just individual letters: a long note should not make
+  // React traverse thousands of letter components for one trailing edit.
+  const glyphRuns=[];
+  for(let i=0;i<charElements.length;i+=64)glyphRuns.push(<InkGlyphRun key={charElements[i].seed} glyphs={charElements.slice(i,i+64)} compositionFrom={draft!==null?(editRange.current?.start??note.text.length):null} depth={settings.ink}/>);
   const { measure, request, previewStrike, select } = useTypewriterMotion({ root, paper, mirror, input: textarea, selection, drawLighting, drawMechanism, drawPaper, scrollTrack }, note.id, displayText);
   const lampIgnition = useLampIgnition({ root, lighting: drawLighting, mechanism: drawMechanism }, lampControl);
   usePaperLighting({ root, paper, canvas: lightCanvas, draw: drawLighting, drawPaper }, settings, lampIgnition);
@@ -87,8 +100,8 @@ export default function Editor({ note, settings, onChange, onNight, onLightChang
     selection.current = caret;
     if (composing.current && !confirmedComposition) { setDraft(value); return; }
     if (value === previous.current) return;
-    const edit = diffText(previous.current, value, caret, inputType.current, confirmedComposition ? undefined : editRange.current);
     const previousGlyphs = glyphData.current;
+    const edit = diffText(previous.current, value, caret, inputType.current, confirmedComposition ? undefined : editRange.current, previousGlyphs);
     let traces = note.traces;
     if (settings.deletion === 'strike' && edit.removed && !confirmedComposition && mirror.current) {
       const area = mirror.current.getBoundingClientRect(), lineHeight = paperLineStep(mirror.current);
@@ -129,7 +142,7 @@ export default function Editor({ note, settings, onChange, onNight, onLightChang
       <div className="paper-content">
       <div className="paper-heading"><span>{createdDate}</span><span className="page-number">01</span></div>
       <div className="writing-area">
-        <div className="ink-text" ref={mirror} aria-hidden="true"><span className="rule-baseline-marker"/>{charElements.map(g => { const ink = inkStyle(g.seed); return <span className={`ink-glyph${draft !== null && g.start >= (editRange.current?.start ?? note.text.length) ? ' composing-ink' : ''}`} key={g.seed} data-start={g.start} data-end={g.end} data-seed={g.seed} style={{ opacity: ink.opacity, '--ink-tone':ink.tone, '--glyph-ink-color':paperInkColor(settings.ink,ink.tone), '--ink-y': `${ink.offsetY}px`, '--mask-x': `${ink.maskX}px`, '--mask-y': `${ink.maskY}px` } as CSSProperties}>{g.text}</span>; })}<span className="end-marker" data-start={displayText.length} data-end={displayText.length}>{'\u200b'}</span><span className="baseline-marker"/>{!displayText && <span className="editor-placeholder">你的故事，从这里开始。</span>}
+        <div className="ink-text" ref={mirror} aria-hidden="true"><span className="rule-baseline-marker"/>{glyphRuns}<span className="end-marker" data-start={displayText.length} data-end={displayText.length}>{'\u200b'}</span><span className="baseline-marker"/>{!displayText && <span className="editor-placeholder">你的故事，从这里开始。</span>}
           {(note.traces || []).map((s,i)=> { const ink = inkStyle(s.seed ?? hashInk(s.text)); return <span key={`strike-${i}`} className="deleted-ink ink-glyph" style={{ left: `${s.x * 100}%`, '--trace-row': s.row, '--mask-x': `${ink.maskX}px`, '--mask-y': `${ink.maskY}px` } as CSSProperties}>{s.text}</span>; })}
         </div>
         <textarea ref={textarea} className="writing-input" value={displayText} maxLength={3000} spellCheck={false} aria-label="纸页书写区域" autoCapitalize="sentences" onChange={e => change(e.target.value, e.target.selectionStart)} onKeyDown={handleKeyDown} onPaste={() => { inputType.current = 'insertFromPaste'; }}

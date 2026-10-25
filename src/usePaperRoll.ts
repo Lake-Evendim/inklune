@@ -88,7 +88,8 @@ export default function usePaperRoll(refs:Refs,curved:boolean,settings:Settings,
   // premultiplied RGB by the browser, producing an overbright fringe.
   const base=new THREE.Mesh(new THREE.BufferGeometry(),baseMaterial);base.renderOrder=0;scene.add(base);
   const tiles=new Map<number,{canvas:HTMLCanvasElement;texture:THREE.CanvasTexture;mesh:THREE.Mesh<THREE.BufferGeometry,THREE.ShaderMaterial>}>();
-  let width=0,height=0,feed=0,font='',line=0,ink=1,areaX=0,areaY=0,baselineOffset=0,dirty=true,frame=0,disposed=false,stockId=live.current.settings.paper;
+  let width=0,height=0,feed=0,font='',line=0,ink=1,areaX=0,areaY=0,baselineOffset=0,dirty=true,repaintAll=true,frame=0,fallback=0,disposed=false,stockId=live.current.settings.paper;
+  let layoutByNode=new WeakMap<HTMLElement,Glyph>();
   let rasterScaleX=1,rasterScaleY=1;
   let from=shape.current.amount,to=from,started=performance.now(),lightVersion='',rasterCount=0,layoutCount=0,drawCount=0;
   let night=live.current.settings.night?1:0,nightFrom=night,nightTo=night,nightStarted=started;
@@ -104,7 +105,9 @@ export default function usePaperRoll(refs:Refs,curved:boolean,settings:Settings,
    for(let i=0;i<rows;i++){const a=i*2;indices.push(a,a+1,a+2,a+1,a+3,a+2);}g.setAttribute('position',p);g.setAttribute('uv',uv);g.setIndex(indices);mesh.geometry.dispose();mesh.geometry=g;mesh.frustumCulled=false;
   };
   const uniforms=(material:THREE.ShaderMaterial)=>{const u=material.uniforms;u.returnStart.value=surface.start;u.sheetWidth.value=width;u.lightMap.value=lightMap;u.inkWearMap.value=inkWearMap;const image=u.map.value.image;u.inkTexel.value.set(Math.max(1,Math.round(.65*rasterScaleX))/Math.max(1,image.width),Math.max(1,Math.round(.65*rasterScaleY))/Math.max(1,image.height));u.lightWidth.value=Number(light.dataset.sheetWidth)||width;u.lightHeight.value=Number(light.dataset.sheetHeight)||paper.clientHeight;u.nightAmount.value=night;u.bendBand.value=shape.current.band;u.bendAmount.value=shape.current.amount;u.feed.value=feed;};
+  const dirtyGlyph=(glyph:Glyph)=>{for(let i=Math.floor((glyph.top-16)/tileSize);i<=Math.floor((glyph.top+glyph.height+16)/tileSize);i++){const tile=tiles.get(i);if(tile)tile.mesh.userData.dirty=true;}};
   const layout=()=>{layoutCount++;
+   const previous=new Map(glyphs.current.map(g=>[g.node,g]));
    const box=paper.getBoundingClientRect(),area=mirror.getBoundingClientRect(),style=getComputedStyle(mirror);
    feed=parseFloat(paper.closest<HTMLElement>('.typewriter-assembly')!.style.getPropertyValue('--paper-feed'))||0;
    areaX=area.left-box.left;areaY=area.top-box.top+(paper.classList.contains('has-paper-roll')?0:feed);line=paperLineStep(mirror);font=`${style.fontWeight} ${style.fontSize} ${style.fontFamily}`;ink=parseFloat(getComputedStyle(paper).getPropertyValue('--ink-opacity'));if(!Number.isFinite(ink))ink=1;
@@ -115,7 +118,14 @@ export default function usePaperRoll(refs:Refs,curved:boolean,settings:Settings,
    const returnLayout=paperReturnLayout(width,height);
    shape.current.band=Math.min(returnLayout.band,Math.max(returnLayout.clearance,areaY-returnLayout.clearance));
    paper.dataset.rollBand=String(shape.current.band);
-   for(const tile of tiles.values())tile.mesh.userData.dirty=true;
+   layoutByNode=new WeakMap();
+   for(const glyph of glyphs.current){
+    layoutByNode.set(glyph.node,glyph);const old=previous.get(glyph.node);previous.delete(glyph.node);
+    if(!old||old.x!==glyph.x||old.top!==glyph.top||old.baseline!==glyph.baseline||old.width!==glyph.width||old.text!==glyph.text||old.start!==glyph.start||old.end!==glyph.end){if(old)dirtyGlyph(old);dirtyGlyph(glyph);}
+   }
+   for(const removed of previous.values())dirtyGlyph(removed);
+   if(repaintAll)for(const tile of tiles.values())tile.mesh.userData.dirty=true;
+   repaintAll=false;
    dirty=false;
   };
   const raster=(index:number)=>{
@@ -126,7 +136,7 @@ export default function usePaperRoll(refs:Refs,curved:boolean,settings:Settings,
     if(live.current.settings.paper==='lined'){const area=mirror.parentElement!,step=parseFloat(area.style.getPropertyValue('--rule-step'))||line,offset=parseFloat(area.style.getPropertyValue('--rule-offset'))||baselineOffset+2;ctx.fillStyle='#89999830';const thickness=parseFloat(area.style.getPropertyValue('--rule-thickness'))||.7;for(let y=areaY+offset+Math.floor((start-areaY-offset)/step)*step;y<start+h;y+=step){if(y>=areaY)ctx.fillRect(areaX,y,width-areaX*2,thickness);}}
     ctx.font=font;ctx.textBaseline='alphabetic';ctx.fillStyle=paperInkColor(live.current.settings.ink);
     const input=refs.input.current!;
-    for(const glyph of glyphs.current){if(glyph.baseline<start-16||glyph.top>start+h||getComputedStyle(glyph.node).visibility==='hidden')continue;
+    for(const glyph of glyphs.current){if(glyph.baseline<start-16||glyph.top>start+h||glyph.node.style.visibility==='hidden')continue;
      if(glyph.end>input.selectionStart&&glyph.start<input.selectionEnd){ctx.globalAlpha=1;ctx.fillStyle='#aeb69966';ctx.fillRect(glyph.x,glyph.top,glyph.width,line);ctx.fillStyle=paperInkColor(live.current.settings.ink);}
      if(!glyph.text.trim())continue;
      ctx.fillStyle=paperInkColor(live.current.settings.ink,Number(glyph.node.style.getPropertyValue('--ink-tone'))||0);
@@ -193,15 +203,43 @@ export default function usePaperRoll(refs:Refs,curved:boolean,settings:Settings,
    for(const [index,tile]of tiles){if(index<firstTile-1||index>lastTile+1){scene.remove(tile.mesh);tile.mesh.geometry.dispose();tile.mesh.material.dispose();tile.texture.dispose();tiles.delete(index);}}
    renderer.render(scene,camera);canvas.dataset.draws=String(++drawCount);canvas.dataset.rasters=String(rasterCount);canvas.dataset.layouts=String(layoutCount);paper.classList.add('has-paper-roll');
    canvas.dataset.feed=feed.toFixed(3);canvas.dataset.tiles=String(tiles.size);
-   if(t<1||nt<1){cancelAnimationFrame(frame);frame=requestAnimationFrame(draw);}
+   if(t<1||nt<1)scheduleDraw();
   };
-  const resize=()=>{syncSize();draw();};
-  const changed=()=>{dirty=true;draw();};invalidate.current=changed;refs.draw.current=(refreshLayout=false)=>{if(refreshLayout)dirty=true;draw();};
-  const observer=new MutationObserver(changed);observer.observe(mirror,{subtree:true,childList:true,characterData:true,attributes:true,attributeFilter:['style','class']});
+  const scheduleDraw=()=>{
+   if(disposed||frame||fallback)return;
+   const run=()=>{cancelAnimationFrame(frame);clearTimeout(fallback);frame=fallback=0;draw();};
+   frame=requestAnimationFrame(run);
+   // The desktop's embedded browser can throttle background RAF. Share the
+   // motion hook's fallback without allowing two renders for one request.
+   fallback=window.setTimeout(run,24);
+  };
+  const resize=()=>{syncSize();scheduleDraw();};
+  const changed=()=>{dirty=true;repaintAll=true;scheduleDraw();};invalidate.current=changed;refs.draw.current=(refreshLayout=false)=>{if(refreshLayout){dirty=true;repaintAll=true;}scheduleDraw();};
+  const observer=new MutationObserver(records=>{
+   for(const record of records){
+    const node=record.target instanceof HTMLElement?record.target:record.target.parentElement;
+    const glyph=node&&layoutByNode.get(node);
+    if(record.type==='attributes'&&glyph){
+     dirtyGlyph(glyph);
+     const geometryStyle=(value:string|null)=>(value||'').replace(/(?:^|;)\s*visibility\s*:[^;]*/g,'');
+     if(record.attributeName==='style'&&geometryStyle(record.oldValue)!==geometryStyle(node!.getAttribute('style')))dirty=true;
+    }else{
+     dirty=true;
+     // Traces/placeholder are separate decorations, not measured live glyphs.
+     if(node?.closest('.deleted-ink,.editor-placeholder')||[...record.addedNodes,...record.removedNodes].some(n=>n instanceof HTMLElement&&n.matches('.deleted-ink,.editor-placeholder')))repaintAll=true;
+    }
+   }
+   scheduleDraw();
+  });observer.observe(mirror,{subtree:true,childList:true,characterData:true,attributes:true,attributeOldValue:true,attributeFilter:['style','class']});
   const sizeObserver=new ResizeObserver(resize);sizeObserver.observe(paper);sizeObserver.observe(paper.closest('.typewriter-assembly')!);
   const desk=paper.closest('.desk');if(desk)sizeObserver.observe(desk);
   window.addEventListener('scroll',resize,{passive:true,capture:true});
-  const select=()=>{for(const tile of tiles.values())tile.mesh.userData.dirty=true;draw();};refs.input.current?.addEventListener('select',select);
+  let selectionStart=refs.input.current!.selectionStart,selectionEnd=refs.input.current!.selectionEnd;
+  const select=()=>{
+   const input=refs.input.current!,oldRange=selectionEnd>selectionStart,newRange=input.selectionEnd>input.selectionStart;
+   if(oldRange||newRange){for(const glyph of glyphs.current)if((oldRange&&glyph.end>selectionStart&&glyph.start<selectionEnd)||(newRange&&glyph.end>input.selectionStart&&glyph.start<input.selectionEnd))dirtyGlyph(glyph);scheduleDraw();}
+   selectionStart=input.selectionStart;selectionEnd=input.selectionEnd;
+  };refs.input.current?.addEventListener('select',select);
   const fontsChanged=()=>{paperLineStep(mirror,true);changed();};document.fonts.addEventListener('loadingdone',fontsChanged);void document.fonts.ready.then(()=>{if(!disposed)fontsChanged();});
   const initialStockId=stockId,initialStock=new THREE.TextureLoader().load(paperSkins[initialStockId].url,tex=>commitStock(tex,initialStockId),undefined,()=>stockFailed(initialStockId));resize();
   const loadedWear=new THREE.TextureLoader().load(wearUrl,texture=>{if(disposed){texture.dispose();return;}texture.wrapS=texture.wrapT=THREE.RepeatWrapping;texture.minFilter=THREE.LinearFilter;texture.generateMipmaps=false;inkWearMap.dispose();inkWearMap=texture;canvas.dataset.inkWearReady='true';draw();});
@@ -209,7 +247,7 @@ export default function usePaperRoll(refs:Refs,curved:boolean,settings:Settings,
   const watchDpr=()=>{resolution?.removeEventListener('change',onDpr);resolution=matchMedia(`(resolution: ${devicePixelRatio}dppx)`);resolution.addEventListener('change',onDpr);};
   const onDpr=()=>{watchDpr();resize();};watchDpr();
   const lost=()=>paper.classList.remove('has-paper-roll'),restored=()=>{width=height=0;resize();};canvas.addEventListener('webglcontextlost',lost);canvas.addEventListener('webglcontextrestored',restored);
-  return()=>{disposed=true;cancelAnimationFrame(frame);observer.disconnect();sizeObserver.disconnect();window.removeEventListener('scroll',resize,true);resolution.removeEventListener('change',onDpr);document.fonts.removeEventListener('loadingdone',fontsChanged);refs.input.current?.removeEventListener('select',select);canvas.removeEventListener('webglcontextlost',lost);canvas.removeEventListener('webglcontextrestored',restored);refs.draw.current=null;invalidate.current=null;paper.classList.remove('has-paper-roll');for(const tile of tiles.values()){tile.mesh.geometry.dispose();tile.mesh.material.dispose();tile.texture.dispose();}base.geometry.dispose();if(initialStock!==baseMaterial.uniforms.map.value)initialStock.dispose();baseMaterial.uniforms.map.value.dispose();baseMaterial.dispose();lightMap.dispose();if(loadedWear!==inkWearMap)loadedWear.dispose();inkWearMap.dispose();returnMap.dispose();renderer.dispose();};
+  return()=>{disposed=true;cancelAnimationFrame(frame);clearTimeout(fallback);observer.disconnect();sizeObserver.disconnect();window.removeEventListener('scroll',resize,true);resolution.removeEventListener('change',onDpr);document.fonts.removeEventListener('loadingdone',fontsChanged);refs.input.current?.removeEventListener('select',select);canvas.removeEventListener('webglcontextlost',lost);canvas.removeEventListener('webglcontextrestored',restored);refs.draw.current=null;invalidate.current=null;paper.classList.remove('has-paper-roll');for(const tile of tiles.values()){tile.mesh.geometry.dispose();tile.mesh.material.dispose();tile.texture.dispose();}base.geometry.dispose();if(initialStock!==baseMaterial.uniforms.map.value)initialStock.dispose();baseMaterial.uniforms.map.value.dispose();baseMaterial.dispose();lightMap.dispose();if(loadedWear!==inkWearMap)loadedWear.dispose();inkWearMap.dispose();returnMap.dispose();renderer.dispose();};
  },[refs.paper,refs.mirror,refs.input,refs.canvas,refs.light,refs.draw]);
  const caretAt=(clientX:number,clientY:number)=>{
   const box=refs.canvas.current!.getBoundingClientRect(),localX=(clientX-box.left)*shape.current.width/box.width,localY=(clientY-box.top)*shape.current.height/box.height,s=unprojectPaper(localY,shape.current),projection=projectPaper(s,shape.current),x=shape.current.width/2+(localX-shape.current.width/2)/projection.scale;

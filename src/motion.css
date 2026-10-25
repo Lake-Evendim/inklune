@@ -1,4 +1,18 @@
 /* The sheet is a viewport into a moving roll; the rail lives outside that roll. */
+/* Motion values must not invalidate the font/style of every letter on each
+   frame. Opt only the paper transport and mechanical parts into inheritance. */
+@property --carriage-x { syntax: '<length>'; inherits: false; initial-value: 80px; }
+@property --carriage-y { syntax: '<length>'; inherits: false; initial-value: 135px; }
+@property --paper-feed { syntax: '<length>'; inherits: false; initial-value: 0px; }
+@property --hammer-extension { syntax: '<length>'; inherits: false; initial-value: 0px; }
+@property --impact-travel { syntax: '<length>'; inherits: false; initial-value: 18px; }
+.paper, .paper-surface { --paper-feed: inherit; --carriage-y: inherit; }
+.paper-content, .paper-texture { --paper-feed: inherit; }
+.carriage, .cobweb-decoration { --carriage-y: inherit; }
+.capsule-anchor, .capsule-anchor * {
+  --carriage-x: inherit; --carriage-y: inherit;
+  --hammer-extension: inherit; --impact-travel: inherit;
+}
 .typewriter-assembly {
   --carriage-x: 80px;
   --carriage-y: 135px;

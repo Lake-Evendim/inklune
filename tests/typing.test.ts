@@ -28,3 +28,24 @@ test('composition confirmation reconciles one committed result',()=>{
  const next=reconcileInk(before,'Hello 中文',diffText('Hello ','Hello 中文',8),()=>50);
  assert.deepEqual(next.slice(0,6).map(g=>g.seed),[1,2,3,4,5,6]);assert.equal(next.slice(6).map(g=>g.text).join(''),'中文');
 });
+
+test('incremental reconciliation preserves complete Unicode graphemes across edits',()=>{
+ for(const text of ['abc中文','cafe\u0301','A👨‍👩‍👧B','🇦🇧🇨🇩🇪🇫','A😀B']){
+  const before=glyphsFor(text);
+  for(const part of before)for(const replacement of ['', 'X', '中', '\u0301', '👩‍👧','🇿']){
+   const after=text.slice(0,part.start)+replacement+text.slice(part.end);
+   const edit=diffText(text,after,part.start+replacement.length,'insertText',{start:part.start,end:part.end},before);
+   const result=reconcileInk(before,after,edit,()=>123);
+   const bounds=(glyphs:ReturnType<typeof glyphsFor>)=>glyphs.map(({text,start,end})=>({text,start,end}));
+   assert.deepEqual(bounds(result),bounds(glyphsFor(after)),JSON.stringify({text,after,edit}));
+  }
+ }
+});
+
+test('typing at the end and deleting it retain the unaffected glyph objects',()=>{
+ const before=glyphsFor('Stable 中文',[10,20,30,40,50,60,70,80,90]);
+ const added=reconcileInk(before,'Stable 中文X',diffText('Stable 中文','Stable 中文X',10,'insertText',{start:9,end:9},before),()=>99);
+ before.forEach((glyph,i)=>assert.strictEqual(added[i],glyph));
+ const removed=reconcileInk(added,'Stable 中文',diffText('Stable 中文X','Stable 中文',9,'deleteContentBackward',{start:10,end:10},added),()=>100);
+ assert.deepEqual(removed,before);removed.forEach((glyph,i)=>assert.strictEqual(glyph,before[i]));
+});

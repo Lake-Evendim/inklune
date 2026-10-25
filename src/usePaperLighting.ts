@@ -57,12 +57,13 @@ export default function usePaperLighting(refs: LightingRefs, settings: Settings,
     // Angular spread changes width only; range changes both projection axes.
     const spread=Math.tan(settings.spread/2*Math.PI/180)/Math.tan(56*Math.PI/180);
     const tint=lampTint(settings.warmth);
-    let scale=1, fieldWidth=0, fieldHeight=0, upperHeight=0, sheetWidth=0, sheetHeight=0;
+    let scale=1, fieldWidth=0, fieldHeight=0, upperHeight=0, sheetWidth=0, sheetHeight=0,lastPaint='';
     const rebuild=()=> {
       if (paper.clientWidth<=0 || paper.clientHeight<=0) return;
       const ratio=Math.min(devicePixelRatio || 1,2);
       sheetWidth=paper.clientWidth;sheetHeight=paper.clientHeight;
       scale=sheetWidth/430;
+      lastPaint='';
       canvas.width=Math.round(paper.clientWidth*ratio); canvas.height=Math.round(paper.clientHeight*ratio);
       // Anything farther than a full sheet to either side cannot be visible
       // for a carriage constrained to that sheet. Avoid huge offscreen fields.
@@ -118,6 +119,11 @@ export default function usePaperLighting(refs: LightingRefs, settings: Settings,
       const x=parseFloat(root.style.getPropertyValue('--carriage-x')) || 80;
       const y=parseFloat(root.style.getPropertyValue('--carriage-y')) || 135;
       const origin=y+lampAperture.origin*scale;
+      const { amount, projection } = ignition.current;
+      const projected=amount>0&&projection>0;
+      const state=[sheetWidth,sheetHeight,canvas.width,canvas.height,amount,projection,projected?x:0,projected?y:0].join('|');
+      if(state===lastPaint)return;
+      lastPaint=state;
       const context=canvas.getContext('2d')!;
       context.setTransform(1,0,0,1,0,0);
       context.fillStyle=`rgb(${ambient.join(' ')})`;
@@ -125,7 +131,6 @@ export default function usePaperLighting(refs: LightingRefs, settings: Settings,
       // so previous frames cannot accumulate at the canvas boundary.
       context.fillRect(0,0,canvas.width,canvas.height);
       context.setTransform(ratio,0,0,ratio,0,0);
-      const { amount, projection } = ignition.current;
       // Only the aperture's projected field can raise the paper above its
       // ambient level. A separate reflection pool would light unexposed areas.
       context.save();context.globalAlpha=amount;

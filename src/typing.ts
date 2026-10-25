@@ -18,7 +18,7 @@ export function glyphsFor(text: string, seeds?: number[], noteId = ''): Glyph[] 
 
 // beforeinput ranges disambiguate edits in repeated text. Fallback boundaries
 // are expanded to whole graphemes, including surrogate pairs and combining marks.
-export function diffText(before: string, after: string, caret: number, inputType = '', range?: EditRange): TextEdit {
+export function diffText(before: string, after: string, caret: number, inputType = '', range?: EditRange, beforeGlyphs?: Glyph[]): TextEdit {
   let start = 0, oldEnd = before.length, newEnd = after.length;
   if (range) {
     start = range.start; oldEnd = range.end;
@@ -35,23 +35,33 @@ export function diffText(before: string, after: string, caret: number, inputType
     oldEnd = before.length; newEnd = after.length;
     while (oldEnd > start && newEnd > start && before[oldEnd - 1] === after[newEnd - 1]) { oldEnd--; newEnd--; }
   }
-  const oldParts = glyphsFor(before), newParts = glyphsFor(after);
+  const oldParts = beforeGlyphs ?? glyphsFor(before), newParts = glyphsFor(after);
   const oldStart = oldParts.find(g => g.start < start && g.end > start)?.start ?? start;
   const newStart = newParts.find(g => g.start < start && g.end > start)?.start ?? start;
   start = Math.min(oldStart, newStart);
-  const oldExpanded = oldParts.find(g => g.start < oldEnd && g.end > oldEnd)?.end ?? oldEnd;
-  const newExpanded = newParts.find(g => g.start < newEnd && g.end > newEnd)?.end ?? newEnd;
-  const extra = Math.max(oldExpanded - oldEnd, newExpanded - newEnd);
-  oldEnd += extra; newEnd += extra;
+  // A regional-indicator edit can regroup the whole following flag run.
+  // Expand until both old and new suffixes begin at grapheme boundaries.
+  for (;;) {
+    const oldExpanded = oldParts.find(g => g.start < oldEnd && g.end > oldEnd)?.end ?? oldEnd;
+    const newExpanded = newParts.find(g => g.start < newEnd && g.end > newEnd)?.end ?? newEnd;
+    const extra = Math.max(oldExpanded - oldEnd, newExpanded - newEnd);
+    if (!extra) break;
+    oldEnd += extra; newEnd += extra;
+    if(oldEnd>before.length||newEnd>after.length){oldEnd=before.length;newEnd=after.length;break;}
+  }
   return { start, oldEnd, newEnd, removed: before.slice(start, oldEnd), inserted: after.slice(start, newEnd) };
 }
 
 export function reconcileInk(before: Glyph[], after: string, edit: TextEdit, nextSeed: () => number): Glyph[] {
   const prefix = before.filter(g => g.end <= edit.start);
   const suffix = before.filter(g => g.start >= edit.oldEnd);
-  const inserted = glyphsFor(edit.inserted).map(g => ({ ...g, seed: nextSeed() }));
-  const seeds = [...prefix, ...inserted, ...suffix].map(g => g.seed);
-  return glyphsFor(after, seeds);
+  const inserted = glyphsFor(edit.inserted).map(g => ({ ...g, start: g.start + edit.start, end: g.end + edit.start, seed: nextSeed() }));
+  const shift = edit.newEnd - edit.oldEnd;
+  const result = [...prefix, ...inserted, ...suffix.map(g => shift ? { ...g, start: g.start + shift, end: g.end + shift } : g)];
+  // diffText expands edits to complete graphemes. Reuse the unaffected glyphs
+  // so memoized letters keep their DOM and pigment when appending/deleting.
+  if ((result.at(-1)?.end ?? 0) !== after.length) return glyphsFor(after, result.map(g => g.seed));
+  return result;
 }
 
 export function inkStyle(seed: number) {
