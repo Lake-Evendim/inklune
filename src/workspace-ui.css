@@ -42,7 +42,7 @@
 .app .writer-dock .export-menu .menu-rule { height:1px; margin:7px 15px; background:var(--ui-line); }
 .app .panel-backdrop,.app.has-library .panel-backdrop { inset:0; background:var(--ui-backdrop); backdrop-filter:blur(6px); }
 
-/* A material shelf, with compact samples and enough room to make choices. */
+/* A material shelf, with paper-backed previews and room to make choices. */
 .app :is(.settings-panel,.about-dialog) { --ink:var(--ui-ink); --muted:var(--ui-muted); --edge:var(--ui-line); color:var(--ui-ink); }
 .app .settings-panel { inset:24px 24px 24px auto; width:460px; height:auto; max-height:none; border:1px solid var(--ui-line); border-radius:20px; background:var(--ui-surface); box-shadow:var(--ui-elevation); overflow:hidden; animation:workspace-open 240ms ease both; }
 .app .settings-panel button { color:var(--ui-muted); }
@@ -61,10 +61,9 @@
 .app .settings-panel .section-intro { margin-bottom:22px; }
 .app .settings-panel .section-intro h3 { font-size:17px; font-weight:500; margin-bottom:8px; color:var(--ui-ink); }
 .app .settings-panel .section-intro p { font-size:13px; line-height:1.7; color:var(--ui-muted); }
-.paper-detail { display:flex; gap:20px; align-items:center; padding-bottom:24px; }
-.paper-detail-sample { position:relative; display:block; overflow:hidden; flex-shrink:0; width:64px; height:80px; border-radius:3px 9px 3px 3px; background-size:160px; box-shadow:0 1px 0 #ffffff50 inset,1px 2px 0 var(--ui-sunk),3px 5px 10px #00000018; }
-.app .paper-detail h3 { margin:0 0 7px; font-size:18px; font-weight:500; color:var(--ui-ink); }
-.paper-detail p { margin:0; font-size:13px; color:var(--ui-muted); line-height:1.7; }
+.paper-detail { display:flex; flex-direction:column; justify-content:center; min-height:112px; margin-bottom:24px; padding:22px 20px; border:1px solid #00000014; border-radius:10px; }
+.app .paper-detail h3 { margin:0 0 7px; font-size:18px; font-weight:500; color:inherit; }
+.paper-detail p { margin:0; font-size:13px; color:inherit; line-height:1.7; }
 .app .settings-panel .paper-options { grid-template-columns:repeat(2,minmax(0,1fr)); gap:6px; }
 .app .settings-panel .paper-option { position:relative; display:flex; align-items:center; gap:11px; min-height:52px; padding:9px 12px; border:1px solid transparent; border-radius:8px; text-align:left; font-size:13px; color:var(--ui-muted); }
 .app .settings-panel .paper-option:hover { background:var(--ui-hover); }
@@ -102,7 +101,7 @@
 .app .settings-panel .switch.on span { transform:translateX(15px); background:var(--ui-panel); }
 .app .settings-panel .keyboard-shortcuts { border-color:var(--ui-line); font-size:12px; }
 .app .settings-panel .keyboard-shortcuts>span,.app .settings-panel .keyboard-shortcuts kbd { color:var(--ui-muted); font-size:12px; }
-.app .settings-panel .writing-font-specimen { display:grid; gap:7px; min-height:112px; padding:22px 20px; line-height:1.5; letter-spacing:0; font-kerning:none; font-variant-ligatures:none; overflow-wrap:anywhere; }
+.app .settings-panel .writing-font-specimen { display:grid; gap:0; min-height:112px; padding:22px 20px; border-color:#00000014; line-height:1.5; letter-spacing:0; font-kerning:none; font-variant-ligatures:none; overflow-wrap:anywhere; }
 .app .settings-panel .writing-font-controls { padding-bottom:22px; border-bottom:1px solid var(--ui-line); }
 .app .settings-panel .writing-font-controls .setting-row { margin-top:14px; }
 .settings-footer { display:flex; align-items:center; justify-content:space-between; flex-shrink:0; gap:20px; min-height:76px; padding:16px 28px; border-top:1px solid var(--ui-line); background:var(--ui-surface); }
