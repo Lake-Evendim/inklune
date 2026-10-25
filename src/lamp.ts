@@ -1,14 +1,24 @@
-// Display-balanced lamp colours: retain the reference's cream default while
-// making both ends of the temperature control visibly distinct on the paper.
+// Keep the original 50 K per unit so saved temperatures retain their colour.
+export const lampWarmthRange={min:-90,max:120};
 export function lampTemperature(warmth: number) {
-  return Math.round(7500 - 5000 * Math.max(0, Math.min(100, warmth)) / 100);
+  const value=Number.isFinite(warmth)?warmth:100;
+  return Math.round(7500 - 50 * Math.max(lampWarmthRange.min, Math.min(lampWarmthRange.max, value)));
 }
+// Display-balanced colour stops extend both ends while retaining the original
+// warm, neutral and cold colours throughout the previous temperature range.
+const temperatureColours:[number,[number,number,number]][]=[
+  [1500,[255,113,35]], [2500,[255,174,101]], [4200,[238,230,212]],
+  [7500,[191,217,255]], [12000,[160,196,255]],
+];
 export function lampTint(warmth: number): [number, number, number] {
   const kelvin = lampTemperature(warmth);
-  const cold = [191, 217, 255], neutral = [238, 230, 212], warm = [255, 174, 101];
-  const a = kelvin >= 4200 ? neutral : warm, b = kelvin >= 4200 ? cold : neutral;
-  const t = kelvin >= 4200 ? (kelvin - 4200) / 3300 : (kelvin - 2500) / 1700;
-  return a.map((v, i) => Math.round(v + (b[i] - v) * t)) as [number, number, number];
+  for(let i=1;i<temperatureColours.length;i++){
+    const [high,b]=temperatureColours[i];
+    if(kelvin>high)continue;
+    const [low,a]=temperatureColours[i-1],t=(kelvin-low)/(high-low);
+    return a.map((v,c)=>Math.round(v+(b[c]-v)*t)) as [number,number,number];
+  }
+  return [...temperatureColours[temperatureColours.length-1][1]];
 }
 // Opal softens the emitter without washing away its temperature. A mostly
 // white mixture made the cold end indistinguishable from a fixed white strip.
