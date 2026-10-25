@@ -2,7 +2,7 @@ import { useLayoutEffect, useRef } from 'react';
 import type { RefObject } from 'react';
 import type { Settings } from './storage';
 import { paperSkins } from './skins';
-import { lampAperture, lampTint } from './lamp';
+import { lampAperture, lampContour, lampTint } from './lamp';
 import type { LampFrame } from './lampIgnition';
 
 type LightingRefs = {
@@ -81,14 +81,13 @@ export default function usePaperLighting(refs: LightingRefs, settings: Settings,
         const level=baseLevel*(height<0?Math.exp(-Math.pow(height/3.5,2)):1);
         // Range and angle enlarge the cone, never the physical aperture.
         const halfSource=lampAperture.length/2;
-        // A single smooth curve rounds the launch into the widening cone.
-        // Both the aperture width and its edge remain fixed at distance zero.
-        const expansion=1.05*distance+12*-Math.expm1(-distance/16)-.0007*distance*distance;
+        // Curvature ends after the short aperture transition; the remainder
+        // of the cone and both feather boundaries continue as straight lines.
+        const {expansion,feather}=lampContour(distance);
         const radius=halfSource+expansion*reach*spread;
         // Angle controls the cone, not a second broad halo. Bounded growth
         // keeps the distant edge legible while intensity fades along the beam.
-        const opening=-Math.expm1(-distance/9);
-        const softness=.55+(2.2+.065*distance)*opening*reach*Math.sqrt(spread);
+        const softness=.55+feather*reach*Math.sqrt(spread);
         for(let x=0;x<sprite.width;x++) {
           const offset=Math.abs(x-sprite.width/2)/ratio/scale;
           // Compact quintic feather: zero light outside the penumbra and
