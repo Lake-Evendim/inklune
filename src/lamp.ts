@@ -33,9 +33,11 @@ export const lampAperture = { length: 20, thickness: 1.56, shellTop: 21.5, origi
 // Round only the first 30 logical pixels above the slit. The cubic correction
 // reaches a constant with zero first/second derivatives, joining a straight
 // cone without a kink. Its penumbra boundaries become straight there too.
+// Width and feather are fitted to the official App Store night screenshot
+// (150% intensity / 112 degrees / 120% reach), normalized to a 430px sheet.
 export function lampContour(distance: number) {
   const height=Math.max(0,distance),t=Math.min(1,height/30);
   const opening=1-Math.pow(1-t,3);
-  return {expansion:height+8*opening,feather:(2.2+.065*height)*opening};
+  return {expansion:1.05*height+5.7*opening,feather:.127*height-.4*opening};
 }
 

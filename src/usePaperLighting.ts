@@ -11,15 +11,16 @@ type LightingRefs = {
   drawPaper: RefObject<(() => void) | null>;
 };
 const materials = Object.fromEntries(Object.entries(paperSkins).map(([id,stock])=>[id,{ day:[1,3,5].map(i=>parseInt(stock.color.slice(i,i+2),16)),ambient:stock.ambient }]));
-// Longitudinal intensity and lateral shading on a 430px sheet. Keep the
-// contour analytic so its curvature does not inherit cross-section knots.
+// Measured from the official App Store night image at 150% / 112° / 120%.
+// The centre stays bright near the slit, while lateral shading increases
+// before the longitudinal fade. Geometry stays independent of these knots.
 const sections = [
   // height, center level, lateral rolloff
-  [0, .88, .00], [5, .92, .00], [15, .96, .01],
-  [30, 1, .03], [50, 1, .05], [70, .96, .09],
-  [90, .76, .14], [110, .52, .18], [130, .36, .22],
-  [150, .23, .23], [175, .08, .23], [200, 0, .23],
-  [225, 0, .23],
+  [0, .88, .00], [5, .92, .00], [15, .96, .00],
+  [30, 1, .03], [50, 1, .10], [70, .95, .33],
+  [90, .70, .37], [110, .50, .41], [130, .36, .50],
+  [150, .225, .60], [175, .07, .65], [200, 0, .65],
+  [225, 0, .65],
 ];
 function profile(height: number) {
   for (let i=1;i<sections.length;i++) {
@@ -41,7 +42,7 @@ function profile(height: number) {
       return (2*t*t*t-3*t*t+1)*v+(t*t*t-2*t*t+t)*span*m0+(-2*t*t*t+3*t*t)*b[column]+(t*t*t-t*t)*span*m1;
     });
   }
-  return [0,.23];
+  return [0,.65];
 }
 export default function usePaperLighting(refs: LightingRefs, settings: Settings, ignition: RefObject<LampFrame>) {
   const field=useRef<HTMLCanvasElement | null>(null);
@@ -94,7 +95,7 @@ export default function usePaperLighting(refs: LightingRefs, settings: Settings,
           // continuous first/second derivatives at both of its boundaries.
           const t=Math.max(0,Math.min(1,.5+(radius-offset)/(6*softness)));
           const edge=t*t*t*(t*(6*t-15)+10);
-          const lateral=Math.max(.3,1-rolloff*Math.pow(offset/Math.max(radius,1),2));
+          const lateral=Math.exp(-rolloff*Math.pow(offset/Math.max(radius,1),2));
           // The reference has a cream pool with a soft gray upper falloff.
           // Exponential exposure keeps intensity adjustment continuous.
           const exposure=Math.min(1,level*edge*lateral*.97);
