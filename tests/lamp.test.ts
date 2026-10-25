@@ -43,6 +43,17 @@ test('rounded launch joins the straight cone with continuous slope and curvature
   }
 });
 
+test('lamp contour matches measured official night-image cross sections',()=>{
+  // Right-hand edge fits, in 430px sheet coordinates. Text and decorations
+  // make the farthest rows unreliable, so use the clear 30–130px sections.
+  // https://apps.apple.com/us/app/platen-paper-ink/id6809529696
+  for(const [height,radius,softness] of [[30,47.9,3.915],[50,67.511,6.606],[70,88.798,9.044],[110,131.041,14.106],[130,153.965,16.206]]){
+    const actual=lampContour(height);
+    assert.ok(Math.abs(10+actual.expansion-radius)<2);
+    assert.ok(Math.abs(.55+actual.feather-softness)<.8);
+  }
+});
+
 test('expanded colours are bounded, continuous and distinct at both ends',()=>{
   let previous=lampTint(lampWarmthRange.min);
   for(let warmth=lampWarmthRange.min;warmth<=lampWarmthRange.max;warmth++){
