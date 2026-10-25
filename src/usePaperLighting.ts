@@ -119,22 +119,15 @@ export default function usePaperLighting(refs: LightingRefs, settings: Settings,
       const y=parseFloat(root.style.getPropertyValue('--carriage-y')) || 135;
       const origin=y+lampAperture.origin*scale;
       const context=canvas.getContext('2d')!;
-      context.setTransform(ratio,0,0,ratio,0,0);
+      context.setTransform(1,0,0,1,0,0);
       context.fillStyle=`rgb(${ambient.join(' ')})`;
-      context.fillRect(0,0,paper.clientWidth,paper.clientHeight);
+      // Fill every physical pixel, including a fractional CSS bottom row,
+      // so previous frames cannot accumulate at the canvas boundary.
+      context.fillRect(0,0,canvas.width,canvas.height);
+      context.setTransform(ratio,0,0,ratio,0,0);
       const { amount, projection } = ignition.current;
-      // Weak paper reflection keeps the writing belt legible when the slit
-      // is at the far end of a line. Stock and pigment receive the same light.
-      if(amount>0){
-        context.save();context.translate(sheetWidth*.5,origin-55*scale);context.scale(sheetWidth*.58,85*scale);
-        const reflection=context.createRadialGradient(0,0,0,0,0,1);
-        const reflected=tint.map((v,i)=>Math.min(255,Math.round(v/materials.cotton.day[i]*255))).join(',');
-        const exposure=Math.min(.32,.26*Math.sqrt(power))*amount;
-        reflection.addColorStop(0,`rgba(${reflected},${exposure})`);
-        reflection.addColorStop(.55,`rgba(${reflected},${exposure*.8})`);
-        reflection.addColorStop(1,`rgba(${reflected},0)`);
-        context.fillStyle=reflection;context.fillRect(-1,-1,2,2);context.restore();
-      }
+      // Only the aperture's projected field can raise the paper above its
+      // ambient level. A separate reflection pool would light unexposed areas.
       context.save();context.globalAlpha=amount;
       // Project from the physical slit: its width stays fixed while the cone
       // grows in depth and breadth. A whole-field fade has no direction.
@@ -148,17 +141,6 @@ export default function usePaperLighting(refs: LightingRefs, settings: Settings,
         context.drawImage(sprite,wing+source,0,wing,sprite.height,aperture/2,-upperHeight,projectedWing,fieldHeight);
         context.restore();
       }
-      // The basalt reference alone shows a weak reflected pool below the
-      // stone. Its hue and intensity follow the lamp, rather than a fixed
-      // orange light that appeared under every kit.
-      if(settings.kit==='basalt') {
-        context.save();context.translate(x,origin+52*scale);context.scale(1,.28);
-        const bounce=context.createRadialGradient(0,0,0,0,0,46*scale);
-        const reflected=[tint[0]*.68,tint[1]*.42,tint[2]*.27].map(Math.round).join(',');
-        bounce.addColorStop(0,`rgba(${reflected},${Math.min(.20,.13*power)*projection})`);
-        bounce.addColorStop(1,`rgba(${reflected},0)`);
-        context.fillStyle=bounce;context.fillRect(-46*scale,-46*scale,92*scale,92*scale);context.restore();
-      }
       context.restore();
       canvas.dataset.lampAmount=String(amount);
       canvas.dataset.lampProjection=String(projection);
@@ -170,5 +152,5 @@ export default function usePaperLighting(refs: LightingRefs, settings: Settings,
     refs.draw.current=draw;rebuild();draw();
     const observer=new ResizeObserver(draw);observer.observe(paper);
     return ()=>{observer.disconnect();refs.draw.current=null;};
-  },[refs.root,refs.paper,refs.canvas,refs.draw,refs.drawPaper,ignition,settings.paper,settings.kit,settings.brightness,settings.warmth,settings.beam,settings.spread]);
+  },[refs.root,refs.paper,refs.canvas,refs.draw,refs.drawPaper,ignition,settings.paper,settings.brightness,settings.warmth,settings.beam,settings.spread]);
 }

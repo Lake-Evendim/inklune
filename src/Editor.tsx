@@ -142,7 +142,7 @@ export default function Editor({ note, settings, onChange, onNight, onLightChang
       </div>
       <canvas ref={rollCanvas} className="paper-roll-canvas" aria-hidden="true" onPointerDown={roll.onPointerDown} onPointerMove={roll.onPointerMove} onPointerUp={roll.onPointerUp} onPointerCancel={roll.onPointerCancel}/>
       </div>
-      <div className="paper-footer"><span>inklune</span><span>留一点时间给自己</span></div>
+      <div className="paper-footer"><span>inklune</span><span>让文字落在纸上</span></div>
       <canvas ref={lightCanvas} className="paper-illumination" aria-hidden="true" />
       <PaperDecorations decoration={settings.decoration} night={settings.night}/>
       {settings.night && <div className="night-light-controls" aria-label="纸页灯光调节">

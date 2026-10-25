@@ -62,7 +62,7 @@ export async function exportPaper(note: Note, settings: Settings) {
   ctx.font = printFont;
   lines.forEach((row,i)=> { let x = margin; for (const glyph of row) { print(glyph.text,glyph.seed,x,firstBaseline+i*leading,1); x += ctx.measureText(glyph.text).width; } });
   for (const trace of note.traces || []) { const x = margin + trace.x * (canvas.width - margin * 2), y = firstBaseline + trace.row * leading; print(trace.text,trace.seed??hashInk(trace.text),x,y,.64); ctx.beginPath(); ctx.moveTo(x, y - size * .32); ctx.lineTo(x + ctx.measureText(trace.text).width, y - size * .32); ctx.lineWidth = 2; ctx.strokeStyle = paperInkColor(settings.ink); ctx.stroke(); }
-  ctx.globalAlpha = 1; ctx.fillStyle = '#8c8d7d'; ctx.font = '30px Borel, cursive'; ctx.fillText('inklune', margin, canvas.height - 90); ctx.font = '19px "DM Sans", sans-serif'; ctx.textAlign = 'right'; ctx.fillText('留一点时间给自己', canvas.width - margin, canvas.height - 90);
+  ctx.globalAlpha = 1; ctx.fillStyle = '#8c8d7d'; ctx.font = '30px Borel, cursive'; ctx.fillText('inklune', margin, canvas.height - 90); ctx.font = '19px "DM Sans", sans-serif'; ctx.textAlign = 'right'; ctx.fillText('让文字落在纸上', canvas.width - margin, canvas.height - 90);
   const name = titleOf(note).replace(/[<>:"/\\|?*]/g, '-');
   await new Promise<void>((resolve, reject)=>canvas.toBlob(blob=> { if (!blob) { reject(new Error('图片生成失败')); return; } const url = URL.createObjectURL(blob); const link = document.createElement('a'); link.href = url; link.download = `${name}.png`; link.click(); setTimeout(()=>URL.revokeObjectURL(url), 1000); resolve(); }, 'image/png'));
 }
