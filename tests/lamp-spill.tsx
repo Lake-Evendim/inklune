@@ -1,6 +1,7 @@
 import {useRef,useState} from 'react';
 import type {CSSProperties} from 'react';
 import {createRoot} from 'react-dom/client';
+import {flushSync} from 'react-dom';
 import usePaperLighting from '../src/usePaperLighting';
 import {defaults} from '../src/storage';
 import type {Settings} from '../src/storage';
@@ -21,7 +22,9 @@ function Fixture(){
   const nextFrame=()=>new Promise<void>(resolve=>requestAnimationFrame(()=>requestAnimationFrame(()=>resolve())));
   for(const kit of ['classic','basalt'] as const){
    for(const patch of [{brightness:150,beam:120,spread:112},{brightness:200,beam:40,spread:160},{brightness:200,beam:200,spread:160}]){
-    setSettings({...defaults,night:true,sound:false,kit,...patch});await nextFrame();
+    // Commit the new field before sampling; animation frames alone do not
+    // guarantee that a concurrent React update has reached its layout effect.
+    flushSync(()=>setSettings({...defaults,night:true,sound:false,kit,...patch}));await nextFrame();
     const c=canvas.current!,ctx=c.getContext('2d')!,ratio=c.width/width,scale=width/430;
     const origin=width*.7+lampAperture.origin*scale;
     const capture=(amount:number,projection:number)=>{

@@ -30,3 +30,12 @@ export function lampLensTint(warmth:number): [number,number,number] {
 // stay fixed. The paper field and CSS fallback use this same finite source.
 export const lampAperture = { length: 20, thickness: 1.56, shellTop: 21.5, origin: -10.5 };
 
+// Round only the first 30 logical pixels above the slit. The cubic correction
+// reaches a constant with zero first/second derivatives, joining a straight
+// cone without a kink. Its penumbra boundaries become straight there too.
+export function lampContour(distance: number) {
+  const height=Math.max(0,distance),t=Math.min(1,height/30);
+  const opening=1-Math.pow(1-t,3);
+  return {expansion:height+8*opening,feather:(2.2+.065*height)*opening};
+}
+
