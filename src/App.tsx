@@ -32,7 +32,7 @@ export default function App({ initialWorkspace, persist = true, initialScreen, n
   const [exportOpen, setExportOpen] = useState(false);
   const [aboutOpen, setAboutOpen] = useState(false);
   const [focus, setFocus] = useState(false);
-  const [toolsCollapsed, setToolsCollapsed] = useState(false);
+  const [toolsCollapsed, setToolsCollapsed] = useState(()=>window.matchMedia('(max-width:760px)').matches);
   const [focusVersion, setFocusVersion] = useState(0);
   const [saveStatus, setSaveStatus] = useState<'saving' | 'saved' | 'error'>('saved');
   const [toast, setToast] = useState('');
