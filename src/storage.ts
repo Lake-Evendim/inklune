@@ -8,7 +8,7 @@ export interface InkTrace { text: string; x: number; row: number; seed?: number;
 export interface Note { id: string; text: string; created: string; updated: string; bookmark: string | null; deleted: boolean; title?: string; deletedAt?: string; traces?: InkTrace[]; inkSeeds?: number[]; }
 export interface Workspace { notes: Note[]; activeId: string; settings: Settings; }
 export const STORAGE_KEY = 'platen-paper-ink:v1';
-export const defaults: Settings = { paper: 'cotton', curved: true, ink: 82, fontSize: 19, chineseFont:defaultChineseFont, englishFont:defaultEnglishFont, sound: true, deletion: 'erase', capsule: 'ivory', kit: 'classic', rail: 'steel', endcap: 'plain', decoration: 'none', night: false, brightness: 170, warmth: 100, beam: 120, spread: 130, lightingVersion: 2 };
+export const defaults: Settings = { paper: 'cotton', curved: true, ink: 82, fontSize: 19, chineseFont:defaultChineseFont, englishFont:defaultEnglishFont, sound: true, deletion: 'erase', capsule: 'ivory', kit: 'classic', rail: 'steel', endcap: 'plain', decoration: 'none', night: true, brightness: 170, warmth: 100, beam: 120, spread: 130, lightingVersion: 2 };
 export function createNote(text = '', created = new Date().toISOString()): Note { return { id: crypto.randomUUID(), text, created, updated: created, bookmark: null, deleted: false }; }
 export function loadWorkspace(): Workspace {
   try { const raw = localStorage.getItem(STORAGE_KEY); if (raw) { const data = JSON.parse(raw); if (Array.isArray(data.notes) && data.notes.every((n: Note) => typeof n.id === 'string' && typeof n.text === 'string' && n.text.length <= 3000 && !isNaN(Date.parse(n.created)) && !isNaN(Date.parse(n.updated))) && typeof data.activeId === 'string') {
